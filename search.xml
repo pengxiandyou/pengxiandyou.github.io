@@ -1851,12 +1851,14 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 </li>
 <li><p>一些命令里的文件或目录，我写全了，可视情况修改。</p>
 </li>
-<li><p>xftp里在/usr/下建的文件夹为java hive hadoop zookeeper。</p>
+<li><p>可提前建好上传。xftp里在/usr/下建的文件夹为java hive hadoop zookeeper。</p>
+</li>
+<li><p>hadoop等复制配置文件时，<font color=red>注意不要少复制或者多复杂或者粘帖时覆盖了部分单词</font></p>
 </li>
 <li><p>环境变量为：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># TZ&#x3D;&#39;Asia&#x2F;Shanghai&#39;; export TZ</span><br><span class="line">export JAVA_HOME&#x3D;&#x2F;usr&#x2F;java&#x2F;jdk1.8.0_171</span><br><span class="line">export HADOOP_HOME&#x3D;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3</span><br><span class="line">export HIVE_HOME&#x3D;&#x2F;usr&#x2F;hive&#x2F;apache-hive-2.1.1-bin</span><br><span class="line">export ZOOKEEPER_HOME&#x3D;&#x2F;usr&#x2F;zookeeper&#x2F;zookeeper-3.4.10</span><br><span class="line">export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin:$HADOOP_HOME&#x2F;bin:$HADOOP_HOME&#x2F;sbin:$HIVE_HOME&#x2F;bin:$ZOOKEEPER_HOME&#x2F;bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TZ&#x3D;&#39;Asia&#x2F;Shanghai&#39;; export TZ</span><br><span class="line">export JAVA_HOME&#x3D;&#x2F;usr&#x2F;java&#x2F;jdk1.8.0_171</span><br><span class="line">export HADOOP_HOME&#x3D;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3</span><br><span class="line">export HIVE_HOME&#x3D;&#x2F;usr&#x2F;hive&#x2F;apache-hive-2.1.1-bin</span><br><span class="line">export ZOOKEEPER_HOME&#x3D;&#x2F;usr&#x2F;zookeeper&#x2F;zookeeper-3.4.10</span><br><span class="line">export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin:$HADOOP_HOME&#x2F;bin:$HADOOP_HOME&#x2F;sbin:$HIVE_HOME&#x2F;bin:$ZOOKEEPER_HOME&#x2F;bin</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
 </li>
@@ -1890,7 +1892,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 </ol>
 <h1 id="四、时区更改"><a href="#四、时区更改" class="headerlink" title="四、时区更改"></a>四、时区更改</h1><h2 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h2><p>预设的<code>TZ=&#39;Asia/Shanghai&#39;; export TZ</code>会视情况加入到环境变量配置文件（/etc/profile）中。</p>
 <p>时区可能不一定更改。</p>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">date 查看时间</span><br><span class="line">tzselect </span><br><span class="line">5911</span><br><span class="line">在命令行里执行TZ&#x3D;&#39;Asia&#x2F;Shanghai&#39;; export TZ也可以</span><br></pre></td></tr></table></figure>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">date 查看时间</span><br><span class="line">tzselect </span><br><span class="line">5911</span><br><span class="line">在命令行里执行TZ&#x3D;&#39;Asia&#x2F;Shanghai&#39;; export TZ也可以</span><br><span class="line">此时就可以把环境变量配好发送生效</span><br></pre></td></tr></table></figure>
 
 
 
@@ -1915,12 +1917,14 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">内容添加至授权文件</span><br><span class="line">cat &#x2F;root&#x2F;.ssh&#x2F;id_dsa.pub &gt;&gt; &#x2F;root&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">或</span><br><span class="line">cp &#x2F;root&#x2F;.ssh&#x2F;id_dsa.pub  &#x2F;root&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">这时可尝试连接 ssh master</span><br><span class="line">退出用exit</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">其他结点</span><br><span class="line">在具体结点（slave123）下执行相应的命令</span><br><span class="line">scp master:~&#x2F;.ssh&#x2F;id_dsa.pub ~&#x2F;.ssh&#x2F;master_dsa.pub</span><br><span class="line">或下面这个也行，应该。如要用，还是用上面的。-r表示递归复制</span><br><span class="line">scp master:&#x2F;root&#x2F;.ssh&#x2F;id_dsa.pub &#x2F;root&#x2F;.ssh&#x2F;master_dsa.pub</span><br><span class="line"></span><br><span class="line">cat &#x2F;root&#x2F;.ssh&#x2F;master_dsa.pub &gt;&gt; &#x2F;root&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">或</span><br><span class="line">cp &#x2F;root&#x2F;.ssh&#x2F;master_dsa.pub  &#x2F;root&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">这时可尝试连接ssh slave123</span><br><span class="line">退出用exit</span><br><span class="line"># 注：此时在连接slave1后，要在master连接slave1，其他结点同理。这是根据文档意思得出的。可能和jobtracker有关。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">其他结点</span><br><span class="line">在具体结点（slave123）下执行相应的命令</span><br><span class="line">scp master:~&#x2F;.ssh&#x2F;id_dsa.pub ~&#x2F;.ssh&#x2F;master_dsa.pub</span><br><span class="line">或下面这个也行，应该。如要用，还是用上面的。-r表示递归复制</span><br><span class="line">scp master:&#x2F;root&#x2F;.ssh&#x2F;id_dsa.pub &#x2F;root&#x2F;.ssh&#x2F;master_dsa.pub</span><br><span class="line"></span><br><span class="line">cat &#x2F;root&#x2F;.ssh&#x2F;master_dsa.pub &gt;&gt; &#x2F;root&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">或</span><br><span class="line">cp &#x2F;root&#x2F;.ssh&#x2F;master_dsa.pub  &#x2F;root&#x2F;.ssh&#x2F;authorized_keys</span><br><span class="line">这时可尝试连接ssh slave123</span><br><span class="line">退出用exit</span><br><span class="line"># 配置好后可以不进行连接，先验证。不通过再进行下面的连接测试等。</span><br><span class="line"># 注：此时在slave1连接slave1并退出后，要在master连接slave1，其他结点同理。这是根据文档意思得出的。可能和jobtracker有关。</span><br></pre></td></tr></table></figure>
 
 <h2 id="rsa"><a href="#rsa" class="headerlink" title="rsa"></a>rsa</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-copy-id master</span><br><span class="line">ssh-copy-id slave1</span><br><span class="line">ssh-copy-id slave2</span><br><span class="line">ssh-copy-id slave3</span><br><span class="line">此方式要输密码</span><br></pre></td></tr></table></figure>
 
 <p>虽然上述命令已经搞定了，但还是可以在复制的时候使用类似dsa的方式。猜测dsa也可以用<code>ssh-copy-id</code>的方式（未验证）。</p>
-<h1 id="八、jdk"><a href="#八、jdk" class="headerlink" title="八、jdk"></a>八、jdk</h1><p>可以分别配或者解压配好后分发。</p>
+<h1 id="八、jdk"><a href="#八、jdk" class="headerlink" title="八、jdk"></a>八、jdk</h1><h2 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h2><p>此时可以创建文件夹了，hive、hadoop、java、zookeeper。</p>
+<p>可以提前在windows上先建好usr文件夹，再在usr文件夹下建4个文件夹，最后在xftp里右键上传覆盖至usr所在的根目录。我已经在本地建好了。</p>
+<p>可以分别配或者解压配好后分发。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar -zxvf &#x2F;opt&#x2F;soft&#x2F;jdk-8u171-linux-x64.tar.gz -C &#x2F;usr&#x2F;java&#x2F;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r &#x2F;usr&#x2F;java&#x2F; slave1:&#x2F;usr&#x2F;</span><br><span class="line">scp -r &#x2F;usr&#x2F;java&#x2F; slave2:&#x2F;usr&#x2F;</span><br><span class="line">scp -r &#x2F;usr&#x2F;java&#x2F; slave3:&#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure>
@@ -1933,7 +1937,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 
 
-<h1 id="九、zookeeper"><a href="#九、zookeeper" class="headerlink" title="九、zookeeper"></a>九、zookeeper</h1><p>这个到时候题目可能会要求先搭hadoop，或者并行。</p>
+<h1 id="九、zookeeper"><a href="#九、zookeeper" class="headerlink" title="九、zookeeper"></a>九、zookeeper</h1><p>这个到时候题目可能会要求先搭<a href="#hadoop">hadoop</a>，或者并行。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar -zxvf &#x2F;opt&#x2F;soft&#x2F;zookeeper-3.4.10.tar.gz -C &#x2F;usr&#x2F;zookeeper&#x2F;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">拷贝zookeeper-3.4.10&#x2F;conf&#x2F;zoo_sample.cfg</span><br><span class="line">cp &#x2F;usr&#x2F;zookeeper&#x2F;zookeeper-3.4.10&#x2F;conf&#x2F;zoo_sample.cfg &#x2F;usr&#x2F;zookeeper&#x2F;zookeeper-3.4.10&#x2F;conf&#x2F;zoo.cfg</span><br></pre></td></tr></table></figure>
@@ -1950,7 +1954,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 
 
-<h1 id="十、hadoop"><a href="#十、hadoop" class="headerlink" title="十、hadoop"></a>十、hadoop</h1><p>如果官方给出的配置较少，跟随官方。</p>
+<h1 id="十、hadoop"><a href="#十、hadoop" class="headerlink" title="十、hadoop"></a>十、<a name="hadoop">hadoop</a></h1><p>如果官方给出的配置较少，跟随官方。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar -zxvf &#x2F;opt&#x2F;soft&#x2F;hadoop-2.7.3.tar.gz -C &#x2F;usr&#x2F;hadoop&#x2F;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;hadoop&#x2F;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;etc&#x2F;hadoop</span><br></pre></td></tr></table></figure>
@@ -1961,7 +1965,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 <h2 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim core-site.xml</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.default.name&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;hdfs:&#x2F;&#x2F;master:9000&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;hdfs&#x2F;tmp&lt;&#x2F;value&gt;</span><br><span class="line">        &lt;--!他们直接在tmp下，没有hdfs--&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;io.file.buffer.size&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;131072&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.checkpoint.period&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;60&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.checkpoint.size&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;67108864&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.default.name&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;hdfs:&#x2F;&#x2F;master:9000&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;hdfs&#x2F;tmp&lt;&#x2F;value&gt;</span><br><span class="line">        &lt;!--他们直接在tmp下，没有hdfs--&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;io.file.buffer.size&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;131072&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.checkpoint.period&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;60&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.checkpoint.size&lt;&#x2F;name&gt;</span><br><span class="line">        &lt;value&gt;67108864&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim  hdfs-site.xml</span><br></pre></td></tr></table></figure>
 
@@ -1979,7 +1983,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;property&gt; </span><br><span class="line">	&lt;name&gt;yarn.resourcemanager.address&lt;&#x2F;name&gt; </span><br><span class="line">	&lt;value&gt;master:18040&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt; </span><br><span class="line">&lt;property&gt;</span><br><span class="line">	&lt;name&gt;yarn.resourcemanager.scheduler.address&lt;&#x2F;name&gt; </span><br><span class="line">	&lt;value&gt;master:18030&lt;&#x2F;value&gt; </span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">	&lt;name&gt;yarn.resourcemanager.webapp.address&lt;&#x2F;name&gt;</span><br><span class="line">    &lt;value&gt;master:18088&lt;&#x2F;value&gt; </span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">	&lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;&#x2F;name&gt;</span><br><span class="line">	&lt;value&gt;master:18025&lt;&#x2F;value&gt; </span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">	&lt;name&gt;yarn.resourcemanager.admin.address&lt;&#x2F;name&gt; </span><br><span class="line">	&lt;value&gt;master:18141&lt;&#x2F;value&gt; </span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">	&lt;name&gt;yarn.nodemanager.aux-services&lt;&#x2F;name&gt;</span><br><span class="line">    &lt;value&gt;mapreduce_shuffle&lt;&#x2F;value&gt; </span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">	&lt;name&gt;yarn.nodemanager.auxservices.mapreduce.shuffle.class&lt;&#x2F;name&gt; </span><br><span class="line">	&lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;&#x2F;value&gt; </span><br><span class="line">	&lt;&#x2F;property&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim mapred-site.xml</span><br><span class="line">&lt;property&gt; </span><br><span class="line">	&lt;name&gt;mapreduce.framework.name&lt;&#x2F;name&gt; </span><br><span class="line">	&lt;value&gt;yarn&lt;&#x2F;value&gt; </span><br><span class="line">&lt;&#x2F;property&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a>mapred-site.xml</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp mapred-site.xml.template  mapred-site.xml</span><br><span class="line">vim mapred-site.xml</span><br><span class="line">&lt;property&gt; </span><br><span class="line">	&lt;name&gt;mapreduce.framework.name&lt;&#x2F;name&gt; </span><br><span class="line">	&lt;value&gt;yarn&lt;&#x2F;value&gt; </span><br><span class="line">&lt;&#x2F;property&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="分发"><a href="#分发" class="headerlink" title="分发"></a>分发</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r &#x2F;usr&#x2F;hadoop slave1:&#x2F;usr&#x2F;</span><br><span class="line">scp -r &#x2F;usr&#x2F;hadoop slave2:&#x2F;usr&#x2F;</span><br><span class="line">scp -r &#x2F;usr&#x2F;hadoop slave3:&#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure>
 
@@ -1989,10 +1993,10 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 <h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><ul>
 <li><p>wordcount</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hadoop fs -put &#39;文件&#39; 目录</span><br><span class="line">hadoop jar $HADOOP_HOME&#x2F;share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-2.7.3.jar wordcount &#x2F;input&#x2F;wordcount.txt &#x2F;output</span><br><span class="line">hadoop fs -cat &#x2F;output&#x2F;part-r-00000</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如果&#x2F;input不存在，最后用-mkdir -p 创建一下。单引号应该可以去掉。</span><br><span class="line">hadoop fs -put &#39;wordcount.txt&#39; &#x2F;input</span><br><span class="line">hadoop jar $HADOOP_HOME&#x2F;share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-2.7.3.jar wordcount &#x2F;input&#x2F;wordcount.txt &#x2F;output</span><br><span class="line">hadoop fs -cat &#x2F;output&#x2F;part-r-00000</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>pi</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hadoop jar $HADOOP_HOME&#x2F;share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-2.9.2.jar pi 5 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hadoop jar $HADOOP_HOME&#x2F;share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-2.7.3.jar pi 5 5</span><br></pre></td></tr></table></figure>
 
 
 
@@ -2004,19 +2008,19 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">环境变量、jdk、hadoop</span><br></pre></td></tr></table></figure>
 
-<h2 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h2><p>命令里<code>sbin/</code>可视情况删除或添加。</p>
+<h2 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h2><p>命令里<code>sbin/</code>可视情况删除或添加（我都删了）。</p>
 <p>dfs.replication如果配得大话，应该适当减小。</p>
-<h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">每台slaves添加slave3（有教程只修改了master的slaves）</span><br><span class="line">vim &#x2F;usr&#x2F;hadoop&#x2F;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;etc&#x2F;hadoop&#x2F;slaves</span><br></pre></td></tr></table></figure>
+<p>虽然可以通过停止集群来添加结点，但尽量不要，毕竟题目要动态。</p>
+<h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">每台slaves添加slave3（有教程只修改了master的slaves，我测试时发现可行）</span><br><span class="line">vim &#x2F;usr&#x2F;hadoop&#x2F;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;etc&#x2F;hadoop&#x2F;slaves</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">slave3下</span><br><span class="line">hadoop-daemon.sh start datanode</span><br><span class="line">sbin&#x2F;yarn-daemon.sh start nodemanager</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">slave3下</span><br><span class="line">hadoop-daemon.sh start datanode</span><br><span class="line">yarn-daemon.sh start nodemanager</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">master下（namenode）</span><br><span class="line">刷新：hdfs dfsadmin -refreshNodes</span><br><span class="line">均衡block:sbin&#x2F;start-balancer.sh</span><br><span class="line">查看存活的节点：hdfs dfsadmin-report</span><br><span class="line">也可在web页面查看</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">master下（namenode）</span><br><span class="line">刷新（看web会有三台）：hdfs dfsadmin -refreshNodes</span><br><span class="line">均衡block:start-balancer.sh</span><br><span class="line">查看存活的节点：hdfs dfsadmin -report</span><br><span class="line">也可在web页面查看</span><br></pre></td></tr></table></figure>
 
 <h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><h3 id="临时删除-可不看"><a href="#临时删除-可不看" class="headerlink" title="临时删除-可不看"></a>临时删除-可不看</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hadoop-daemon.sh stop datanode </span><br><span class="line">hadoop-daemon.sh stop tasktracker</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="hdfs-site-xml-1"><a href="#hdfs-site-xml-1" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;etc&#x2F;hadoop&#x2F;hdfs-site.xml</span><br></pre></td></tr></table></figure>
+<h3 id="hdfs-site-xml-1"><a href="#hdfs-site-xml-1" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h3><p>如果删除验证不通过，可以配全，当就要编写datanode-allow.list了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;etc&#x2F;hadoop&#x2F;hdfs-site.xml</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;dfs.hosts.exclude&lt;&#x2F;name&gt;</span><br><span class="line">&lt;value&gt;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;etc&#x2F;hadoop&#x2F;excludes&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br><span class="line">&lt;!--还可以添加下面，大部分教程没有。不加的话，slaves里默认都是允许的。加了的话，要仿excludes--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;dfs.hosts&lt;&#x2F;name&gt;</span><br><span class="line">&lt;value&gt;&#x2F;usr&#x2F;hadoop&#x2F;hadoop-2.7.3&#x2F;etc&#x2F;hadoop&#x2F;datanode-allow.list&lt;&#x2F;value&gt;</span><br><span class="line">&lt;&#x2F;property&gt;</span><br></pre></td></tr></table></figure>
 
@@ -2024,15 +2028,15 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 <h3 id="执行一些命令"><a href="#执行一些命令" class="headerlink" title="执行一些命令"></a>执行一些命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">master下</span><br><span class="line">刷新所有datanode：hdfs dfsadmin -refreshNodes</span><br><span class="line"># 有的教程此处跳至均衡了</span><br><span class="line">查看存活结点：hdfs dfsadmin -report</span><br><span class="line">状态：Decommission In Progress（退役）</span><br><span class="line">	执行完毕后：Decommission Status：Decommissioned</span><br><span class="line">	可在web（masterIP:50070）看</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">可能需要等待一会</span><br><span class="line">在删除的结点上</span><br><span class="line">sbin&#x2F;hadoop-daemon.sh stop datanode</span><br><span class="line">sbin&#x2F;yarn-daemon.sh stop nodemanager</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">可能需要等待一会</span><br><span class="line">在删除的结点上</span><br><span class="line">hadoop-daemon.sh stop datanode</span><br><span class="line">yarn-daemon.sh stop nodemanager</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">master下</span><br><span class="line">sbin&#x2F;start-balancer.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">master下</span><br><span class="line">start-balancer.sh</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#下面是官方ppt有但没有口头说</span><br><span class="line">从namenode的excludes、slaves、hosts（我觉得不需要）去掉删除的主机名</span><br><span class="line">所有datanode上执行hadoop-pull.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">去掉slaves里的slave，excludes里也可以去掉slave3</span><br><span class="line">#下面是官方ppt有但没有口头说</span><br><span class="line">从namenode的excludes、slaves、hosts（我觉得不需要）去掉删除的主机名</span><br><span class="line">所有datanode上执行hadoop-pull.sh（没有这个）</span><br></pre></td></tr></table></figure>
 
 
 
-<h1 id="hive"><a href="#hive" class="headerlink" title="hive"></a>hive</h1><h2 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h2><ol>
+<h1 id="十二、hive"><a href="#十二、hive" class="headerlink" title="十二、hive"></a>十二、hive</h1><h2 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h2><ol>
 <li>为了节约时间，可提前在slaves2和slave3（看情况）安装mysql。</li>
 <li>如果题目要求，可把10改成8，文档是8。</li>
 <li>master作为client，slave1作为 hive server，slave2或3安装mysql server。</li>
