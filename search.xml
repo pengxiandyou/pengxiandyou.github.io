@@ -1867,7 +1867,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 
 </li>
 </ol>
-<h1 id="一-、更新本地源"><a href="#一-、更新本地源" class="headerlink" title="一 、更新本地源"></a>一 、更新本地源</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于这一块不熟，命令视情况运行</span><br><span class="line">发信号给 yum 进程：pkill -9 yum</span><br><span class="line">进入 yum 源配置文件：cd &#x2F;etc&#x2F;yum.repos.d</span><br><span class="line">删除所有文件：rm -rf	*</span><br><span class="line">下载 yum 源：wget http:&#x2F;&#x2F;10.10.31.2:8000&#x2F;bigdata&#x2F;repofile&#x2F;bigdata.repo</span><br><span class="line">清除YUM 缓存：yum clean all</span><br><span class="line">更新元数据 ：yum makecache</span><br></pre></td></tr></table></figure>
+<h1 id="一-、更新本地源"><a href="#一-、更新本地源" class="headerlink" title="一 、更新本地源"></a>一 、更新本地源</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于这一块不熟，命令视情况运行。</span><br><span class="line">（不一定执行）发信号给 yum 进程：pkill -9 yum</span><br><span class="line">进入 yum 源配置文件：cd &#x2F;etc&#x2F;yum.repos.d</span><br><span class="line">如果需要，把CentOS-Base.repo备份一下，把下载的或已有的repo重名为CentOS-Base.repo。</span><br><span class="line">可能会用到的命令</span><br><span class="line">	curl -o &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo 地址（http:&#x2F;&#x2F;等）</span><br><span class="line">	或</span><br><span class="line">	wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo 地址（http:&#x2F;&#x2F;等）</span><br><span class="line">（不一定执行）删除所有文件：rm -rf	*</span><br><span class="line">下载 yum 源：wget http:&#x2F;&#x2F;10.10.31.2:8000&#x2F;bigdata&#x2F;repofile&#x2F;bigdata.repo</span><br><span class="line">清除YUM 缓存：yum clean all</span><br><span class="line">更新元数据 ：yum makecache</span><br></pre></td></tr></table></figure>
 
 
 
