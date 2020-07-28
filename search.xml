@@ -1022,7 +1022,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 </li>
 <li><p>如果需要网页有较多功能，比如再执行一边。可自行设计。由于我前段时间看过<a href="https://www.bilibili.com/video/BV15b411e71u" target="_blank" rel="noopener">尚学堂杨淑娟老师-手写服务器</a>，代码也有，所以修改修改再添加点，最后打包，就应该可以放到服务器里运行了。</p>
 </li>
-<li><p>服务器到期后可放到阿里、腾讯、百度的函数计算上。个人推荐百度的，因为有免费1G的外网流量。</p>
+<li><p>服务器到期后可放到阿里、腾讯、百度的函数计算上。个人推荐百度的，因为有免费1G的外网流量。leancloud也可应该。</p>
 </li>
 </ol>
 ]]></content>
