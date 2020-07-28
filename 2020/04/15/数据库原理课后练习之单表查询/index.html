@@ -125,7 +125,17 @@
   </style>
 </noscript>
 
-
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -807,10 +817,11 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 </script>
 
    <!-- 点击出现社会主义彩色文字 -->
- <script type="text/javascript" src="/js/shzyhxjzg.js"></script>
-<!-- 点击动画 -->
+ <!--<script type="text/javascript" src="/js/shzyhxjzg.js"></script>
+--><!-- 点击动画 --><!--
  <script type="text/javascript" src="/js/love.js"></script>
-
+-->
+<!-- 点击出现社会主义彩色文字 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script><!-- 点击出现爱心 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
 <!-- 天气 -->
 <script type="text/javascript">
 WIDGET = {FID: 'apV00Hp0nY'}

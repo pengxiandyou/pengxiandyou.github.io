@@ -571,6 +571,10 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 <p>awsedrftghj</p>
 <p>edcrfvtgbyhnj</p>
 <p>sxdcfvgbhnj</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wwwwwwwhenidadadwd4384</span><br></pre></td></tr></table></figure>
+
+
+
 <p>zwxecrtvybnumi</p>
 <p>xsdcfvgbhnj</p>
 <p>zwxedcfghnj</p>
@@ -578,6 +582,10 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 </div></div>
 
 <p>2333</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% fold 点击显&#x2F;隐内容 %&#125;</span><br><span class="line">&#123;% endfold %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <div>
     <div class="fold_hider">
         <div class="close hider_title">点击显示/隐藏代码</div>
@@ -588,7 +596,14 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
         54535
         2424
     </div>
-</div>]]></content>
+</div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;fold_hider&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;close hider_title&quot;&gt;点击显示&#x2F;隐藏代码&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;fold&quot;&gt;</span><br><span class="line">        要隐藏的部分</span><br><span class="line">        25338785</span><br><span class="line">        54535</span><br><span class="line">        2424</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>666</strong></p>
+]]></content>
   </entry>
   <entry>
     <title>假期学习记录和总结</title>

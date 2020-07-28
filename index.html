@@ -123,7 +123,17 @@
   </style>
 </noscript>
 
-
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -611,7 +621,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-28 22:47:25" itemprop="dateModified" datetime="2020-07-28T22:47:25+08:00">2020-07-28</time>
+                <time title="修改时间：2020-07-29 00:43:20" itemprop="dateModified" datetime="2020-07-29T00:43:20+08:00">2020-07-29</time>
               </span>
           <br/>
 
@@ -619,7 +629,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
 <span title="post.wordcount">
-    160 字
+    239 字
 </span> | 
 <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
@@ -1635,10 +1645,11 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 </script>
 
    <!-- 点击出现社会主义彩色文字 -->
- <script type="text/javascript" src="/js/shzyhxjzg.js"></script>
-<!-- 点击动画 -->
+ <!--<script type="text/javascript" src="/js/shzyhxjzg.js"></script>
+--><!-- 点击动画 --><!--
  <script type="text/javascript" src="/js/love.js"></script>
-
+-->
+<!-- 点击出现社会主义彩色文字 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script><!-- 点击出现爱心 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
 <!-- 天气 -->
 <script type="text/javascript">
 WIDGET = {FID: 'apV00Hp0nY'}
