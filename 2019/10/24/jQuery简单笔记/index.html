@@ -432,6 +432,7 @@
     });  
 </script>
 
+
       
 </div>
       <footer class="post-footer">
@@ -747,8 +748,11 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
+   <!-- 点击出现社会主义彩色文字 -->
+ <script type="text/javascript" src="/js/shzyhxjzg.js"></script>
 <!-- 点击动画 -->
  <script type="text/javascript" src="/js/love.js"></script>
+
 <!-- 天气 -->
 <script type="text/javascript">
 WIDGET = {FID: 'apV00Hp0nY'}
@@ -765,6 +769,17 @@ WIDGET = {FID: 'apV00Hp0nY'}
             }, 3e3))
     })
 </script>
+<!-- 折叠 --><!-- 
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script> -->
 <!-- 背景 -->
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
