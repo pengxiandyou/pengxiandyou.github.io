@@ -1318,7 +1318,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #67c932;
+  background: #aa81ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3006,6 +3006,29 @@ mjx-container + br {
 .site-title {
   font-family: 'Lato', "PingFang SC", "华文新魏", sans-serif;
   font-size: 20px;
+}
+.post-body h2 {
+  font-size: 23px;
+  font-weight: bold;
+  background-color: #31a2e4;
+  border-radius: 20px;
+  color: #f9f9f9;
+  padding-left: 8px;
+  text-shadow: 1px 1px 1px #000;
+}
+.post-body h3 {
+  background: #2b6600;
+  box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10,10,0,0.5);
+  color: #fff;
+  font-family: "微软雅黑", "宋体", "黑体", Arial;
+  font-size: 15px;
+  font-weight: bold;
+  height: 24px;
+  line-height: 23px;
+  margin: 12px 0 !important;
+  padding: 5px 0 5px 10px;
+  text-shadow: 2px 2px 3px #222;
+  border-radius: 20px;
 }
 strong {
   font-weight: bold;
