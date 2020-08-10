@@ -1318,7 +1318,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #aa81ff;
+  background: #44a7f5;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3038,6 +3038,16 @@ strong {
   padding-left: 0px;
   padding-right: 1px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+code {
+  padding: 2px 4px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  color: #ff7600;
+  background: #fbf7f8;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bolder;
 }
 blockquote {
   padding: 0 15px;
