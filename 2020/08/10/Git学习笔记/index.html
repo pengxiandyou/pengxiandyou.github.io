@@ -70,7 +70,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/08/10/oabC3Qp2YniJ78d.png">
 <meta property="og:image" content="https://i.loli.net/2020/08/10/6i3lbROQ1eackyt.png">
 <meta property="article:published_time" content="2020-08-10T07:52:45.000Z">
-<meta property="article:modified_time" content="2020-08-10T15:53:30.487Z">
+<meta property="article:modified_time" content="2020-08-12T11:58:11.002Z">
 <meta property="article:author" content="小可爱">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="Github">
@@ -291,10 +291,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-10 15:52:45 / 修改时间：23:53:30" itemprop="dateCreated datePublished" datetime="2020-08-10T15:52:45+08:00">2020-08-10</time>
+              <time title="创建时间：2020-08-10 15:52:45" itemprop="dateCreated datePublished" datetime="2020-08-10T15:52:45+08:00">2020-08-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-12 19:58:11" itemprop="dateModified" datetime="2020-08-12T19:58:11+08:00">2020-08-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -314,13 +320,13 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
 <span title="post.wordcount">
-    1.3k 字
+    1.9k 字
 </span> | 
 <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
 <span title="post.min2read">
-    5 分钟
+    7 分钟
 </span>
 <br/>
           
@@ -375,6 +381,22 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email 150811@qq.com <span class="comment"># 邮箱</span></span><br></pre></td></tr></table></figure>
 
 <p>&emsp;看了上上面的命令，可以自行对上面的命令进行改造。实在不想打命令，可以去对应文件修改。关于冒充，最好不要。</p>
+<h1 id="命令合集部分跳转"><a href="#命令合集部分跳转" class="headerlink" title="命令合集部分跳转"></a>命令合集部分跳转</h1><ol>
+<li><a href=#qt>其他</a></li>
+<li><a href=#tag>tag</a></li>
+<li><a href=#rebase>rebase</a></li>
+<li><a href=#pf>pull和fetch</a></li>
+<li><a href=#push>push</a></li>
+<li><a href=#cherry-pick>chrerry-pick</a></li>
+<li><a href=#stash>stash</a></li>
+<li><a href="#merge">merge合并和rebase</a></li>
+<li>[branch](# branch分支相关)</li>
+<li><a href="#remote远程相关">remote</a></li>
+<li><a href="#rm">rm</a></li>
+<li><a href="#checkout">checkout和resotre恢复相关</a></li>
+<li><a href="#reset">reset和revert</a></li>
+<li><a href="#log">log</a></li>
+</ol>
 <h1 id="命令合集"><a href="#命令合集" class="headerlink" title="命令合集"></a>命令合集</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;这个命令可以初始化一个空仓库。也可以用下面的命令得到一个仓库。</p>
@@ -386,7 +408,7 @@
 
 <p>&emsp;<code>git add</code>这个命令作用很多。</p>
 <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"消息"</span> [file 不加则全部]</span><br><span class="line">git commit //会进入编辑模式，用的编辑器取决于配置文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"消息"</span> [file 不加则全部]</span><br><span class="line">git commit //会进入编辑模式，用的编辑器取决于配置文件</span><br><span class="line">git commit --amend //常常用来修改某个branch上最顶端的commit</span><br><span class="line">git commit -c ORIG_HEAD  //-c选项使得新提交的<span class="built_in">log</span> message重用ORIG_HEAD指向的commit使用的<span class="built_in">log</span> message，但允许用户编辑（查--amend得到）</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;这个不多说，<del>懂得都懂，不懂得，说了你也不明白，不如不说。你们也别来问我怎么了，利益牵扯太大，说了对你们也没什么好处，当不知道就行了，其余的我只能说这里面水很深，牵扯到很多大人物。详细资料你们自己找是很难找的，网上大部分已经删除干净了，所以我只能说懂得都懂，不懂得也没办法。</del></p>
 <hr>
@@ -399,7 +421,7 @@
 <p>&emsp;这个命令可以看到文件有什么修改。当然这时可能看到乱码。自行解决。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git diff：是查看working tree与index的差别的。</span><br><span class="line">git diff --cached：是查看index与repository的差别的。</span><br><span class="line">git diff HEAD：是查看working tree和repository的差别的。其中：HEAD代表的是最近的一次commit的信息。</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;上述命令来自<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">教程</a>的评论区，我比较相信。<code>git diff HEAD -- readme.txt</code>中间确实有空格。</p>
+<p>&emsp;<span id=diff>上述命令</span>来自<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">教程</a>的评论区，我比较相信。<code>git diff HEAD -- readme.txt</code>中间确实有空格。</p>
 <hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br><span class="line">git <span class="built_in">log</span> --graph</span><br><span class="line">git <span class="built_in">log</span> --pretty=oneline</span><br><span class="line">git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</span><br></pre></td></tr></table></figure>
 
@@ -408,38 +430,42 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;这个命令可以看每次的命令。对于我来说，可以方便回退到某个版本。</p>
+<p>&emsp;<span id=log>这个命令</span>可以看每次的命令。对于我来说，可以方便回退到某个版本。</p>
 <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^ </span><br><span class="line">下面有git reset --soft HEAD^ </span><br><span class="line">默认是--mixed</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;这个命令可以回退到某一个版本。win上需要双倍<code>^</code>。后面可以理解为指针。</p>
+<p>&emsp;<span id=reset>这个命令</span>可以回退到某一个版本。win上需要双倍<code>^</code>（父）。后面可以理解为指针。还有~<num>。</p>
 <p>&emsp;对于使用<code>--hard</code>，我还是有些疑惑。我还是查阅过一点资料的。这种疑惑是一种知识不全的感觉。</p>
-<p>&emsp;<code>reset</code>好像有点危险。</p>
+<p>&emsp;<code>reset</code>好像有点危险。远程无效。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert HEAD</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;可以分享给别人。撤销提交，引入新提交，和提交前一样。</p>
 <hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- readme.txt</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;这个命令结合可以撤销修改到最近的<code>commit or add</code>(感觉有问题，是不是直接从暂存区恢复？)状态。理解起来很烦，所以我一般用<code>switch</code>。</p>
+<p>&emsp;<span id=checkout>这个命令</span>结合可以撤销修改到最近的<code>commit or add</code>(感觉有问题，是不是直接从暂存区恢复？)状态。理解起来很烦，所以我一般用<code>switch</code>。</p>
 <p>&emsp;修改了工作区，可以用上面的命令丢弃修改。改了工作区有<code>add</code>了，用<code>git reset HEAD &lt;file&gt;</code>，再使用上面的命令。</p>
 <p>&emsp;较高的Git版本，会提示用<code>restore</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">从暂存区恢复工作区，</span><br><span class="line">git resotre --worktree readme.txt</span><br><span class="line">从master恢复暂存区 </span><br><span class="line">git restore --staged readme.txt</span><br><span class="line">从master同时恢复工作区和暂存区</span><br><span class="line">git restore --<span class="built_in">source</span>=HEAD --staged --worktree readme.txt</span><br></pre></td></tr></table></figure>
 
 <hr>
+<p>&emsp;<span id=rm>rm</span></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git rm</span><br><span class="line">git rm --cached</span><br><span class="line">git rm -r</span><br><span class="line">直觉告诉我应该有</span><br><span class="line">git rm -rf</span><br></pre></td></tr></table></figure>
 
 <hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin [仓库克隆或下载那的链接]</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;这个命令结合可以关联远程仓库。我是把<code>origin</code>理解为主机名的。取消关联<code>git remote rm origin</code>（没试过）</p>
+<p>&emsp;<span id=remote>这个命令</span>结合可以关联远程仓库。我是把<code>origin</code>理解为主机名的，配置文件看一看，大概就理解了。取消关联<code>git remote rm origin</code>（没试过）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;上面的命令用来查看远程库的信息。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br><span class="line">追踪远程分支</span><br><span class="line">还可以</span><br><span class="line">git<span class="string">'checkout……</span></span><br></pre></td></tr></table></figure>
 
 <p>&emsp;第一次推送要用类似上面的命令。</p>
 <hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br><span class="line">推荐使用</span><br><span class="line">git switch -c dev</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;上面的命令表示创建并切换分支。可以理解为下面两条命令。似乎还可以加上远程分支<code>origin/name</code></p>
+<p>&emsp;上面的<span id=branch>命令</span>表示创建并切换分支。可以理解为下面两条命令。似乎还可以加上远程分支<code>origin/name</code>和<code>commit_id</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;对于查看分支可以用下面的。</p>
@@ -452,13 +478,15 @@
 
 <p>&emsp;上面的命令是来链接本地分支与远程分支的。</p>
 <hr>
-<p>&emsp;合并</p>
+<p>&emsp;<span id=merge>合并</span>，假设有两个分支，在生成另一个分支切出去后，主分支没动。当另一个分支有提交后，在主分支合并会直接前进。如果主分支也有提交，合并会形成一个新的提交。它有两个父结点的提交。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br><span class="line">git merge --no-ff -m <span class="string">"merge with no-ff"</span> dev</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase master 会把当前的复制到master。 可以跟两个，搬后面的</span><br></pre></td></tr></table></figure>
 
 <hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;这个命令可以储藏当前工作区。</p>
+<p>&emsp;<span id=stash>这个命令</span>可以储藏当前工作区。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash list</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;查看</p>
@@ -468,19 +496,30 @@
 <hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick 4c805e2</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;这个命令可以复制指定提交到当前分治，可以更多个<code>commit_id</code>，不过顺序又要求（如果没记错）。</p>
+<p>&emsp;<span id=cherry-pick>这个命令</span>可以复制指定提交到当前HEAD，可以更多个<code>commit_id</code>，不过顺序又要求（如果没记错）。</p>
 <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push [主机名] [本地分支]:[远程分支]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push [主机名] [本地分支]:[远程分支]</span><br><span class="line">不带参数会和push.default有关。</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;这个命令不加本地分支会删除远程分支。</p>
+<p>&emsp;<span id=push>这个命令</span>不加本地分支会删除远程分支。</p>
 <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<div id=pf>pull和fetch</div>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git pull 等价git fetch 加 git merge</span><br><span class="line">git pull --rebase</span><br><span class="line">git pull [主机名] [远程分支]:[本地分支]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch 本地master不会前进</span><br></pre></td></tr></table></figure>
 
 <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rebase 分支合并在前面</span><br><span class="line">git rebase -i HEAD~4 提交历史是直线，还可以用前面的分支名。（游戏得出）</span><br><span class="line">git rebase --interactive HEAD~4</span><br></pre></td></tr></table></figure>
 
+<p>&emsp;<span id=rebase>如果</span>不知道哈希值，可以用它的交互模式。可以调序、删除不要、合并提交（游戏）。</p>
 <hr>
+<div id=tag>tag</div>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br><span class="line">git tag v1.0</span><br><span class="line">git tag v0.9 f52c633</span><br><span class="line">git tag -a v0.1 -m <span class="string">"version 0.1 released"</span> 1094adb</span><br><span class="line">git show &lt;tagname&gt;</span><br><span class="line">git tag -d v0.1</span><br><span class="line">git push origin v1.0</span><br><span class="line">git push origin --tags</span><br><span class="line">git push origin :refs/tags/v0.9</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>&emsp;<div id=qt>其他</div></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">git checkout [commit_id/branch_name] 我是这么理解的。还可以加~、^</span><br><span class="line">---</span><br><span class="line">cat .git\HEAD 看HEAD的指向。</span><br><span class="line">git symbolic-ref HEAD 如果HAED指向引用，用这个查看指向。</span><br><span class="line">---</span><br><span class="line">git branch -f master HEAD~3 ‘-f’容许我们将分支强制移动到指定位置。 </span><br><span class="line">git reset --soft HEAD^  //将branch的头指针向前移动一个commit，--soft选项使得index和workspace tree的内容保持移动之前不变（查--amend得到的）（前面有--hard的，因此可以反向理解）</span><br><span class="line">---</span><br><span class="line">git bisect</span><br><span class="line">---</span><br><span class="line">git describe &lt;ref&gt; </span><br><span class="line">输出&lt;tag&gt;_&lt;numCommits&gt;_g&lt;<span class="built_in">hash</span>&gt;</span><br><span class="line">tag 表示的是离 ref 最近的标签， numCommits 是表示这个 ref 与 tag 相差有多少个提交记录， <span class="built_in">hash</span> 表示的是你所给定的 ref 所表示的提交记录哈希值的前几位。</span><br><span class="line">当 ref 提交记录上有某个标签时，则只输出标签名称</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -520,7 +559,7 @@
   <p><span>本文标题:</span><a href="/2020/08/10/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Git学习笔记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 小可爱 的个人博客">小可爱</a></p>
   <p><span>发布时间:</span>2020年08月10日 - 15:52</p>
-  <p><span>最后更新:</span>2020年08月10日 - 23:53</p>
+  <p><span>最后更新:</span>2020年08月12日 - 19:58</p>
   <p><span>原始链接:</span><a href="/2020/08/10/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Git学习笔记">https://pengxiandyou.github.io/2020/08/10/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://pengxiandyou.github.io/2020/08/10/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"  aria-label="复制成功！"></i></span>
   </p>
@@ -619,7 +658,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从遇见狂神说视频里截的图"><span class="nav-number">1.</span> <span class="nav-text">从遇见狂神说视频里截的图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简介、诞生、安装等"><span class="nav-number">2.</span> <span class="nav-text">简介、诞生、安装等</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看配置"><span class="nav-number">3.1.</span> <span class="nav-text">查看配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-1"><span class="nav-number">3.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令合集"><span class="nav-number">4.</span> <span class="nav-text">命令合集</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从遇见狂神说视频里截的图"><span class="nav-number">1.</span> <span class="nav-text">从遇见狂神说视频里截的图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简介、诞生、安装等"><span class="nav-number">2.</span> <span class="nav-text">简介、诞生、安装等</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看配置"><span class="nav-number">3.1.</span> <span class="nav-text">查看配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-1"><span class="nav-number">3.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令合集部分跳转"><span class="nav-number">4.</span> <span class="nav-text">命令合集部分跳转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令合集"><span class="nav-number">5.</span> <span class="nav-text">命令合集</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
