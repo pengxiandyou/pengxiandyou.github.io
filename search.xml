@@ -1179,6 +1179,8 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 <li><p>QQ浏览器对于localhost:4000打不开（127.0.0.1:4000也打不开），报 SLL 的错误 而其他浏览器可以正常访问。</p>
 <p>找到interner工具-高级-还原高级设置 我观察了一些 使用Sll3.0的钩去掉了 记得重启。</p>
 </li>
+<li><p>不蒜子与live2d冲突，解决：看<code>F12</code>,自行搜索文件内容找到文件，把<code>style=&quot;display: none;&quot;</code>删了。此时对于页脚的显示应该解决了。对于每一篇文章，可以把外层<code>&lt;span&gt;</code>去掉，或者修改js代码。</p>
+</li>
 </ol>
 ]]></content>
       <categories>

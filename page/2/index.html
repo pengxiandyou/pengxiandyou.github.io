@@ -124,6 +124,8 @@
 </noscript>
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<!--我自定义的搜索-->
+<script async="true" src="https://pengxiandyou.gitee.io/src/js/search-my.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $(document).on('click', '.fold_hider', function(){
@@ -205,6 +207,19 @@
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
+      </li>
+      <li class="menu-item menu-item-search-my">
+      <a>
+      <i class="fa fa-search fa-fw"></i>
+      <input type="text" value="B:我爱你" name="wd" id="kw" size="15"  autocomplete="off" onkeydown="keyDown(event)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search()" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i></a>
+      </li>
+
+      <li class="menu-item menu-item-gonggao-my">
+      <div style=" border:1px solid #ffc0cb"><div>
+  <font color="#ffc0cb">小公告：</font>
+</div>
+<iframe src="https://pengxiandyou.gitee.io/src/hexo-next/公告.html"></iframe>
+</div>
       </li>
   </ul>
 </nav>
@@ -1167,7 +1182,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-13 18:35:16" itemprop="dateModified" datetime="2019-10-13T18:35:16+08:00">2019-10-13</time>
+                <time title="修改时间：2020-08-13 12:45:06" itemprop="dateModified" datetime="2020-08-13T12:45:06+08:00">2020-08-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1184,7 +1199,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
 <span title="post.wordcount">
-    187 字
+    256 字
 </span> | 
 <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
@@ -1492,6 +1507,12 @@
   </div>
 
       </div>
+
+            <div>
+          <i class="fa fa-search fa-fw"></i>
+      <input type="text" value="B:我爱你" name="wd" id="kw" size="15"  autocomplete="off" onkeydown="keyDown(event)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search()" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
+      </div>
+
 
     </div>
   </aside>
