@@ -213,7 +213,7 @@
       <li class="menu-item menu-item-search-my">
       <a>
       <i class="fa fa-search fa-fw"></i>
-      <input type="text" value="B:我爱你" name="wd" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search()" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i></a>
+      <input type="text" value="B:我爱你" name="wd" id="kw2" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw2').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i></a>
       </li>
 
       <li class="menu-item menu-item-gonggao-my">
@@ -621,7 +621,7 @@
 
             <div>
           <i class="fa fa-search fa-fw"></i>
-      <input type="text" value="B:我爱你" name="wd" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search()" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
+      <input type="text" value="B:我爱你" name="wd" id="kw1" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw1').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
       </div>
 
 
