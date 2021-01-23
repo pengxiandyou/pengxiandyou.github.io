@@ -714,7 +714,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     new Valine({
       el         : '#valine-comments',
       verify     : true,
-      notify     : false,
+      notify     : true,
       appId      : 'NV0UdyQgG4YmNrKza8PMBPfg-MdYXbMMI',
       appKey     : 'nlNzn8j5jFal7PfxtNld4Iwk',
       placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!支持markdown呢",
@@ -724,7 +724,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       visitor    : false,
       lang       : 'zh-cn' || 'zh-cn',
       path       : location.pathname,
-      recordIP   : false,
+      recordIP   : true,
       serverURLs : ''
     });
   }, window.Valine);
