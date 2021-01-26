@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"pengxiandyou.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+<script>
+    (function () {
+        if ("") {
+          var c="".split(/[,，]/);
+          var a="".split(/[ ]/);
+          var b=prompt('请输入可能的文章口令');
+          var flag=new Boolean();
+          for ( i=0;i<a.length;i++) {
+          if (b==a[i]) {
+            flag=true;
+          }
+        }
+        //alert(flag);
+            if (false==flag) {
+                alert('本文章没有使用或没有该口令！可在第一篇文章下的评论留下关于我的口令');
+                if (history.length === 1) {
+                    location.replace("https://pengxiandyou.github.io"); 
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://pengxiandyou.github.io");
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+  <meta name="description" content="&amp;emsp;&amp;emsp;有时翻源码的时候，看到那些native方法，总是心痒痒。我翻源码就是为了看看怎么写的，结果看到没有方法体，就很气（虽然去翻c&#x2F;c++的文件应该可以找到）。&amp;emsp;&amp;emsp;今天随便点进了Tread里，看到好多native方法，就想着能不能自己写写。查了几篇教程就着手了。&amp;emsp;&amp;emsp;看的教程里面都是简简单单的打印一下，我偏要写一个带返回值的&amp;emsp;&amp;em">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自己实现一个native方法">
+<meta property="og:url" content="https://pengxiandyou.github.io/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="魔装少男的博客">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;有时翻源码的时候，看到那些native方法，总是心痒痒。我翻源码就是为了看看怎么写的，结果看到没有方法体，就很气（虽然去翻c&#x2F;c++的文件应该可以找到）。&amp;emsp;&amp;emsp;今天随便点进了Tread里，看到好多native方法，就想着能不能自己写写。查了几篇教程就着手了。&amp;emsp;&amp;emsp;看的教程里面都是简简单单的打印一下，我偏要写一个带返回值的&amp;emsp;&amp;em">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-25T12:08:25.000Z">
+<meta property="article:modified_time" content="2021-01-26T04:17:36.930Z">
+<meta property="article:author" content="小可爱">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="c">
+<meta property="article:tag" content="jni">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://pengxiandyou.github.io/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>自己实现一个native方法 | 魔装少男的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?497aa34d870c1d7996acc609bf1d5afd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<!--我自定义的搜索-->
+<script async="true" src="https://pengxiandyou.gitee.io/src/js/search-my.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">魔装少男的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">我可爱又美丽却能唤来死亡 <br>  虽然我可爱又迷人,但我能招来死亡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">40</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">25</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">35</span></a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+      <li class="menu-item menu-item-search-my">
+      <a>
+      <i class="fa fa-search fa-fw"></i>
+      <input type="text" value="B:我爱你" name="wd" id="kw2" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw2').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i></a>
+      </li>
+
+      <li class="menu-item menu-item-gonggao-my">
+      <div style=" border:1px solid #ffc0cb"><div>
+  <font color="#ffc0cb">小公告：</font>
+</div>
+<iframe src="https://pengxiandyou.gitee.io/src/hexo-next/公告.html"></iframe>
+</div>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/pengxiandyou" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pengxiandyou.github.io/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="小可爱">
+      <meta itemprop="description" content="正在读大学，要毕业了">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="魔装少男的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          自己实现一个native方法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-25 20:08:25" itemprop="dateCreated datePublished" datetime="2021-01-25T20:08:25+08:00">2021-01-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-26 12:17:36" itemprop="dateModified" datetime="2021-01-26T12:17:36+08:00">2021-01-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%99%E7%AE%97%E6%95%99%E7%A8%8B%E5%90%A7/" itemprop="url" rel="index"><span itemprop="name">这算教程吧</span></a>
+                </span>
+            </span>
+          <br/>
+
+<span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+<span title="post.wordcount">
+    1.7k 字
+</span> | 
+<span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+<span title="post.min2read">
+    8 分钟
+</span>
+<br/>
+          
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" >
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+           </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <div class="post-description"><p>&emsp;&emsp;有时翻源码的时候，看到那些native方法，总是心痒痒。我翻源码就是为了看看怎么写的，结果看到没有方法体，就很气（虽然去翻c/c++的文件应该可以找到）。</p><p>&emsp;&emsp;今天随便点进了Tread里，看到好多native方法，就想着能不能自己写写。查了几篇教程就着手了。</p><p>&emsp;&emsp;看的教程里面都是简简单单的打印一下，我偏要写一个带返回值的<p/><p>&emsp;&emsp;<font color=pink>注：</font>如果要跟着我一起来，只须要相应的环境，可以不要ide。基本上用记事本即可，不过我用的sublime</p></div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ol>
+<li><p>Windows专业版</p>
+</li>
+<li><p>java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">D:\桌面</span><br><span class="line">λ java -version</span><br><span class="line">java version &quot;1.8.0_191&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_191-b12) Java HotSpot(TM) 64-Bit Server VM (build 25.191-b12, mixed mode)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>gcc——mingw-w64</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">D:\桌面</span><br><span class="line">λ gcc -v</span><br><span class="line">Using built-in specs.</span><br><span class="line">COLLECT_GCC&#x3D;gcc</span><br><span class="line">COLLECT_LTO_WRAPPER&#x3D;D:&#x2F;mingw-w64&#x2F;mingw64&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;x86_64-w64-mingw32&#x2F;8.1.0&#x2F;lto-wrapper.exe</span><br><span class="line">Target: x86_64-w64-mingw32</span><br><span class="line">Configured with: ..&#x2F;..&#x2F;..&#x2F;src&#x2F;gcc-8.1.0&#x2F;configure --host&#x3D;x86_64-w64-mingw32 --build&#x3D;x86_64-w64-mingw32 --target&#x3D;x86_64-w64-mingw32 --prefix&#x3D;&#x2F;mingw64 --with-sysroot&#x3D;&#x2F;c&#x2F;mingw810&#x2F;x86_64-810-posix-seh-rt_v6-rev0&#x2F;mingw64 --enable-shared --enable-static --disable-multilib --enable-languages&#x3D;c,c++,fortran,lto --enable-libstdcxx-time&#x3D;yes --enable-threads&#x3D;posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking&#x3D;release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch&#x3D;nocona --with-tune&#x3D;core2 --with-libiconv --with-system-zlib --with-gmp&#x3D;&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static --with-mpfr&#x3D;&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static --with-mpc&#x3D;&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static --with-isl&#x3D;&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static --with-pkgversion&#x3D;&#39;x86_64-posix-seh-rev0, Built by MinGW-W64 project&#39; --with-bugurl&#x3D;https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;mingw-w64 CFLAGS&#x3D;&#39;-O2 -pipe -fno-ident -I&#x2F;c&#x2F;mingw810&#x2F;x86_64-810-posix-seh-rt_v6-rev0&#x2F;mingw64&#x2F;opt&#x2F;include -I&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-zlib-static&#x2F;include -I&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static&#x2F;include&#39; CXXFLAGS&#x3D;&#39;-O2 -pipe -fno-ident -I&#x2F;c&#x2F;mingw810&#x2F;x86_64-810-posix-seh-rt_v6-rev0&#x2F;mingw64&#x2F;opt&#x2F;include -I&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-zlib-static&#x2F;include -I&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static&#x2F;include&#39; CPPFLAGS&#x3D;&#39; -I&#x2F;c&#x2F;mingw810&#x2F;x86_64-810-posix-seh-rt_v6-rev0&#x2F;mingw64&#x2F;opt&#x2F;include -I&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-zlib-static&#x2F;include -I&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static&#x2F;include&#39; LDFLAGS&#x3D;&#39;-pipe -fno-ident -L&#x2F;c&#x2F;mingw810&#x2F;x86_64-810-posix-seh-rt_v6-rev0&#x2F;mingw64&#x2F;opt&#x2F;lib -L&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-zlib-static&#x2F;lib -L&#x2F;c&#x2F;mingw810&#x2F;prerequisites&#x2F;x86_64-w64-mingw32-static&#x2F;lib &#39;</span><br><span class="line">Thread model: posix</span><br><span class="line">gcc version 8.1.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cmder 191012 </p>
+<p>默认是<code>GBK</code>编译，切换<code>utf-8</code>，可用<code>chcp 65001</code>，切换回来用<code>chcp 936</code>。</p>
+<p>在编译运行java，可以尝试<code>-encoding</code>，不会写的话，就百度或者去翻自己的ide。</p>
+<p>在编译dll是，可用<code>-fexec-charset=gbk -finput-charset=utf-8</code>。</p>
+<p>我不在dll里打印中文信息，就统一<code>GBK</code>了，如果要换成<code>uft8</code>，我会崩溃的。</p>
+</li>
+</ol>
+<h1 id="一、编写TestNative-java并编译"><a href="#一、编写TestNative-java并编译" class="headerlink" title="一、编写TestNative.java并编译"></a>一、编写<code>TestNative.java</code>并编译</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestNative</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		<span class="comment">//要写绝对路径</span></span><br><span class="line">		<span class="comment">//System.load("TestNative.dll");</span></span><br><span class="line">		System.loadLibrary(<span class="string">"TestNative"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">native</span> <span class="keyword">static</span> String <span class="title">getYouHeart</span><span class="params">(String msg)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(getYouHeart(args[<span class="number">0</span>]));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">D:\桌面                                                 </span><br><span class="line">λ javac TestNative.java                               </span><br><span class="line">                                                      </span><br><span class="line">D:\桌面                                                 </span><br><span class="line">λ dir | find &quot;TestNative&quot;                             </span><br><span class="line">2021&#x2F;01&#x2F;25  20:05               451 TestNative.class  </span><br><span class="line">2021&#x2F;01&#x2F;25  20:03               201 TestNative.java</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="二、使用javah生成-h文件"><a href="#二、使用javah生成-h文件" class="headerlink" title="二、使用javah生成.h文件"></a>二、使用<code>javah</code>生成<code>.h</code>文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">D:\桌面                                                 </span><br><span class="line">λ javah -jni TestNative                               </span><br><span class="line">                                                      </span><br><span class="line">D:\桌面                                                 </span><br><span class="line">λ dir | find &quot;TestNative&quot;                             </span><br><span class="line">2021&#x2F;01&#x2F;25  20:05               451 TestNative.class  </span><br><span class="line">2021&#x2F;01&#x2F;25  20:11               436 TestNative.h      </span><br><span class="line">2021&#x2F;01&#x2F;25  20:03               201 TestNative.java</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;下面是生成的<code>TestNative.h</code>,不要随意修改。如果java里的方法没变，基本上生成一次就够了。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/* DO NOT EDIT THIS FILE - it is machine generated */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;jni.h&gt;</span></span></span><br><span class="line"><span class="comment">/* Header for class TestNative */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _Included_TestNative</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _Included_TestNative</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> &#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Class:     TestNative</span></span><br><span class="line"><span class="comment"> * Method:    getYouHeart</span></span><br><span class="line"><span class="comment"> * Signature: (Ljava/lang/String;)Ljava/lang/String;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">JNIEXPORT jstring JNICALL Java_TestNative_getYouHeart</span><br><span class="line">  (JNIEnv *, jclass, jstring);</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __cplusplus</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="三、编写-c文件"><a href="#三、编写-c文件" class="headerlink" title="三、编写.c文件"></a>三、编写<code>.c</code>文件</h1><p>&emsp;&emsp;由于我使用指定的路径总是出问题，于是就在编译时指定了。</p>
+<p>&emsp;&emsp;实现相应的方法就可。</p>
+<p>&emsp;&emsp;我的文件名<code>TestNative.c</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//总是出奇怪的问题</span></span><br><span class="line"><span class="comment">//#include &lt;D:/JAVA/8u191/JDK/include/jni.h&gt;</span></span><br><span class="line"><span class="comment">//#include &lt;D:/JAVA/8u191/JDK/include/win32/jni_md.h&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"jni.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"jni_md.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"TestNative.h"</span></span></span><br><span class="line"></span><br><span class="line">JNIEXPORT jstring JNICALL Java_TestNative_getYouHeart</span><br><span class="line">  (JNIEnv* env, jclass obj, jstring msg)&#123;</span><br><span class="line">  	<span class="keyword">const</span> <span class="keyword">char</span>* msg_char = (*env)-&gt;GetStringUTFChars(env, msg, <span class="number">0</span>);</span><br><span class="line">  	<span class="comment">/*在gbk下乱码，在utf8其他地方乱码*/</span></span><br><span class="line">  	<span class="comment">//printf("你说：%s\n", msg_char);</span></span><br><span class="line">  	<span class="keyword">if</span>(<span class="number">0</span> == <span class="built_in">strcmp</span>(msg_char , <span class="string">"我爱你"</span>))&#123;</span><br><span class="line">  		<span class="comment">//printf("%s\n", msg_char);</span></span><br><span class="line">  		<span class="keyword">return</span> (*env)-&gt;NewStringUTF(env, <span class="string">"我知道你的心意，我也爱你"</span>);</span><br><span class="line"></span><br><span class="line">  	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  		<span class="keyword">return</span> (*env)-&gt;NewStringUTF(env, <span class="string">"你可知道我的心意？"</span>);</span><br><span class="line">  	&#125;</span><br><span class="line">  	<span class="comment">//老有问题</span></span><br><span class="line">  	<span class="comment">//(*env)-&gt;ReleaseStringUTFChars(msg,msg_char);</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、编译TestNative-c生成TestNative-dll"><a href="#四、编译TestNative-c生成TestNative-dll" class="headerlink" title="四、编译TestNative.c生成TestNative.dll"></a>四、编译<code>TestNative.c</code>生成<code>TestNative.dll</code></h1><p>&emsp;&emsp;<code>-I</code>后面是头文件是搜索路径，为<code>${JAVA_HOME}</code>下的<code>include</code>和<code>include/win32</code>。</p>
+<p>&emsp;&emsp;<code>-o</code>是指定输出文件名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\桌面</span><br><span class="line">λ gcc -o TestNative.dll -shared TestNative.c -I &quot;D:&#x2F;JAVA&#x2F;8u191&#x2F;JDK&#x2F;include&#x2F;&quot; -I &quot;D:&#x2F;JAVA&#x2F;8u191&#x2F;JDK&#x2F;include&#x2F;win32&#x2F;&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="五、运行-class文件"><a href="#五、运行-class文件" class="headerlink" title="五、运行.class文件"></a>五、运行<code>.class</code>文件</h1><p>&emsp;&emsp;先前最简单的方式，在<code>.c</code>里打印一下。 此时乱码的原因是因为<code>cmder</code>的编码是<code>GBK</code>。用<code>chcp 65001</code>即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">D:\桌面</span><br><span class="line">λ javac TestNative.java</span><br><span class="line"></span><br><span class="line">D:\桌面</span><br><span class="line">λ java TestNative 我爱你</span><br><span class="line">p↑Fk</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;最后运行效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">D:\桌面</span><br><span class="line">λ javac TestNative.java</span><br><span class="line"></span><br><span class="line">D:\桌面</span><br><span class="line">λ javah -jni TestNative</span><br><span class="line">&#x2F;&#x2F;记得编写.c文件</span><br><span class="line">D:\桌面</span><br><span class="line">λ  gcc -o TestNative.dll -shared TestNative.c -I &quot;D:&#x2F; JAVA&#x2F;8u191&#x2F;JDK&#x2F;include&#x2F;&quot; -I &quot;D:&#x2F;JAVA&#x2F;8u191&#x2F;JDK&#x2F;include&#x2F;win32&#x2F;&quot;</span><br><span class="line"></span><br><span class="line">D:\桌面</span><br><span class="line">λ dir | find &quot;TestNative&quot;</span><br><span class="line">2021&#x2F;01&#x2F;26  11:31               813 TestNative.c</span><br><span class="line">2021&#x2F;01&#x2F;26  11:32               571 TestNative.class</span><br><span class="line">2021&#x2F;01&#x2F;26  11:32            48,029 TestNative.dll</span><br><span class="line">2021&#x2F;01&#x2F;25  21:54               456 TestNative.h</span><br><span class="line">2021&#x2F;01&#x2F;26  10:16               284 TestNative.java</span><br><span class="line"></span><br><span class="line">D:\桌面</span><br><span class="line">λ java TestNative 你爱我吗？</span><br><span class="line">你可知道我的心意？</span><br><span class="line"></span><br><span class="line">D:\桌面</span><br><span class="line">λ java TestNative 我爱你</span><br><span class="line">我知道你的心意，我也爱你</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="我想说"><a href="#我想说" class="headerlink" title="我想说"></a>我想说</h1><p>&emsp;&emsp;很就以前就知道有jni这个东西，当时好像是为了完成一个什么东西。这个东西用java写的话，我不会。如果用c写的话，我还可以挣扎一下。至于为什么放弃了，是因为当时看到jni的写法，感觉不会写。毕竟当时c学得不多和java理解得不多，虽然现在c也忘得差不多了。</p>
+<p>&emsp;&emsp;对于dll——动态链接库，我是在一个pvz的外挂视频里了解到的。我当时应该是很想用c来写外挂。比较没读大学前就通过套路来破解安卓游戏。我现在还记得一些关键的东西，比如<code>onCreate</code>、<code>6000</code>。现在想要破解这些东西，要按照套路来已经很困难了。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://blog.csdn.net/nimeghbia/article/details/70174269" target="_blank" rel="noopener">jstring</a></li>
+<li><a href="https://blog.csdn.net/qq_37635373/article/details/101352301" target="_blank" rel="noopener">怎样自己实现一个native本地方法呢？</a></li>
+<li><a href="https://www.cnblogs.com/szlbm/p/5504603.html" target="_blank" rel="noopener">自己实现一个Native方法的调用</a></li>
+<li><a href="https://blog.csdn.net/torane/article/details/102981221" target="_blank" rel="noopener">[Java] 用C编写你自己的native方法</a></li>
+<li><a href="https://www.cnblogs.com/alan666/p/8311984.html" target="_blank" rel="noopener">gcc -I -L -l区别</a></li>
+<li><a href="https://www.cnblogs.com/siqi/p/4798444.html" target="_blank" rel="noopener">linux gcc头文件搜索路径</a></li>
+<li><a href="https://blog.csdn.net/u011598031/article/details/85051242" target="_blank" rel="noopener">JNI基础之JNIEnv，jclass和jobject</a></li>
+<li><a href="https://blog.csdn.net/a_thousand_miles/article/details/81125017" target="_blank" rel="noopener">02.JNIEnv和jclass,数据类型,访问java属性方法</a></li>
+<li><a href="https://blog.csdn.net/xlxxcc/article/details/51106721" target="_blank" rel="noopener">JNI中string 、 char* 和 jstring 两种转换</a></li>
+<li><a href="https://blog.csdn.net/jacke121/article/details/61419590" target="_blank" rel="noopener">char* 和jstring转换</a></li>
+<li><a href="https://cloud.tencent.com/developer/ask/49921" target="_blank" rel="noopener">如何将jstring转换为char *？</a></li>
+<li><a href="https://bbs.csdn.net/topics/320220343" target="_blank" rel="noopener">char类型与jstring类型的转换</a></li>
+<li><a href="https://blog.csdn.net/xiuye2015/article/details/90112905" target="_blank" rel="noopener">Java JNI 创建字符串对象</a></li>
+<li><a href="https://bbs.csdn.net/topics/390165867" target="_blank" rel="noopener">JNI中如何把char * 转化为jstring</a></li>
+<li><a href="https://bbs.csdn.net/topics/390351378" target="_blank" rel="noopener">JNI char*转jstring乱码问题</a></li>
+<li><a href="https://blog.csdn.net/yishifu/article/details/52180448" target="_blank" rel="noopener">JNI官方中文资料</a></li>
+<li><a href="https://blog.csdn.net/yaosongyuan/article/details/9120013" target="_blank" rel="noopener">java编译UTF-8文件乱码的问题</a></li>
+<li><a href="https://www.cnblogs.com/CodeWorkerLiMing/p/12503166.html" target="_blank" rel="noopener">GCC编译环境中文乱码解决方案</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>打赏</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="小可爱 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="小可爱 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+          <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/">自己实现一个native方法</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 小可爱 的个人博客">小可爱</a></p>
+  <p><span>发布时间:</span>2021年01月25日 - 20:08</p>
+  <p><span>最后更新:</span>2021年01月26日 - 12:17</p>
+  <p><span>原始链接:</span><a href="/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/" title="自己实现一个native方法">https://pengxiandyou.github.io/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://pengxiandyou.github.io/2021/01/25/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnative%E6%96%B9%E6%B3%95/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+
+      
+</div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+              <a href="/tags/c/" rel="tag"><i class="fa fa-tag"></i> c</a>
+              <a href="/tags/jni/" rel="tag"><i class="fa fa-tag"></i> jni</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/15/%E5%9B%9E%E5%BD%A2%E6%95%B0%E7%BB%84%E7%9A%84%E8%87%AA%E6%88%91%E8%A7%A3%E7%AD%94/" rel="prev" title="回形数组的自我解答">
+      <i class="fa fa-chevron-left"></i> 回形数组的自我解答
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、编写TestNative-java并编译"><span class="nav-number">2.</span> <span class="nav-text">一、编写TestNative.java并编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、使用javah生成-h文件"><span class="nav-number">3.</span> <span class="nav-text">二、使用javah生成.h文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、编写-c文件"><span class="nav-number">4.</span> <span class="nav-text">三、编写.c文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、编译TestNative-c生成TestNative-dll"><span class="nav-number">5.</span> <span class="nav-text">四、编译TestNative.c生成TestNative.dll</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、运行-class文件"><span class="nav-number">6.</span> <span class="nav-text">五、运行.class文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我想说"><span class="nav-number">7.</span> <span class="nav-text">我想说</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小可爱"
+      src="/images/%E5%A4%B4%E5%83%8F.jpg">
+  <p class="site-author-name" itemprop="name">小可爱</p>
+  <div class="site-description" itemprop="description">正在读大学，要毕业了</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/pengxiandyou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.coolapk.com/u/1385475" title="酷安 → https:&#x2F;&#x2F;www.coolapk.com&#x2F;u&#x2F;1385475" rel="noopener" target="_blank"><i class="fa fa-fw fa-"></i>酷安</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/20837528" title="B站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;20837528" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>B站</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/pengxiandyou" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fa fa-fw fa-gitee"></i>Gitee</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.baidu.com/" title="http:&#x2F;&#x2F;www.baidu.com" rel="noopener" target="_blank">百度</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.52pojie.cn/" title="https:&#x2F;&#x2F;www.52pojie.cn&#x2F;" rel="noopener" target="_blank">吾爱</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.zhihu.com/" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;" rel="noopener" target="_blank">知乎</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.jianshu.com/" title="https:&#x2F;&#x2F;www.jianshu.com&#x2F;" rel="noopener" target="_blank">简书</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://pengxiandyou.gitee.io/" title="https:&#x2F;&#x2F;pengxiandyou.gitee.io" rel="noopener" target="_blank">码云io</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://pengxiandyou.gitee.io/src/game/t-rex-runner/" title="https:&#x2F;&#x2F;pengxiandyou.gitee.io&#x2F;src&#x2F;game&#x2F;t-rex-runner&#x2F;" rel="noopener" target="_blank">小恐龙游戏</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://39.101.186.72/" title="http:&#x2F;&#x2F;39.101.186.72&#x2F;" rel="noopener" target="_blank">贴吧签到情况</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+            <div>
+          <i class="fa fa-search fa-fw"></i>
+      <input type="text" value="B:我爱你" name="wd" id="kw1" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw1').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
+      </div>
+
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小可爱</span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("07/15/2019 13:14:21");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+  <script src='https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+        
+<div class="busuanzi-count">
+  <!--<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
+  <script async src="https://pengxiandyou.gitee.io/src/js/busuanzi-my.js"></script>
+    <span  >
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span >
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : 'NV0UdyQgG4YmNrKza8PMBPfg-MdYXbMMI',
+      appKey     : 'nlNzn8j5jFal7PfxtNld4Iwk',
+      placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!支持markdown呢",
+      avatar     : 'monsterid',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+   <!-- 点击出现社会主义彩色文字 -->
+ <!--<script type="text/javascript" src="/js/shzyhxjzg.js"></script>
+--><!-- 点击动画 --><!--
+ <script type="text/javascript" src="/js/love.js"></script>
+-->
+<!-- 点击出现社会主义彩色文字 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script><!-- 点击出现爱心 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+<!-- 天气 -->
+<script type="text/javascript">
+WIDGET = {FID: 'apV00Hp0nY'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+<!-- 动态标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+            "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+<!-- 折叠 --><!-- 
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script> -->
+<!-- 背景 -->
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
