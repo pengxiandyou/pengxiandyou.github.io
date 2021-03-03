@@ -3203,4 +3203,43 @@ C-->|3|F["fa:fa-car Car"]</pre>
         <tag>jdk</tag>
       </tags>
   </entry>
+  <entry>
+    <title>关于我想编译JDK但强迫症和知识不允许这件事</title>
+    <url>/2021/03/03/%E5%85%B3%E4%BA%8E%E6%88%91%E6%83%B3%E7%BC%96%E8%AF%91JDK%E4%BD%86%E5%BC%BA%E8%BF%AB%E7%97%87%E5%92%8C%E7%9F%A5%E8%AF%86%E4%B8%8D%E5%85%81%E8%AE%B8%E8%BF%99%E4%BB%B6%E4%BA%8B/</url>
+    <content><![CDATA[<h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><p>&emsp;&emsp;很久以前看过程序羊（自己去B站找）用mac编译过JDK。我是windows，不方便，虽然可以用虚拟机安装一个ubuntu（我挺喜欢kali的，但是我没学，虽然知道一些攻击，因为不是很想像以前一样当脚本小子），但我就想在windows上搞，并且不想安装那些软件——用一次就卸载。我就想用我电脑现有的完成，所以一直拖。</p>
+<p>&emsp;&emsp;算上这次我一共编译过两次工具，第一次是在PVZ里面。作者提供了一个外挂的源代码，要我们自己编译。还有就是这一次。首先去lua的官网下载源代码，不想编译就多看看下载其他的。</p>
+<p>&emsp;&emsp;首先是解压，由于是在windows上，所以可以尝试多次解压出来。我用7z试过。不过我还是在Cmder里用<code>tar -zxvf lua-5.3.4.tar.gz -C lua</code>，lua这个文件夹要存在。解压后终端进入到src文件夹下，执行<code>mingw32-make.exe mingw</code>。其中<code>mingw32-make.exe</code>是因为mingw的<code>make</code>是这个，<code>mingw</code>在官方的直到文档里提到过，自己看。</p>
+<blockquote>
+<P>
+     Do "<kbd>make</kbd>" and see if your platform is listed.
+ The platforms currently supported are:
+</P>
+<p class="display" >
+   <font color=red>aix bsd c89 freebsd generic linux macosx mingw posix solaris</font>
+</p>
+<p>
+ If your platform is listed, just do "<kbd>make xxx</kbd>", where xxx
+ is your platform name.
+</p><p>
+ If your platform is not listed, try the closest one or posix, generic,
+ c89, in this order.
+</p><p>
+</p>
+</blockquote>
+<p>&emsp;&emsp;测试也简单，在src文件下，进入终端输入<code>lua</code>，执行<code>print &quot;hello world&quot;</code>，没问题还可以建一个lua文件<code>echo print &quot;Hello World&quot; &gt;&gt; test.lua</code>，然后执行<code>dofile(&quot;test.lua&quot;)</code>。还可以添加环境变量，这样在哪里都可以执行了，比如我在<code>D:\桌面\github--page</code>下，我可以在lua里执行<code>dofile(&quot;../编程/lua/lua-5.3.4/src/test.lua&quot;)</code>，再比如我在桌面，我可以<code>dofile(&quot;./编程/lua/lua-5.3.4/src/test.lua&quot;)</code>。</p>
+<p>&emsp;&emsp;完事。但是编译JDk可不简单。假期末尾其实还简单了解了netcat，这东西好玩，功能挺强大的，东西不是很多，虽然又忘的差不多了。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://www.cnblogs.com/Allen-rg/p/11454911.html" target="_blank" rel="noopener">win10 ‘make’ 不是内部或外部命令</a></li>
+<li><a href="https://blog.csdn.net/weixin_38391755/article/details/80380786" target="_blank" rel="noopener">Makefile教程（绝对经典，所有问题看这一篇足够了）</a>(太长了，没看多少)</li>
+<li><a href="https://blog.csdn.net/quicmous/article/details/102987619" target="_blank" rel="noopener">lua 源代码初次编译</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>这算教程吧</category>
+      </categories>
+      <tags>
+        <tag>lua</tag>
+        <tag>mingw</tag>
+      </tags>
+  </entry>
 </search>
