@@ -186,12 +186,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">25</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">26</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">38</span></a>
 
   </li>
         <li class="menu-item menu-item-sitemap">
@@ -271,6 +271,114 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pengxiandyou.github.io/2020/07/23/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B%E5%A4%A7%E8%87%B4%E8%AE%A1%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="小可爱">
+      <meta itemprop="description" content="正在读大学，要毕业了">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="魔装少男的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/23/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B%E5%A4%A7%E8%87%B4%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">大数据技能竞赛搭建流程大致计划v2.1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-23 10:39:02 / 修改时间：19:09:01" itemprop="dateCreated datePublished" datetime="2020-07-23T10:39:02+08:00">2020-07-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a>
+                </span>
+            </span>
+          <br/>
+
+<span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+<span title="post.wordcount">
+    4.2k 字
+</span> | 
+<span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+<span title="post.min2read">
+    21 分钟
+</span>
+<br/>
+          
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/23/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B%E5%A4%A7%E8%87%B4%E8%AE%A1%E5%88%92/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/23/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B%E5%A4%A7%E8%87%B4%E8%AE%A1%E5%88%92/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>大致的搭建计划。测试建议zookeeper排在后面，先搭hadoop，分别测试案例、添加结点、测试案例、删除结点、测试案例。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/23/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B%E5%A4%A7%E8%87%B4%E8%AE%A1%E5%88%92/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -1254,118 +1362,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pengxiandyou.github.io/2019/10/24/%E6%8B%93%E5%B1%95%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="小可爱">
-      <meta itemprop="description" content="正在读大学，要毕业了">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="魔装少男的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/24/%E6%8B%93%E5%B1%95%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">拓展简单笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-10-24 20:16:19 / 修改时间：20:31:52" itemprop="dateCreated datePublished" datetime="2019-10-24T20:16:19+08:00">2019-10-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF/%E6%8B%93%E5%B1%95/" itemprop="url" rel="index"><span itemprop="name">拓展</span></a>
-                </span>
-            </span>
-          <br/>
-
-<span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-<span title="post.wordcount">
-    489 字
-</span> | 
-<span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-<span title="post.min2read">
-    2 分钟
-</span>
-<br/>
-          
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/10/24/%E6%8B%93%E5%B1%95%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/10/24/%E6%8B%93%E5%B1%95%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>盒子模型 标准文档流 div布局</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/10/24/%E6%8B%93%E5%B1%95%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1437,14 +1433,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
