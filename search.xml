@@ -4495,6 +4495,13 @@ a2-->a3</pre>
 </blockquote>
 <p>&emsp;&emsp;假如我将我的系统盘里的东西（C盘）复制出来，完整保存注册表和环境变量，然后格了（低格还是什么格）我的固态，在里装上我的系统，最后恢复注册表和环境变量。这样是否可以做到和原先一样，所有软件正常运行，环境也是正确的，安装过的软件也可以在卸载管理里找到？</p>
 <p>&emsp;&emsp;注册表里包含环境变量。</p>
+<p>&emsp;&emsp;我始终觉得解决这件事理论上应该是一个不难的事，一种直觉。第一步，首先是解决开机见到系统选择界面。于是，我用bcdedit复制了一个，同时，我直接打bcdedit命令看到，看到了pe的path。于是去pe里把UEFI启动项里复制的<code>Windows Boot Manager</code>再次修改了，换成了path位置里的efi文件。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210720200755msconfig%E5%92%8Cbcdedit.PNG" alt="2021-07-20_190200" title="两者不一样"></p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210720200848%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%87%8C%E7%9A%84%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194107"></p>
+<p>&emsp;&emsp;重启，见到了系统选择界面。点击pe，不是进的pe，而是像重新启动，再次进入系统选择界面。very good。有戏。于是我重新进入win10，安装微pe。我发现启动类型变成UEFI了，非常开心。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210720201247UEFI%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194329"></p>
+<p>&emsp;&emsp;重新安装后，启动，进入pe，ok，启动，进入win10，ok，删除复制的win10，启动，进入pe，ok，启动，进入win10，ok。</p>
+<p>&emsp;&emsp;由于之前重新买了u盘，因此SD卡的利用就换了，那就是win to go 和kali to go结合在一起。生命不息，折腾不止。最后就只剩文中提到的问题了。</p>
 ]]></content>
       <categories>
         <category>记录</category>
