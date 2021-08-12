@@ -4515,4 +4515,91 @@ a2-->a3</pre>
         <tag>u盘</tag>
       </tags>
   </entry>
+  <entry>
+    <title>异形工厂（shapezio）简单制造工厂</title>
+    <url>/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/</url>
+    <content><![CDATA[<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" one-link-mark="yes"><img src="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" alt="shapez.io Logo" data-canonical-src="https://i.imgur.com/Y5Z2iqQ.png" style="max-width:100%;"></a></p>
+
+<p>&emsp;&emsp;你还为每过一关就要再造一个生产线而感到烦恼吗？快来建造一个工厂吧。我这个工厂简单易懂，甚至可以不用电路，仅需一点点操作。</p>
+<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><p>&emsp;&emsp;为了能做这个工厂，你必须要解锁图片中的设施。不用每一个都完全解锁，每种有一个就行。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811224510%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A6%81%E6%B1%82.PNG" alt="要求"></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>&emsp;&emsp;我们制作工厂是为了尽可能解放双手的操作，因此在设计之初暂不考虑效率，先解决有无的问题。速度不行的话还可以堆数量。虽然这不是一个完全自动化的工厂，但慢慢改嘛。</p>
+<p>&emsp;&emsp;由于暂时没有电路加持，工厂只能造简单的图形。类似于<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811234108%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9C%BA1.png" alt="机2_1">)和<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811234139%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82.png" alt="机1_1">，这种图形暂时只能单独造机器。自动化的方式还没思考出来。</p>
+<style>
+    img[alt="机1_1"]
+    {
+        display:inline-block;
+        margin: 0;
+    }
+     img[alt="机2_1"]
+    {
+        display:inline-block;
+        margin: 0;
+    }
+</style>
+
+<p>&emsp;&emsp;该教程是根据关卡徐徐渐进的，未解锁的物品如果能被替换，就会先被替换，解锁后更改。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>&emsp;&emsp;最终思路：从底层出发，对每一层进行分解。首先将原材料染色，然后进行旋转，接着根据产出材料的种类选择合成方式（二、三、四，一直接走旁边产物通道）。合成出每一层后再根据层数进行叠加。</p>
+<h2 id="开搓"><a href="#开搓" class="headerlink" title="开搓"></a>开搓</h2><p>&emsp;&emsp;先看一个整体图，好有一个直观的感受。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811234757%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B7%A5%E5%8E%82.PNG" alt="全 - 副本"></p>
+<p>&emsp;&emsp;在异形工厂中，所有图形都可以分解为一下四中图形的组合，我们将他们作为原材料输入到工厂中。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812000843%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99.PNG" alt="原材料"></p>
+<p>&emsp;&emsp;可以在地图上找到相应的图形进行开采，或者单独为每种材料供应。如果采用图中挖掘包含所有材料的图形的话，要注意安装垃圾桶防止堵塞。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812001517%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99%E7%94%9F%E4%BA%A7.PNG" alt="原材料生成"></p>
+<p>&emsp;&emsp;前期，我刚可以开始造工厂时，关卡要求都是两层图形。因此我们先考虑两层。不过在考虑两层前，我们先考虑一层。我们将图形分为四个象限。先进行染色在进行旋转。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812002147%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90.PNG" alt="一个象限"></p>
+<p>&emsp;&emsp;这个工厂的一部分属于染色旋转区。由于没有颜料供应，染色器处于阻塞状态，没有产物输出。对于无色图形，我们通过控制传送带的断连来输出产物。在输出位置可以看到，我做了相应的旋转。这是为了旋转到相应的象限。</p>
+<p>&emsp;&emsp;相信你从上图中看出来，现阶段的工厂还需要我们操作，不过已经不用频繁造生成线了。这就像工厂生成物品一样，需要操作一些机器。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812002917%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D.PNG" alt="基础颜色分配器"></p>
+<p>&emsp;&emsp;这是我们的颜料分配器。它从下方输入7种颜料，从右侧输出颜料。可以看到，图中有4排传送带，它依次对应颜色的材料。将两者结合就可以得到下面这张图。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812003527%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D%E4%BA%BA%E6%95%B0.PNG" alt="颜色和象限"></p>
+<p>&emsp;&emsp;要使用它首先要人为确定该层该象限的图形和颜色。确定好后，选择对应材料的传送带，顺着传送带回走。在颜料分配区，选择对应的颜色，用传送带连接上平衡器。（在使用过程中，我有一种以前那种一次性烧录芯片烧录程序的感觉，虽然我没操作过，但我看过。）</p>
+<p>&emsp;&emsp;在这一个区域，总的来说，染色的话就用传送带连接对应平衡器。如果是无色的话，就断开所有颜色分配的传送带连接，连接上无色分配的传送带（在输出位置）。在关卡结束后，要断开所有自己手动连接添上的传送带。</p>
+<p>&emsp;&emsp;相信你已经造好了一个象限所需要的装置（上图），接下来，将其复制，拢共制作4份共4个象限，记得修改输出位置的旋转角度。制作好的效果类似于下图。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812005816%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83.PNG" alt="一个单元"></p>
+<p>&emsp;&emsp;仔细观察上图，你会发现4个红色的地方。这个地方是垃圾桶，因为我不是单独供应原材料，如果不销毁多余的材料就无法剪出需要的材料。后期解锁过滤器后可以修改并保存大量原材料。</p>
+<p>&emsp;&emsp;将上面的装置复制一份就可以处理两层图形了，再复制两份就可以最多处理四层图形了。效果类似于下图。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812010756%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%824%E5%8D%95%E5%85%83.PNG" alt="4层"></p>
+<p>&emsp;&emsp;接下来就是颜料供应了。我的供应是这样的。这个随你造了，反正都差不多。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812011016%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E4%BE%9B%E5%BA%94.PNG" alt="颜色"></p>
+<p>&emsp;&emsp;颜料齐全后，就可以制造单层图形了。这里面要考虑只有一个象限、只有两个象限、只有三个象限、四个象限都有。因为当前无法自动化，先手工连接对应的合成模块。我的合成模块如下图。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812011635%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A8%A1%E5%9D%97.PNG" alt="合成模块"></p>
+<p>&emsp;&emsp;现在可以制造出每一层了，接下来就是层与层之间的叠加了。要考虑那个在下，那个在上。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812012432%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8F%A0%E5%8A%A0.PNG" alt="叠加区域"></p>
+<p>&emsp;&emsp;叠加层数也是通过传送带的断连来控制。</p>
+<p>&emsp;&emsp;到此时，一个需要人为操作而不要造的工厂就诞生了。它的使用方式是，分析每层每个象限是什么，要什么颜色。连接上传送带输出染色后的材料。接着根据每层的情况选择合适数量的合成模块制造出每一层。最后根据层数连接对应传送带。最最后通过该关卡后，要断开你所有连接的传送带。</p>
+<p>&emsp;&emsp;到这里，教程就可以算做是结束了。针对后期不在要求数量而是要求速度（产量），可以先挂机存储，合适时机在释放。</p>
+<hr color="pink">
+
+<p>&emsp;&emsp;随着关卡的解锁，新的装置解锁后，可以修改原设置，使之更方便。</p>
+<h2 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h2><p>&emsp;&emsp;在解锁过滤器后，原先通过拆掉或连上传送带的动作可以利用过滤器和开关来简化动作，这样就只需要左击开关就可以控制流向了。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812170124%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%97%A0%E8%89%B2%E8%BF%87%E6%BB%A4%E5%99%A8.PNG" alt="无色开关"></p>
+<p>&emsp;&emsp;当然在颜色分配器上，也可以修改，使之更容易操作，减少右键带来的误操作。有点久了，忘了合并器是在什么时候解锁的了，如何你没有解锁，也可以用平衡器替换合并器进行改造。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812170535%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E8%89%B2%E5%BC%80%E5%85%B3.PNG" alt="开关颜色分配"></p>
+<p>&emsp;&emsp;如果想直观显示颜色，可以像上面接个容器或者像下面一样接上显示器。</p>
+<p><img src="https://i.loli.net/2021/08/12/fXtQZw8u1zslRd6.png" alt="显示颜色"></p>
+<p>&emsp;&emsp;有了过滤器和容器，就可以在原材料制作处进行改进了。这样就不用担心原材料消耗不同而导致阻塞必须添加垃圾桶的境况。</p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812174618%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A7%A3%E5%86%B3%E9%98%BB%E5%A1%9E.PNG" alt="解决阻塞"></p>
+<h2 id="某某生产教程"><a href="#某某生产教程" class="headerlink" title="某某生产教程"></a>某某生产教程</h2><p>&emsp;&emsp;整体思路：通过叠加缩小图形，再通过剪切的方式将其保留在需要的大图形上。</p>
+<h3 id="CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw"><a href="#CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw" class="headerlink" title="CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw"></a>CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw</h3><p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812174910%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="原型机1"></p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812175112%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%9F%E6%88%90%E6%9C%BA.PNG" alt="单个生成机1"></p>
+<p><img src="https://i.loli.net/2021/08/12/1JYxCVpy8eHhSWE.png" alt="电路"></p>
+<h3 id="RuCw–Cw-—-Ru–"><a href="#RuCw–Cw-—-Ru–" class="headerlink" title="RuCw–Cw:—-Ru–"></a>RuCw–Cw:—-Ru–</h3><p><img src="https://i.loli.net/2021/08/12/jh4lHDQENw18qMe.png" alt="&quot;RuCw--Cw:----Ru--&quot;"></p>
+<p>&emsp;&emsp;等待更新</p>
+<h2 id="较高程度自动化"><a href="#较高程度自动化" class="headerlink" title="较高程度自动化"></a>较高程度自动化</h2><p>我目前已经解锁全部设施了，已经在思考了。</p>
+<p><img src="https://tva1.sinaimg.cn/large/006Xzox4ly1gdur6fuq71j306o06oaab.jpg" alt="别催了，虽然每人催"></p>
+<p>等待更新和等待思考</p>
+<h2 id="完全自动化"><a href="#完全自动化" class="headerlink" title="完全自动化"></a>完全自动化</h2><p>包含叠加时恰好无共同象限，导致3层变2层，4层变3层等情况。</p>
+<p>难，应该很难想出来。</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>如果某一层同一材料在不同象限都有使用，那么会由于合成不足，拖慢速度。可以通过提高传送带速度或每一象限单独供应原料。</p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+        <category>教程向</category>
+      </categories>
+      <tags>
+        <tag>异形工厂</tag>
+        <tag>shapezio</tag>
+        <tag>自动化</tag>
+      </tags>
+  </entry>
 </search>
