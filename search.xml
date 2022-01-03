@@ -4599,7 +4599,7 @@ a2-->a3</pre>
 <p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102232342%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E9%94%81%E5%AD%98.PNG" alt="SR锁存"></p>
 <p>&emsp;&emsp;输入一个短脉冲，它就会改变输出信号。然而，这种SR锁存会在短脉冲来的时候将输出变成高频，但影响不大。当然开和关的持续时间不一样，所以可以在不同状态下，让物品在不同传送带上走。同时也可以加一个开关来控制是否启用计时。</p>
 <p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102232955%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E5%BC%80%E5%85%B3.PNG" alt="状态切换抖动"></p>
-<p><img src="D:%5C%E6%A1%8C%E9%9D%A2%5C2021-08-23_212643.PNG" alt="2021-08-23_212643"></p>
+<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220103002820%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E5%AE%9E%E8%A3%85.PNG" alt="2021-08-23_212643"></p>
 <p>&emsp;&emsp;到这，自动化基本就完成了，剩下的基本上是优化和改进了。</p>
 <h2 id="完全自动化"><a href="#完全自动化" class="headerlink" title="完全自动化"></a>完全自动化</h2><p>包含叠加时恰好无共同象限，导致3层变2层，4层变3层等情况。</p>
 <p>难，应该很难想出来。</p>
