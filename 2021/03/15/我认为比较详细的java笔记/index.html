@@ -76,9 +76,10 @@
 <meta property="og:image" content="https://i.loli.net/2021/03/15/bDOEJcpZA8M2Yzy.png">
 <meta property="og:image" content="https://i.loli.net/2021/03/16/ImZGgzUxphQY3CA.png">
 <meta property="og:image" content="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210620163503.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/5f3c8c3f68f040849bfed639ae4c40bf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNDY0OTc2NzU=,size_20,color_FFFFFF,t_70,g_se,x_16">
 <meta property="og:image" content="https://i.loli.net/2021/03/15/3IVgCh19enx2ULm.png">
 <meta property="article:published_time" content="2021-03-15T12:20:23.000Z">
-<meta property="article:modified_time" content="2021-12-04T11:28:28.512Z">
+<meta property="article:modified_time" content="2022-01-27T12:43:37.433Z">
 <meta property="article:author" content="小可爱">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -295,7 +296,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
       <meta itemprop="name" content="小可爱">
-      <meta itemprop="description" content="正在读大学，要毕业了">
+      <meta itemprop="description" content="已经毕业了，现在是西部计划志愿者">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -320,7 +321,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-04 19:28:28" itemprop="dateModified" datetime="2021-12-04T19:28:28+08:00">2021-12-04</time>
+                <time title="修改时间：2022-01-27 20:43:37" itemprop="dateModified" datetime="2022-01-27T20:43:37+08:00">2022-01-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -341,13 +342,13 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
 <span title="post.wordcount">
-    13.9k 字
+    14.5k 字
 </span> | 
 <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
 <span title="post.min2read">
-    58 分钟
+    61 分钟
 </span>
 <br/>
           
@@ -1530,8 +1531,14 @@ a2-->a3</pre>
 
 
 <h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><p>&emsp;&emsp;Spring两大核心：IOC容器：常见方式依赖注入、AOP：原理：动态代理。</p>
-<p>先来静态的</p>
-<pre><code class="java"></code></pre>
+<p>先来静态的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">interface</span>  <span class="title">ClothFactory</span></span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">void</span> <span class="title">produceCloth</span><span class="params">()</span></span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">Class ProxyClothFactory implements ClothFactory&#123;</span><br><span class="line">    privite ClothFactory factory;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ProxyClothFactory</span><span class="params">(ClothFactory factory)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.factory = factory;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">produceCloth</span><span class="params">()</span></span>&#123;</span><br><span class="line">        syso(<span class="string">"代理工厂做一些工作"</span>);</span><br><span class="line">        factory.produceCloth();</span><br><span class="line">        syso(<span class="string">"代理工厂做后续工作"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Class NikeClothFactory implements ClothFactory&#123;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">produceCloth</span><span class="params">()</span></span>&#123;</span><br><span class="line">        syso(<span class="string">"Nike工厂生产运动服"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    ClothFactory nike = <span class="keyword">new</span> NikeClothFactory();</span><br><span class="line">    ClothFactory proxyClothFactory = <span class="keyword">new</span> ProxyClothFactory(nike);</span><br><span class="line">    proxyClothFactory.produceCloth();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>动态的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Human</span></span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">getBelief</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SuperMan</span> <span class="keyword">implements</span> <span class="title">Human</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getBelief</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"I believe I can fly!"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我喜欢吃"</span> + food);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HumanUtil</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"====================通用方法一===================="</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"====================通用方法二===================="</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">要想实现动态代理，需要解决的问题？</span></span><br><span class="line"><span class="comment">问题一：如何根据加载到内存中的被代理类，动态的创建一个代理类及其对象。</span></span><br><span class="line"><span class="comment">问题二：当通过代理类的对象调用方法a时，如何动态的去调用被代理类中的同名方法a。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProxyFactory</span></span>&#123;</span><br><span class="line">    <span class="comment">//调用此方法，返回一个代理类的对象。解决问题一</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title">getProxyInstance</span><span class="params">(Object obj)</span></span>&#123;<span class="comment">//obj:被代理类的对象</span></span><br><span class="line">        MyInvocationHandler handler = <span class="keyword">new</span> MyInvocationHandler();</span><br><span class="line"></span><br><span class="line">        handler.bind(obj);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Proxy.newProxyInstance(obj.getClass().getClassLoader(),obj.getClass().getInterfaces(),handler);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyInvocationHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Object obj;<span class="comment">//需要使用被代理类的对象进行赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bind</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.obj = obj;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//当我们通过代理类的对象，调用方法a时，就会自动的调用如下的方法：invoke()</span></span><br><span class="line">    <span class="comment">//将被代理类要执行的方法a的功能就声明在invoke()中</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        HumanUtil util = <span class="keyword">new</span> HumanUtil();</span><br><span class="line">        util.method1();</span><br><span class="line">        <span class="comment">//method:即为代理类对象调用的方法，此方法也就作为了被代理类对象要调用的方法</span></span><br><span class="line">        <span class="comment">//obj:被代理类的对象</span></span><br><span class="line">        Object returnValue = method.invoke(obj,args);</span><br><span class="line">        util.method2();</span><br><span class="line">        <span class="comment">//上述方法的返回值就作为当前类中的invoke()的返回值。</span></span><br><span class="line">        <span class="keyword">return</span> returnValue;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProxyTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SuperMan superMan = <span class="keyword">new</span> SuperMan();</span><br><span class="line">        <span class="comment">//proxyInstance:代理类的对象</span></span><br><span class="line">        Object proxyInstance = (Human) ProxyFactory.getProxyInstance(superMan);<span class="comment">//可以强转（可以泛型吗？）</span></span><br><span class="line">        Human proxyInstance = （Human）proxyInstance；</span><br><span class="line">        <span class="comment">//当通过代理类对象调用方法时，会自动的调用被代理类中同名的方法</span></span><br><span class="line">        String belief = proxyInstance.getBelief();</span><br><span class="line">        System.out.println(belief);</span><br><span class="line">        proxyInstance.eat(<span class="string">"四川麻辣烫"</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"*****************************"</span>);</span><br><span class="line"></span><br><span class="line">        NikeClothFactory nikeClothFactory = <span class="keyword">new</span> NikeClothFactory();</span><br><span class="line"></span><br><span class="line">        ClothFactory proxyClothFactory = (ClothFactory) ProxyFactory.getProxyInstance(nikeClothFactory);</span><br><span class="line"></span><br><span class="line">        proxyClothFactory.produceCloth();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/5f3c8c3f68f040849bfed639ae4c40bf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNDY0OTc2NzU=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="AOP代理的方法"></p>
+<p>它在<code>HumanUtil</code>有体现。</p>
 <h1 id="1-0-1-2-1-5-1-7-1-8-1-10-1-11"><a href="#1-0-1-2-1-5-1-7-1-8-1-10-1-11" class="headerlink" title="1.0 1.2 1.5 1.7 1.8 1.10 1.11"></a>1.0 1.2 1.5 1.7 1.8 1.10 1.11</h1><p>&emsp;&emsp;1.1的Calendar</p>
 <p>&emsp;&emsp;<code>switch</code>：5.0时的枚举，7.0时的<code>String</code>。</p>
 <p>&emsp;&emsp;5.0可变参数。</p>
@@ -1587,7 +1594,7 @@ a2-->a3</pre>
   <p><span>本文标题:</span><a href="/2021/03/15/%E6%88%91%E8%AE%A4%E4%B8%BA%E6%AF%94%E8%BE%83%E8%AF%A6%E7%BB%86%E7%9A%84java%E7%AC%94%E8%AE%B0/">我认为比较详细的java笔记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 小可爱 的个人博客">小可爱</a></p>
   <p><span>发布时间:</span>2021年03月15日 - 20:20</p>
-  <p><span>最后更新:</span>2021年12月04日 - 19:28</p>
+  <p><span>最后更新:</span>2022年01月27日 - 20:43</p>
   <p><span>原始链接:</span><a href="/2021/03/15/%E6%88%91%E8%AE%A4%E4%B8%BA%E6%AF%94%E8%BE%83%E8%AF%A6%E7%BB%86%E7%9A%84java%E7%AC%94%E8%AE%B0/" title="我认为比较详细的java笔记">https://pengxiandyou.github.io/2021/03/15/%E6%88%91%E8%AE%A4%E4%B8%BA%E6%AF%94%E8%BE%83%E8%AF%A6%E7%BB%86%E7%9A%84java%E7%AC%94%E8%AE%B0/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://pengxiandyou.github.io/2021/03/15/%E6%88%91%E8%AE%A4%E4%B8%BA%E6%AF%94%E8%BE%83%E8%AF%A6%E7%BB%86%E7%9A%84java%E7%AC%94%E8%AE%B0/"  aria-label="复制成功！"></i></span>
   </p>
@@ -1696,7 +1703,7 @@ a2-->a3</pre>
     <img class="site-author-image" itemprop="image" alt="小可爱"
       src="/images/%E5%A4%B4%E5%83%8F.jpg">
   <p class="site-author-name" itemprop="name">小可爱</p>
-  <div class="site-description" itemprop="description">正在读大学，要毕业了</div>
+  <div class="site-description" itemprop="description">已经毕业了，现在是西部计划志愿者</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -1762,7 +1769,7 @@ a2-->a3</pre>
           <a href="https://pengxiandyou.gitee.io/src/game/t-rex-runner/" title="https:&#x2F;&#x2F;pengxiandyou.gitee.io&#x2F;src&#x2F;game&#x2F;t-rex-runner&#x2F;" rel="noopener" target="_blank">小恐龙游戏</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://39.101.186.72/" title="http:&#x2F;&#x2F;39.101.186.72&#x2F;" rel="noopener" target="_blank">贴吧签到情况</a>
+          <a href="http://39.101.186.72/" title="http:&#x2F;&#x2F;39.101.186.72&#x2F;" rel="noopener" target="_blank">贴吧签到情况(已失效)</a>
         </li>
     </ul>
   </div>
@@ -1939,7 +1946,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       notify     : true,
       appId      : 'NV0UdyQgG4YmNrKza8PMBPfg-MdYXbMMI',
       appKey     : 'nlNzn8j5jFal7PfxtNld4Iwk',
-      placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!支持markdown呢",
+      placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!支持markdown呢，还有表情呢！:heart:",
       avatar     : 'monsterid',
       meta       : guest,
       pageSize   : '10' || 10,
@@ -1947,7 +1954,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       lang       : 'zh-cn' || 'zh-cn',
       path       : location.pathname,
       recordIP   : true,
-      serverURLs : ''
+      serverURLs : 'nv0udyqg.api.lncldglobal.com'
     });
   }, window.Valine);
 });
