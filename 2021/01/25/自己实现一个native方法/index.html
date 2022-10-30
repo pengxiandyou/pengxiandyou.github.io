@@ -36,44 +36,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"pengxiandyou.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<script>
-    (function () {
-        if ("") {
-          var c="".split(/[,，]/);
-          var a="".split(/[ ]/);
-          var b=prompt('请输入可能的文章口令');
-          var flag=new Boolean();
-          for ( i=0;i<a.length;i++) {
-          if (b==a[i]) {
-            flag=true;
-          }
-        }
-        //alert(flag);
-            if (false==flag) {
-                alert('本文章没有使用或没有该口令！可在第一篇文章下的评论留下关于我的口令');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io"); 
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io");
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="&amp;emsp;&amp;emsp;有时翻源码的时候，看到那些native方法，总是心痒痒。我翻源码就是为了看看怎么写的，结果看到没有方法体，就很气（虽然去翻c&#x2F;c++的文件应该可以找到）。&amp;emsp;&amp;emsp;今天随便点进了Tread里，看到好多native方法，就想着能不能自己写写。查了几篇教程就着手了。&amp;emsp;&amp;emsp;看的教程里面都是简简单单的打印一下，我偏要写一个带返回值的&amp;emsp;&amp;em">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自己实现一个native方法">

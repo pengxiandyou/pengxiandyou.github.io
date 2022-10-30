@@ -36,44 +36,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"pengxiandyou.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<script>
-    (function () {
-        if ("") {
-          var c="".split(/[,，]/);
-          var a="".split(/[ ]/);
-          var b=prompt('请输入可能的文章口令');
-          var flag=new Boolean();
-          for ( i=0;i<a.length;i++) {
-          if (b==a[i]) {
-            flag=true;
-          }
-        }
-        //alert(flag);
-            if (false==flag) {
-                alert('本文章没有使用或没有该口令！可在第一篇文章下的评论留下关于我的口令');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io"); 
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io");
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="&amp;emsp;&amp;emsp;我笔记本上一个SD卡的卡槽，于是买了一个128G的SD卡。渐渐地渐渐地里面里面存放了一些学习资料。有一天不小心在弹出时点到了格式化，于是我的灵车没了。&amp;emsp;&amp;emsp;毕业那段时间，网吧通宵写论文，把我的U盘串搞没了。我的PE、win10家庭、win10专业、资料都没了。于是昨天为了以防万一以及虚拟机kali要外接网卡的原因，我用读卡器在SD卡里装PE和kali了。虽">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于我想物尽其用，在SD卡上安装kali、pe，甚至多系统，并体验kali安装过程而导致电脑引导不符合预期的这样一件事。——应该是这样">

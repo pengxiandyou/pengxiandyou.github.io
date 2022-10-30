@@ -36,44 +36,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"pengxiandyou.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<script>
-    (function () {
-        if ("") {
-          var c="".split(/[,，]/);
-          var a="".split(/[ ]/);
-          var b=prompt('请输入可能的文章口令');
-          var flag=new Boolean();
-          for ( i=0;i<a.length;i++) {
-          if (b==a[i]) {
-            flag=true;
-          }
-        }
-        //alert(flag);
-            if (false==flag) {
-                alert('本文章没有使用或没有该口令！可在第一篇文章下的评论留下关于我的口令');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io"); 
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io");
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="&amp;emsp;如果想快速了解一点，可以先不看手册、文档和书籍，可以去B站看看视频。这里不推荐【狂神说Java】Git最新教程通俗易懂这个视频。虽然我从这个视频学到一些东西，但我觉得太基础了。&amp;emsp;可以跟着这个教程学习。这个教程比较连贯，可以着手。学完后进这个链接或这个链接(可能不顺畅)，可以像游戏一样进行试炼。&amp;emsp;要查阅资料可以到git-scm.com。这个也可以Git简体中文版">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git学习笔记">

@@ -36,44 +36,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"pengxiandyou.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<script>
-    (function () {
-        if ("") {
-          var c="".split(/[,，]/);
-          var a="".split(/[ ]/);
-          var b=prompt('请输入可能的文章口令');
-          var flag=new Boolean();
-          for ( i=0;i<a.length;i++) {
-          if (b==a[i]) {
-            flag=true;
-          }
-        }
-        //alert(flag);
-            if (false==flag) {
-                alert('本文章没有使用或没有该口令！可在第一篇文章下的评论留下关于我的口令');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io"); 
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
-<script>
-    (function () {
-        if ('') {
-            if (prompt('请输入文章密码') !== '') {
-                alert('密码错误！');
-                if (history.length === 1) {
-                    location.replace("https://pengxiandyou.github.io");
-                } else {
-                    history.back();
-                }
-            }
-        }
-    })();
-</script>
+
   <meta name="description" content="不是纯c 继续使用vs2015编写 一般集合合并 有序集合链式合并 一元稀疏多项式相加 不小心多写了有序集合的顺序合并">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构第一次上机代码">
