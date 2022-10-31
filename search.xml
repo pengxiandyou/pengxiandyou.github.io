@@ -3283,7 +3283,7 @@ C-->|3|F["fa:fa-car Car"]</pre>
 <p>&emsp;&emsp;内存泄露（回收不了）和内存溢出还是会出现。</p>
 <p>&emsp;&emsp;JDK：Java Development Kit、JRE：Java Runtime Environment。有人问过我，当时比较迷糊，因为我常记各种知识的获取渠道，需要就立马去找。</p>
 <p>&emsp;&emsp;JDK = 开发工具集 + JRE；JRE = Java SE标准类库 + JVM；</p>
-<p><img src="https://i.loli.net/2021/03/15/2ySiRewxE5hrMVl.png" alt="java概念图描述.PNG"></p>
+<p><img data-src="https://i.loli.net/2021/03/15/2ySiRewxE5hrMVl.png" alt="java概念图描述.PNG"></p>
 <h1 id="简短的东西"><a href="#简短的东西" class="headerlink" title="简短的东西"></a>简短的东西</h1><p>&emsp;&emsp;<code>true</code>、<code>false</code>、<code>null</code>严格不算关键字，但可以当关键字使用。<code>strictfp</code>、<code>transient</code>、<code>volatile</code>、<code>assert</code>不完全见过。<code>goto</code>、<code>const</code>保留字。</p>
 <table>
 <thead>
@@ -3339,8 +3339,8 @@ C-->|3|F["fa:fa-car Car"]</pre>
 <p>&emsp;&emsp;快排思想：选基数，小的放一边，大的放一边，递归。</p>
 <p>&emsp;&emsp;<code>Arrays</code>一些方法<code>equals</code>、<code>toString</code>、<code>fill</code>、<code>sort</code>、<code>binarySerach</code>。</p>
 <p>&emsp;&emsp;面向过程：POP，面向对象：OOP。</p>
-<p>&emsp;&emsp;<img src="https://pic2.zhimg.com/v2-ce955f2368f5a436f94ad63b45ce73d1_r.jpg" alt="内存解析"></p>
-<p>&emsp;&emsp;<img src="https://img-blog.csdnimg.cn/20201210185926335.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldmVyX2xhdGU=,size_16,color_FFFFFF,t_70" alt="内存解析"></p>
+<p>&emsp;&emsp;<img data-src="https://pic2.zhimg.com/v2-ce955f2368f5a436f94ad63b45ce73d1_r.jpg" alt="内存解析"></p>
+<p>&emsp;&emsp;<img data-src="https://img-blog.csdnimg.cn/20201210185926335.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldmVyX2xhdGU=,size_16,color_FFFFFF,t_70" alt="内存解析"></p>
 <p>以前应该有人问过，忘记该答这个了。</p>
 <p>&emsp;&emsp;重载可以出现自动类型提升<code>(int,int)-&gt;(double,double)</code>。</p>
 <p>&emsp;&emsp;5.0可变参数 ，以前是数组。</p>
@@ -3505,7 +3505,7 @@ C-->|3|F["fa:fa-car Car"]</pre>
 <p>&emsp;&emsp;这种方式方便卖票。</p>
 <p>&emsp;&emsp;优先选择这个，它没有单继承的局限性，可以共享数据。</p>
 <h3 id="分类和周期"><a href="#分类和周期" class="headerlink" title="分类和周期"></a>分类和周期</h3><p>&emsp;&emsp;Java线程分为守护线程和用户线程。在<code>start()</code>调用前调用<code>setDaemon(true)</code>就可用户线程变守护线程。gc就是典型的守护线程。</p>
-<p><img src="https://i.loli.net/2021/03/17/mpaZNjI6rk2yBMQ.png" alt="线程状态转换图.png"></p>
+<p><img data-src="https://i.loli.net/2021/03/17/mpaZNjI6rk2yBMQ.png" alt="线程状态转换图.png"></p>
 <h3 id="线程安全问题"><a href="#线程安全问题" class="headerlink" title="线程安全问题"></a>线程安全问题</h3><p>&emsp;&emsp;利用同步机制</p>
 <h4 id="同步代码块"><a href="#同步代码块" class="headerlink" title="同步代码块"></a>同步代码块</h4><p>&emsp;&emsp;synchronnized、synchronized、synchronizeds、synchronized、synchronized、synchronized</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">synchronized</span>(同步监视器)&#123;</span><br><span class="line">    操作共享数据的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3895,7 +3895,7 @@ TreeMap --实现--> SortedMap;</pre>
 <p>  向Set添加数据，一定要重写hashcode和equals。</p>
 <p>  一致性：相等的对象必须具有相等的散列码。</p>
 <p>  HashSet和HashMap有关系：HashSet里在<code>new HashMap&lt;&gt;()</code>。</p>
-<h4 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h4><p>  <img src="https://i.loli.net/2021/03/15/k72TfynWlw8CP9N.png" alt="LinkedHashSet感觉图.png"></p>
+<h4 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h4><p>  <img data-src="https://i.loli.net/2021/03/15/k72TfynWlw8CP9N.png" alt="LinkedHashSet感觉图.png"></p>
 <p>  频繁遍历比HashSet高。</p>
 <h4 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h4><p>  数据要是相同类对象。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">add <span class="number">123</span> <span class="number">456</span> <span class="string">"AA"</span>  ClassCastException</span><br><span class="line">数字从小到大</span><br></pre></td></tr></table></figure>
@@ -3931,7 +3931,7 @@ TrssSet --对应--> TreeMap</pre>
 <p>  put的是Entry，Entry有key和value，也是无序不可重复，使用Set存储所有Entry。</p>
 <p>  key是无序的，不可重复的，使用Set存储所有的key。</p>
 <p>  value是无序的，可重复的，使用Collection存储所有的value。</p>
-<p><img src="https://i.loli.net/2021/03/15/dDO76np8m3KBPQt.png" alt="Map结构的理解.PNG"></p>
+<p><img data-src="https://i.loli.net/2021/03/15/dDO76np8m3KBPQt.png" alt="Map结构的理解.PNG"></p>
 <p>&emsp;&emsp;针对上图，此时我还没翻源码，但我想到的一种可能：内部类或者内部接口。</p>
 <p>  以HashMap为例，key要<code>equals</code>和<code>hashcode</code>，value要<code>equals</code>。</p>
 <h4 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h4><h5 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h5><ul>
@@ -3939,12 +3939,12 @@ TrssSet --对应--> TreeMap</pre>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">HsahMap map = <span class="keyword">new</span> HashMap();<span class="comment">// 长度是16的一位数组Entry[] table。</span></span><br><span class="line">……</span><br><span class="line">map.put(k,v);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">计算key的hash值，与上数组长度-1得数组位置。</span></span><br><span class="line"><span class="comment">空则加入成功，不空则比较hash值。</span></span><br><span class="line"><span class="comment">不同则加入成功，同则比较equals，true则替换value，false则加入成功。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
 <p>扩容：2倍，复制。</p>
-<p><img src="https://i.loli.net/2021/03/15/4kr1qp69fYxwdy2.png" alt="HashMap存储结构7.PNG"></p>
+<p><img data-src="https://i.loli.net/2021/03/15/4kr1qp69fYxwdy2.png" alt="HashMap存储结构7.PNG"></p>
 </li>
 <li><p>8</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> HashMap();<span class="comment">//没有创建16的数组。数组不加Entry，叫node。</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">首次put创建长度16的数组。当数组的某个位置上的元素以链表形式存在的数据个数＞8，且数组长度＞64时，此时此索引位置上的数据改为使用红黑树存储。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2021/03/15/bDOEJcpZA8M2Yzy.png" alt="HashMap存储结构8.PNG"></p>
+<p><img data-src="https://i.loli.net/2021/03/15/bDOEJcpZA8M2Yzy.png" alt="HashMap存储结构8.PNG"></p>
 </li>
 <li><p>7的码</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(capacity &lt; <span class="number">16</span>)</span><br><span class="line">    capacity &lt;&lt;= <span class="number">1</span>;<span class="comment">//变2的多少幂</span></span><br><span class="line"></span><br><span class="line">hash&amp;(length-<span class="number">1</span>)<span class="comment">//length-1转成二进制数，基本就明白了吧</span></span><br></pre></td></tr></table></figure>
@@ -4212,7 +4212,7 @@ TrssSet --对应--> TreeMap</pre>
 <p>&emsp;&emsp;<code>flush()</code>刷新缓冲区。</p>
 <p>&emsp;&emsp;BufferedReader有<code>String readLine()</code>，到末尾返回null。不包含换行符，可以用<code>newLine()</code>。</p>
 <h3 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h3><p>&emsp;&emsp;字节流和字符流之间的转换。编码解码。</p>
-<p><img src="https://i.loli.net/2021/03/16/ImZGgzUxphQY3CA.png" alt="转换流.PNG"></p>
+<p><img data-src="https://i.loli.net/2021/03/16/ImZGgzUxphQY3CA.png" alt="转换流.PNG"></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>(InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">"233.txt"</span>), <span class="string">"UTF-8"</span>))&#123;</span><br><span class="line">    <span class="keyword">char</span>[] cbuf = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line">    <span class="keyword">while</span>((len = isr.read(cbuf)) != -<span class="number">1</span>)&#123;</span><br><span class="line">        System.out.print(<span class="keyword">new</span> String(cbuf, <span class="number">0</span>, len));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -4366,7 +4366,7 @@ a2-->a3</pre>
 <li>当初始化一个类的时候，如果发现器父类还没有初始化，则需要先触发其父类的初始化。</li>
 <li>虚拟机会保证一个类的<code>&lt;clinit&gt;()</code>方法在多线程环境中被正确加锁和同步。</li>
 </ul>
-<h3 id="ClassLoader"><a href="#ClassLoader" class="headerlink" title="ClassLoader"></a>ClassLoader</h3><p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210620163503.png" alt="image-20210620161845947" title="我自己在ppt里画的"></p>
+<h3 id="ClassLoader"><a href="#ClassLoader" class="headerlink" title="ClassLoader"></a>ClassLoader</h3><p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210620163503.png" alt="image-20210620161845947" title="我自己在ppt里画的"></p>
 <p>&emsp;&emsp;<mark>引导类加载器：</mark>C++编写。JVM自带加载器。负责Java平台核心库，用来装载核心类库。该加载器无法直接获取。</p>
 <p>&emsp;&emsp;<mark>扩展类加载器：</mark>负责jre/lib/ext目录下的jar包或-Djava.ext.dirs指定目录下的jar包载入工作库。</p>
 <p>&emsp;&emsp;<mark>系统类加载器：</mark>负责Java-classpath或-Djava.class.path所指的目录下的类与jar包装入工作，是最常用的类加载器。</p>
@@ -4425,7 +4425,7 @@ a2-->a3</pre>
 <p>动态的</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Human</span></span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">getBelief</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SuperMan</span> <span class="keyword">implements</span> <span class="title">Human</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getBelief</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"I believe I can fly!"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我喜欢吃"</span> + food);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HumanUtil</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"====================通用方法一===================="</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"====================通用方法二===================="</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">要想实现动态代理，需要解决的问题？</span></span><br><span class="line"><span class="comment">问题一：如何根据加载到内存中的被代理类，动态的创建一个代理类及其对象。</span></span><br><span class="line"><span class="comment">问题二：当通过代理类的对象调用方法a时，如何动态的去调用被代理类中的同名方法a。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProxyFactory</span></span>&#123;</span><br><span class="line">    <span class="comment">//调用此方法，返回一个代理类的对象。解决问题一</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title">getProxyInstance</span><span class="params">(Object obj)</span></span>&#123;<span class="comment">//obj:被代理类的对象</span></span><br><span class="line">        MyInvocationHandler handler = <span class="keyword">new</span> MyInvocationHandler();</span><br><span class="line"></span><br><span class="line">        handler.bind(obj);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Proxy.newProxyInstance(obj.getClass().getClassLoader(),obj.getClass().getInterfaces(),handler);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyInvocationHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Object obj;<span class="comment">//需要使用被代理类的对象进行赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bind</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.obj = obj;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//当我们通过代理类的对象，调用方法a时，就会自动的调用如下的方法：invoke()</span></span><br><span class="line">    <span class="comment">//将被代理类要执行的方法a的功能就声明在invoke()中</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        HumanUtil util = <span class="keyword">new</span> HumanUtil();</span><br><span class="line">        util.method1();</span><br><span class="line">        <span class="comment">//method:即为代理类对象调用的方法，此方法也就作为了被代理类对象要调用的方法</span></span><br><span class="line">        <span class="comment">//obj:被代理类的对象</span></span><br><span class="line">        Object returnValue = method.invoke(obj,args);</span><br><span class="line">        util.method2();</span><br><span class="line">        <span class="comment">//上述方法的返回值就作为当前类中的invoke()的返回值。</span></span><br><span class="line">        <span class="keyword">return</span> returnValue;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProxyTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SuperMan superMan = <span class="keyword">new</span> SuperMan();</span><br><span class="line">        <span class="comment">//proxyInstance:代理类的对象</span></span><br><span class="line">        Object proxyInstance = (Human) ProxyFactory.getProxyInstance(superMan);<span class="comment">//可以强转（可以泛型吗？）</span></span><br><span class="line">        Human proxyInstance = （Human）proxyInstance；</span><br><span class="line">        <span class="comment">//当通过代理类对象调用方法时，会自动的调用被代理类中同名的方法</span></span><br><span class="line">        String belief = proxyInstance.getBelief();</span><br><span class="line">        System.out.println(belief);</span><br><span class="line">        proxyInstance.eat(<span class="string">"四川麻辣烫"</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"*****************************"</span>);</span><br><span class="line"></span><br><span class="line">        NikeClothFactory nikeClothFactory = <span class="keyword">new</span> NikeClothFactory();</span><br><span class="line"></span><br><span class="line">        ClothFactory proxyClothFactory = (ClothFactory) ProxyFactory.getProxyInstance(nikeClothFactory);</span><br><span class="line"></span><br><span class="line">        proxyClothFactory.produceCloth();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/5f3c8c3f68f040849bfed639ae4c40bf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNDY0OTc2NzU=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="AOP代理的方法"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/5f3c8c3f68f040849bfed639ae4c40bf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNDY0OTc2NzU=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="AOP代理的方法"></p>
 <p>它在<code>HumanUtil</code>有体现。</p>
 <h1 id="1-0-1-2-1-5-1-7-1-8-1-10-1-11"><a href="#1-0-1-2-1-5-1-7-1-8-1-10-1-11" class="headerlink" title="1.0 1.2 1.5 1.7 1.8 1.10 1.11"></a>1.0 1.2 1.5 1.7 1.8 1.10 1.11</h1><p>&emsp;&emsp;1.1的Calendar</p>
 <p>&emsp;&emsp;<code>switch</code>：5.0时的枚举，7.0时的<code>String</code>。</p>
@@ -4443,7 +4443,7 @@ a2-->a3</pre>
 <p>&emsp;&emsp;8.0<code>::</code></p>
 <p>&emsp;&emsp;我认为7891011有类型推断，只不过有些许差别。</p>
 <h1 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h1><p>这个输入皮肤挺好看的。</p>
-<p><img src="https://i.loli.net/2021/03/15/3IVgCh19enx2ULm.png" alt="输入法皮肤.PNG"></p>
+<p><img data-src="https://i.loli.net/2021/03/15/3IVgCh19enx2ULm.png" alt="输入法皮肤.PNG"></p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -4460,18 +4460,18 @@ a2-->a3</pre>
 <p>&emsp;&emsp;然后因为教程基本就这些，我就想自己尝试。最初想法是先分好区，然后分别安装。结果一格式化就全盘格式化。GG。</p>
 <p>&emsp;&emsp;手机上查查，电脑上查查，找到一个工具——YUMI。这个工具好，比较傻瓜。但还是失败了。怎么失败的忘了，反正就是失败了。</p>
 <p>&emsp;&emsp;上厕所的时候，我有发现了一个工具。这个工具堪称神器，简直就是我这种人的福音。这个工具就是ventoy。第一次失败是因为分区的问题，当时没有预留空间，在kali安装分区后就失败了。第二次就搞好了。这个工具对我来说，使用那些不用安装的iso真的很方便。</p>
-<p>&emsp;&emsp;kali安装过程中为了搞清楚要有哪些分区的照片。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713195307%E5%A4%A7%E8%87%B4%E5%88%86%E5%8C%BA.jpg" alt="大致分区" title="要有什么分区"></p>
-<p>&emsp;&emsp;最后启动成功的画面照片。我当时超高兴。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713195510kali2021%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.jpg" alt="kali安装成功" title="启动成功"></p>
-<p>&emsp;&emsp;当然啦，为了确认真的成功了还要方法测试。初步测试还是很成功的，只要拔掉插上再测试一遍就可以的。但是出现想不到的画面了，后来也出现的几次应该都是同一个界面，但还是有点区别。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713200025grub%E7%95%8C%E9%9D%A2.jpg" alt="我不喜欢的界面" title="GRUB"></p>
+<p>&emsp;&emsp;kali安装过程中为了搞清楚要有哪些分区的照片。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713195307%E5%A4%A7%E8%87%B4%E5%88%86%E5%8C%BA.jpg" alt="大致分区" title="要有什么分区"></p>
+<p>&emsp;&emsp;最后启动成功的画面照片。我当时超高兴。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713195510kali2021%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.jpg" alt="kali安装成功" title="启动成功"></p>
+<p>&emsp;&emsp;当然啦，为了确认真的成功了还要方法测试。初步测试还是很成功的，只要拔掉插上再测试一遍就可以的。但是出现想不到的画面了，后来也出现的几次应该都是同一个界面，但还是有点区别。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713200025grub%E7%95%8C%E9%9D%A2.jpg" alt="我不喜欢的界面" title="GRUB"></p>
 <p>&emsp;&emsp;找到的教程里有提到在里不停的找，但我没找到。</p>
 <p>&emsp;&emsp;但我再次用读卡器插上SD卡后，有可以进到kali的引导界面（应该是）。这个界面里有<code>Windows Boot Manager</code>和    <code>system setup</code>，我当时还感叹，挺智能的，不错。结果后来就感觉不对了。虽然可以通过<code>Windows Boot Manager</code>到达我以前双系统的选择界面（应该是UEFI的引导吧）。而且都可以成功进入。因此就是不停的进入两个PE、win10、kali和插拔。最后在PE的工具里删除了一些UEFI BOIS启动项。因为通过观察，我感觉有多个引导在起作用。如过没猜错，应该是先启动到kali的，再根据选项启动我以前笔记本启动项。至于为什么敢删，是因为我之前机械硬盘坏了，用过PE，再加上观察类别，还有保存呢。删除后，拔掉SD卡也可以正常进入系统了，SD卡里的PE也可以启动。至于kali没关心了，因为以后肯定重新安装。就算要启动也可以恢复启动项来启动。</p>
 <p>&emsp;&emsp;本以为皆大欢喜了，笔记本本身安装的PE没用了，重启也没有系统选择界面，直接就进系统了。通过设置里的高级启动，又可以见到选择界面，但是表面上是PE，但进入后仍是win10。反复进SD卡里的PE检查，想着可能引导坏了，尝试过修复引导，添加过启动项，重新安装过PE都没效果（我又想到应该方法，我观察过efi文件的位置，查阅微PE的资料应该可以通过添加启动项试试。）。最后还发现了两个问题。希望第二个问题是自欺欺人。</p>
 <p>&emsp;&emsp;BOIS变了，两个选项不能选，还有一些选项没有了，十分简陋，就连更改启动顺序的也不见了。网络上常见的修改也找不到。</p>
-<p>&emsp;&emsp;另外一个就是我尝试再安装PE时发现的。我认为应该是UEFI的。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713201149%E5%90%AF%E5%8A%A8%E7%B1%BB%E5%9E%8B%E4%B8%8D%E6%98%AFUEFI.PNG" alt="启动类型" title="我认为应该是UEFI，后来安慰自己是兼容，两种都有"></p>
-<p>&emsp;&emsp;查阅BOIS的相关教程时，生成的信息图。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713203149cmd%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_130614">)<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713203216winr%E7%94%9F%E6%88%90%E7%9A%84%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_183519"></p>
+<p>&emsp;&emsp;另外一个就是我尝试再安装PE时发现的。我认为应该是UEFI的。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713201149%E5%90%AF%E5%8A%A8%E7%B1%BB%E5%9E%8B%E4%B8%8D%E6%98%AFUEFI.PNG" alt="启动类型" title="我认为应该是UEFI，后来安慰自己是兼容，两种都有"></p>
+<p>&emsp;&emsp;查阅BOIS的相关教程时，生成的信息图。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203149cmd%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_130614">)<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203216winr%E7%94%9F%E6%88%90%E7%9A%84%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_183519"></p>
 <p>&emsp;&emsp;我试过刷BOIS，但是找的工具不想。而且也不敢强刷，毕竟笔记本就一个，而且囊中羞涩。保持理性。</p>
-<p>&emsp;&emsp;在这次过程中下载的工具。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713203659Sd%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E5%B7%A5%E5%85%B7.PNG" alt="2021-07-13_203646" title="工具"></p>
-<p>&emsp;&emsp;这过程中浏览的历史。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210713203802SD%E5%8D%A1%E6%B5%8F%E8%A7%88%E5%8E%86%E5%8F%B2.PNG" alt="2021-07-13_183150" title="浏览历史"></p>
+<p>&emsp;&emsp;在这次过程中下载的工具。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203659Sd%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E5%B7%A5%E5%85%B7.PNG" alt="2021-07-13_203646" title="工具"></p>
+<p>&emsp;&emsp;这过程中浏览的历史。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203802SD%E5%8D%A1%E6%B5%8F%E8%A7%88%E5%8E%86%E5%8F%B2.PNG" alt="2021-07-13_183150" title="浏览历史"></p>
 <p>&emsp;&emsp;最后的结果就是双系统的PE找不着，启动不了。SD卡里的PE可以用，kali可以通过手段启动。有失有得。</p>
 <blockquote>
 <p>祸兮福所倚，福兮祸所伏</p>
@@ -4479,10 +4479,10 @@ a2-->a3</pre>
 <p>&emsp;&emsp;假如我将我的系统盘里的东西（C盘）复制出来，完整保存注册表和环境变量，然后格了（低格还是什么格）我的固态，在里装上我的系统，最后恢复注册表和环境变量。这样是否可以做到和原先一样，所有软件正常运行，环境也是正确的，安装过的软件也可以在卸载管理里找到？</p>
 <p>&emsp;&emsp;注册表里包含环境变量。</p>
 <p>&emsp;&emsp;我始终觉得解决这件事理论上应该是一个不难的事，一种直觉。第一步，首先是解决开机见到系统选择界面。于是，我用bcdedit复制了一个，同时，我直接打bcdedit命令看到，看到了pe的path。于是去pe里把UEFI启动项里复制的<code>Windows Boot Manager</code>再次修改了，换成了path位置里的efi文件。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210720200755msconfig%E5%92%8Cbcdedit.PNG" alt="2021-07-20_190200" title="两者不一样"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210720200848%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%87%8C%E7%9A%84%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194107"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720200755msconfig%E5%92%8Cbcdedit.PNG" alt="2021-07-20_190200" title="两者不一样"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720200848%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%87%8C%E7%9A%84%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194107"></p>
 <p>&emsp;&emsp;重启，见到了系统选择界面。点击pe，不是进的pe，而是像重新启动，再次进入系统选择界面。very good。有戏。于是我重新进入win10，安装微pe。我发现启动类型变成UEFI了，非常开心。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210720201247UEFI%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194329"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720201247UEFI%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194329"></p>
 <p>&emsp;&emsp;重新安装后，启动，进入pe，ok，启动，进入win10，ok，删除复制的win10，启动，进入pe，ok，启动，进入win10，ok。</p>
 <p>&emsp;&emsp;由于之前重新买了u盘，因此SD卡的利用就换了，那就是win to go 和kali to go结合在一起。生命不息，折腾不止。最后就只剩文中提到的问题了。</p>
 ]]></content>
@@ -4501,13 +4501,13 @@ a2-->a3</pre>
   <entry>
     <title>异形工厂（shapezio）简单制造工厂</title>
     <url>/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/</url>
-    <content><![CDATA[<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" one-link-mark="yes"><img src="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" alt="shapez.io Logo" data-canonical-src="https://i.imgur.com/Y5Z2iqQ.png" style="max-width:100%;"></a></p>
+    <content><![CDATA[<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" one-link-mark="yes"><img data-src="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" alt="shapez.io Logo" data-canonical-src="https://i.imgur.com/Y5Z2iqQ.png" style="max-width:100%;"></a></p>
 
 <p>&emsp;&emsp;你还为每过一关就要再造一个生产线而感到烦恼吗？快来建造一个工厂吧。我这个工厂简单易懂，甚至可以不用电路，仅需一点点操作。</p>
 <h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><p>&emsp;&emsp;为了能做这个工厂，你必须要解锁图片中的设施。不用每一个都完全解锁，每种有一个就行。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811224510%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A6%81%E6%B1%82.PNG" alt="要求"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811224510%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A6%81%E6%B1%82.PNG" alt="要求"></p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>&emsp;&emsp;我们制作工厂是为了尽可能解放双手的操作，因此在设计之初暂不考虑效率，先解决有无的问题。速度不行的话还可以堆数量。虽然这不是一个完全自动化的工厂，但慢慢改嘛。</p>
-<p>&emsp;&emsp;由于暂时没有电路加持，工厂只能造简单的图形。类似于<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811234108%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9C%BA1.png" alt="机2_1">)和<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811234139%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82.png" alt="机1_1">，这种图形暂时只能单独造机器。自动化的方式还没思考出来。</p>
+<p>&emsp;&emsp;由于暂时没有电路加持，工厂只能造简单的图形。类似于<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234108%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9C%BA1.png" alt="机2_1">)和<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234139%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82.png" alt="机1_1">，这种图形暂时只能单独造机器。自动化的方式还没思考出来。</p>
 <style>
     img[alt="机1_1"]
     {
@@ -4524,31 +4524,31 @@ a2-->a3</pre>
 <p>&emsp;&emsp;该教程是根据关卡徐徐渐进的，未解锁的物品如果能被替换，就会先被替换，解锁后更改。</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>&emsp;&emsp;最终思路：从底层出发，对每一层进行分解。首先将原材料染色，然后进行旋转，接着根据产出材料的种类选择合成方式（二、三、四，一直接走旁边产物通道）。合成出每一层后再根据层数进行叠加。</p>
 <h2 id="开搓"><a href="#开搓" class="headerlink" title="开搓"></a>开搓</h2><p>&emsp;&emsp;先看一个整体图，好有一个直观的感受。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210811234757%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B7%A5%E5%8E%82.PNG" alt="全 - 副本"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234757%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B7%A5%E5%8E%82.PNG" alt="全 - 副本"></p>
 <p>&emsp;&emsp;在异形工厂中，所有图形都可以分解为一下四中图形的组合，我们将他们作为原材料输入到工厂中。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812000843%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99.PNG" alt="原材料"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812000843%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99.PNG" alt="原材料"></p>
 <p>&emsp;&emsp;可以在地图上找到相应的图形进行开采，或者单独为每种材料供应。如果采用图中挖掘包含所有材料的图形的话，要注意安装垃圾桶防止堵塞。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812001517%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99%E7%94%9F%E4%BA%A7.PNG" alt="原材料生成"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812001517%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99%E7%94%9F%E4%BA%A7.PNG" alt="原材料生成"></p>
 <p>&emsp;&emsp;前期，我刚可以开始造工厂时，关卡要求都是两层图形。因此我们先考虑两层。不过在考虑两层前，我们先考虑一层。我们将图形分为四个象限。先进行染色在进行旋转。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812002147%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90.PNG" alt="一个象限"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812002147%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90.PNG" alt="一个象限"></p>
 <p>&emsp;&emsp;这个工厂的一部分属于染色旋转区。由于没有颜料供应，染色器处于阻塞状态，没有产物输出。对于无色图形，我们通过控制传送带的断连来输出产物。在输出位置可以看到，我做了相应的旋转。这是为了旋转到相应的象限。</p>
 <p>&emsp;&emsp;相信你从上图中看出来，现阶段的工厂还需要我们操作，不过已经不用频繁造生成线了。这就像工厂生成物品一样，需要操作一些机器。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812002917%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D.PNG" alt="基础颜色分配器"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812002917%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D.PNG" alt="基础颜色分配器"></p>
 <p>&emsp;&emsp;这是我们的颜料分配器。它从下方输入7种颜料，从右侧输出颜料。可以看到，图中有4排传送带，它依次对应颜色的材料。将两者结合就可以得到下面这张图。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812003527%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D%E4%BA%BA%E6%95%B0.PNG" alt="颜色和象限"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812003527%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D%E4%BA%BA%E6%95%B0.PNG" alt="颜色和象限"></p>
 <p>&emsp;&emsp;要使用它首先要人为确定该层该象限的图形和颜色。确定好后，选择对应材料的传送带，顺着传送带回走。在颜料分配区，选择对应的颜色，用传送带连接上平衡器。（在使用过程中，我有一种以前那种一次性烧录芯片烧录程序的感觉，虽然我没操作过，但我看过。）</p>
 <p>&emsp;&emsp;在这一个区域，总的来说，染色的话就用传送带连接对应平衡器。如果是无色的话，就断开所有颜色分配的传送带连接，连接上无色分配的传送带（在输出位置）。在关卡结束后，要断开所有自己手动连接添上的传送带。</p>
 <p>&emsp;&emsp;相信你已经造好了一个象限所需要的装置（上图），接下来，将其复制，拢共制作4份共4个象限，记得修改输出位置的旋转角度。制作好的效果类似于下图。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812005816%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83.PNG" alt="一个单元"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812005816%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83.PNG" alt="一个单元"></p>
 <p>&emsp;&emsp;仔细观察上图，你会发现4个红色的地方。这个地方是垃圾桶，因为我不是单独供应原材料，如果不销毁多余的材料就无法剪出需要的材料。后期解锁过滤器后可以修改并保存大量原材料。</p>
 <p>&emsp;&emsp;将上面的装置复制一份就可以处理两层图形了，再复制两份就可以最多处理四层图形了。效果类似于下图。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812010756%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%824%E5%8D%95%E5%85%83.PNG" alt="4层"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812010756%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%824%E5%8D%95%E5%85%83.PNG" alt="4层"></p>
 <p>&emsp;&emsp;接下来就是颜料供应了。我的供应是这样的。这个随你造了，反正都差不多。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812011016%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E4%BE%9B%E5%BA%94.PNG" alt="颜色"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812011016%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E4%BE%9B%E5%BA%94.PNG" alt="颜色"></p>
 <p>&emsp;&emsp;颜料齐全后，就可以制造单层图形了。这里面要考虑只有一个象限、只有两个象限、只有三个象限、四个象限都有。因为当前无法自动化，先手工连接对应的合成模块。我的合成模块如下图。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812011635%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A8%A1%E5%9D%97.PNG" alt="合成模块"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812011635%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A8%A1%E5%9D%97.PNG" alt="合成模块"></p>
 <p>&emsp;&emsp;现在可以制造出每一层了，接下来就是层与层之间的叠加了。要考虑那个在下，那个在上。从左至右，分别是最底层、上一层、再上一层和最顶层。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812012432%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8F%A0%E5%8A%A0.PNG" alt="叠加区域"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812012432%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8F%A0%E5%8A%A0.PNG" alt="叠加区域"></p>
 <p>&emsp;&emsp;叠加层数也是通过传送带的断连来控制。</p>
 <p>&emsp;&emsp;到此时，一个需要人为操作而不要造的工厂就诞生了。它的使用方式是，分析每层每个象限是什么，要什么颜色。连接上传送带输出染色后的材料。接着根据每层的情况选择合适数量的合成模块制造出每一层。最后根据层数连接对应传送带。最最后通过该关卡后，要断开你所有连接的传送带。</p>
 <p>&emsp;&emsp;到这里，教程就可以算做是结束了。针对后期不在要求数量而是要求速度（产量），可以先挂机存储，合适时机在释放。</p>
@@ -4556,56 +4556,56 @@ a2-->a3</pre>
 
 <p>&emsp;&emsp;随着关卡的解锁，新的装置解锁后，可以修改原设置，使之更方便。</p>
 <h2 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h2><p>&emsp;&emsp;在解锁过滤器后，原先通过拆掉或连上传送带的动作可以利用过滤器和开关来简化动作，这样就只需要左击开关就可以控制流向了。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812170124%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%97%A0%E8%89%B2%E8%BF%87%E6%BB%A4%E5%99%A8.PNG" alt="无色开关"></p>
-<p>&emsp;&emsp;当然在颜色分配器上，也可以修改，使之更容易操作，减少右键带来的误操作。有点久了，忘了合并器是在什么时候解锁的了，如何你没有解锁，也可以用平衡器替换合并器进行改造。<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812170535%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E8%89%B2%E5%BC%80%E5%85%B3.PNG" alt="开关颜色分配"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812170124%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%97%A0%E8%89%B2%E8%BF%87%E6%BB%A4%E5%99%A8.PNG" alt="无色开关"></p>
+<p>&emsp;&emsp;当然在颜色分配器上，也可以修改，使之更容易操作，减少右键带来的误操作。有点久了，忘了合并器是在什么时候解锁的了，如何你没有解锁，也可以用平衡器替换合并器进行改造。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812170535%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E8%89%B2%E5%BC%80%E5%85%B3.PNG" alt="开关颜色分配"></p>
 <p>&emsp;&emsp;如果想直观显示颜色，可以像上面接个容器或者像下面一样接上显示器。</p>
-<p><img src="https://i.loli.net/2021/08/12/fXtQZw8u1zslRd6.png" alt="显示颜色"></p>
+<p><img data-src="https://i.loli.net/2021/08/12/fXtQZw8u1zslRd6.png" alt="显示颜色"></p>
 <p>&emsp;&emsp;有了过滤器和容器，就可以在原材料制作处进行改进了。这样就不用担心原材料消耗不同而导致阻塞必须添加垃圾桶的境况。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812174618%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A7%A3%E5%86%B3%E9%98%BB%E5%A1%9E.PNG" alt="解决阻塞"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812174618%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A7%A3%E5%86%B3%E9%98%BB%E5%A1%9E.PNG" alt="解决阻塞"></p>
 <h2 id="某某生产教程"><a href="#某某生产教程" class="headerlink" title="某某生产教程"></a>某某生产教程</h2><p>&emsp;&emsp;整体思路：通过叠加缩小图形，再通过剪切的方式将其保留在需要的大图形上。</p>
-<h3 id="CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw"><a href="#CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw" class="headerlink" title="CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw"></a>CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw</h3><p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812174910%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="原型机1"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210812175112%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%9F%E6%88%90%E6%9C%BA.PNG" alt="单个生成机1"></p>
-<p><img src="https://i.loli.net/2021/08/12/1JYxCVpy8eHhSWE.png" alt="电路"></p>
-<h3 id="RuCw–Cw-—-Ru–"><a href="#RuCw–Cw-—-Ru–" class="headerlink" title="RuCw–Cw:—-Ru–"></a>RuCw–Cw:—-Ru–</h3><p><img src="https://i.loli.net/2021/08/12/jh4lHDQENw18qMe.png" alt="&quot;RuCw--Cw:----Ru--&quot;"></p>
+<h3 id="CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw"><a href="#CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw" class="headerlink" title="CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw"></a>CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw</h3><p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812174910%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="原型机1"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812175112%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%9F%E6%88%90%E6%9C%BA.PNG" alt="单个生成机1"></p>
+<p><img data-src="https://i.loli.net/2021/08/12/1JYxCVpy8eHhSWE.png" alt="电路"></p>
+<h3 id="RuCw–Cw-—-Ru–"><a href="#RuCw–Cw-—-Ru–" class="headerlink" title="RuCw–Cw:—-Ru–"></a>RuCw–Cw:—-Ru–</h3><p><img data-src="https://i.loli.net/2021/08/12/jh4lHDQENw18qMe.png" alt="&quot;RuCw--Cw:----Ru--&quot;"></p>
 <p>&emsp;&emsp;等待更新</p>
 <h2 id="较高程度自动化"><a href="#较高程度自动化" class="headerlink" title="较高程度自动化"></a>较高程度自动化</h2><p><del>我目前已经解锁全部设施了，已经在思考了。</del></p>
-<p><img src="https://tva1.sinaimg.cn/large/006Xzox4ly1gdur6fuq71j306o06oaab.jpg" alt="别催了，虽然每人催"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006Xzox4ly1gdur6fuq71j306o06oaab.jpg" alt="别催了，虽然每人催"></p>
 <p><del>等待更新和等待思考</del></p>
 <p>&emsp;&emsp;我这个和一般的自动化不一样，这个是将最底层视为第一层，因为在最初考虑时，还没有电线解锁，只能用自己手动操作。电路设计上，优先考虑不改变工厂布局和原有设计。</p>
 <p>&emsp;&emsp;先看整体电路布局。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210824215742%20%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%9B%BE%E5%BD%A2%E6%A3%80%E6%B5%8B%E5%90%88%E6%88%90.PNG" alt="2021-08-22_215944"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210824215831%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%B5%E8%B7%AF%E6%95%B4%E4%BD%93%E4%B8%8B.PNG" alt="2021-08-23_212313"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215742%20%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%9B%BE%E5%BD%A2%E6%A3%80%E6%B5%8B%E5%90%88%E6%88%90.PNG" alt="2021-08-22_215944"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215831%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%B5%E8%B7%AF%E6%95%B4%E4%BD%93%E4%B8%8B.PNG" alt="2021-08-23_212313"></p>
 <p>&emsp;&emsp;第一步将基地图像信号引出。在解锁自动化前，相信你已经知道有悬空的图形（就是上面的生产教程）了 。因此，我们要先进行判读图形是否是悬空图形。检测电路如下。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20210824215931%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A3%80%E6%B5%8B.PNG" alt="图像信号合成检测"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215931%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A3%80%E6%B5%8B.PNG" alt="图像信号合成检测"></p>
 <p>&emsp;&emsp;它的原理是将图形拆分一层后将其和下一次拆分后的图形进行叠加，接着重复，最后将结果进行比较，根据结果将图像信号分别传输到不同位置。这两个位置在最后叠加方式不同。一个是按原有设计：最底层和上一层叠加，叠加结果和再上一层叠加，最后再和最顶层合成。另一个是：最顶层和下一层叠加，叠加结果和再下一层叠加，最后和最底层叠加。分这两种是为了尽可能合成悬空图形。</p>
 <blockquote>
 <p>作为后，写博客时，发现我做复杂了，因此我先说整体思路吧，后面的内容就一个地方做复杂了，它其实是可以删掉的。</p>
 <p>首先将图像信号分层，将每一层信号分成4个象限，对每个象限进行分析颜色和图形，通过与门控制对应图形的对应颜色开关进行染色（无色也是一种颜色），将象限的图形和颜色信号输出到合成层的地方，根据信号进行合成。最后根据层信号进行层与层之间的合成。</p>
 </blockquote>
 <p>&emsp;&emsp;我们先采用原本设计好的叠加方式，也就是第一种方式。（<font color = red>此处理论可删除，只须改动合成层的电路逻辑</font>）在我的设计中，从左至右，4个单元分别是最底层、倒数第二层、倒数第三层和最顶层。层与层之间是先叠加最底层和倒数第二层，然后在叠加倒数第三层，最后叠加最顶层。然而模拟拆分器先拆分出最顶层，因此最底层不确定是在哪一根线输出。所以要做一个不管有几层输入，都会依次从最低层开始输出的机器。（此电路可以删除的，不过叠加的就要思考一下了）</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102225900%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%8E%9F%E5%9E%8B.PNG" alt="逆序机1"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102225954%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%AE%9E%E8%A3%85.PNG" alt="逆序机2"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225900%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%8E%9F%E5%9E%8B.PNG" alt="逆序机1"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225954%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%AE%9E%E8%A3%85.PNG" alt="逆序机2"></p>
 <p>&emsp;&emsp;这个机器如果输入1会输出1，如果输入12会输出21，如果输入123会输出321，如果输入1234会输出4321。至于原理，我就解释不清楚了，因为我是一个目标一个目标实现的。做成这个的思想就是遇到问题不要害怕，将难题分解或一步一步解决。首先就是先实现2个的，再实现3个的，最后实现4个，也不用考虑简化呀什么的，能用就行。</p>
 <p>&emsp;&emsp;接下来就是每一层的信号送到对应每一层的单元（如果不对应，随意的话，需要考虑叠加的判断），每个单元里有分为四个象限。因此需要提取出每个象限的图形和颜色。</p>
-<p>&emsp;&emsp;<img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102230023%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90%E5%9B%BE%E5%BD%A2%E5%92%8C%E9%A2%9C%E8%89%B2%E6%8B%86%E5%88%86.PNG" alt="颜色和图形"></p>
+<p>&emsp;&emsp;<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102230023%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90%E5%9B%BE%E5%BD%A2%E5%92%8C%E9%A2%9C%E8%89%B2%E6%8B%86%E5%88%86.PNG" alt="颜色和图形"></p>
 <p>&emsp;&emsp;这个简单机器就是提取象限的颜色和图形。每个象限的机器不太一样，因为比较简单就自己做了，只要能输出颜色（无色）和图形（无）信号就行了。不要担心无色和却项，通过与可以解决。</p>
 <p>&emsp;&emsp;有颜色和图形信号后，就可以考虑染色了。通过比较器在指定位置输出图形信号到后面的染色区，通过比较器在指定位置输出颜色信号。这其中将无色信号输送到染色区了。染料通过图形信号和颜色信号的与运算控制指定的染料开关。如下图。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102215944%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E6%96%99%E5%8C%BA%E6%8E%A7%E5%88%B6.PNG" alt="染色材料"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102215944%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E6%96%99%E5%8C%BA%E6%8E%A7%E5%88%B6.PNG" alt="染色材料"></p>
 <p>&emsp;&emsp;在染色区，染料输送过来后，会自动合成。对于无色的输出，同样是使用与运算进行控制。染色后就送至合成区，同时将图像信号输送到合成区，用于后续判断等。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102225724%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E8%89%B2%E6%8E%A7%E5%88%B6.PNG" alt="无色"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225724%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E8%89%B2%E6%8E%A7%E5%88%B6.PNG" alt="无色"></p>
 <p>&emsp;&emsp;在合成区，原先的合成是收到切换的，现在要改成自动化。原先做了3个合成来合成2个、3个、4个象限的图形。最开始想到的判断象限数量来切换使用不同的路径。问题是如何判断数量、如何判断是那几个道出材料、以及如何切换，要设计的话得很久，天荒地老的那种（夸张）。因此，我重新设计了一个合成模块。</p>
 <p>&emsp;&emsp;思路也比较简单。一步一步分析，首先，总体思路选择两两合成——两个象限合成一个，两个象限合成一个，再一合成就完了。因为这种不用考虑那么多。我们在前面象限拆分时，往下输送了该象限的图形信号，因此可以判断当前道的材料有无。如果4条道都有，那么关闭通道，让材料进入合成。如果有有3条道有材料，可以通过与运算判断。与出1说明2条道有，关闭通道让材料进入合成，另外一边则与出0，打开通道让有材料的通过，而合成器会因为只有一边输入导致阻塞，无法输出。如果有2条道有，可以理解3条道中的两条紧挨的道，或者是两条3条道中独立的那一条。后续则是这样的，它的情况就考虑1条道和2条道，仿照前面的就可以了。理解不了就看图，师傅领进门，修行看个人。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102225703%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="合成新方式"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102225629%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA%E7%94%B5%E8%B7%AF.PNG" alt="新和成电路"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102230420%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF%E5%AE%9E%E8%A3%85.PNG" alt="层"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225703%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="合成新方式"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225629%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA%E7%94%B5%E8%B7%AF.PNG" alt="新和成电路"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102230420%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF%E5%AE%9E%E8%A3%85.PNG" alt="层"></p>
 <p>&emsp;&emsp;层与层的叠加基本不变，只是此刻你应该可以有单层的图像信号了（前面通过分层、逆序已经得到了）。有了图形信号就可将不要的删除了，优化一下，加快速度。同时有了层信号可以对层与层的合成进行判断了。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102231258%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF.PNG" alt="合成层"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102231357%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E6%8E%A7%E5%88%B6.PNG" alt="层层控制"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102231258%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF.PNG" alt="合成层"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102231357%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E6%8E%A7%E5%88%B6.PNG" alt="层层控制"></p>
 <p>&emsp;&emsp;很快，你发现提交要求不在是数量而是速度了，然而一个工厂的合成速度肯定是不足的，解决 办法可以是多几个工厂或者将产品存储起来，一定时间后释放，此时，速度就与传动带速度相关了。时间可以用一个物品在传送带上走，用一个检测器输出信号就可以了。开信号需要持续一定时间，关信号也要持续一段时间，而检测器只输出很短的信号，因此，使用一个SR锁存器进行信号切换。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102232342%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E9%94%81%E5%AD%98.PNG" alt="SR锁存"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102232342%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E9%94%81%E5%AD%98.PNG" alt="SR锁存"></p>
 <p>&emsp;&emsp;输入一个短脉冲，它就会改变输出信号。然而，这种SR锁存会在短脉冲来的时候将输出变成高频，但影响不大。当然开和关的持续时间不一样，所以可以在不同状态下，让物品在不同传送带上走。同时也可以加一个开关来控制是否启用计时。</p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220102232955%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E5%BC%80%E5%85%B3.PNG" alt="状态切换抖动"></p>
-<p><img src="https://gitee.com/pengxiandyou/imgbed/raw/master/2021/20220103002820%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E5%AE%9E%E8%A3%85.PNG" alt="2021-08-23_212643"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102232955%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E5%BC%80%E5%85%B3.PNG" alt="状态切换抖动"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220103002820%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E5%AE%9E%E8%A3%85.PNG" alt="2021-08-23_212643"></p>
 <p>&emsp;&emsp;到这，自动化基本就完成了，剩下的基本上是优化和改进了。</p>
 <h2 id="完全自动化"><a href="#完全自动化" class="headerlink" title="完全自动化"></a>完全自动化</h2><p>包含叠加时恰好无共同象限，导致3层变2层，4层变3层等情况。</p>
 <p>难，应该很难想出来。</p>
