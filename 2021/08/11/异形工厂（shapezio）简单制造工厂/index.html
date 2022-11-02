@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico">
@@ -13,9 +13,14 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-bouncebounce.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"pengxiandyou.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"mac"},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
 
 <!-- Chatra {literal} -->
 <script>
@@ -31,13 +36,7 @@
     })(document, window, 'Chatra');
 </script>
 <!-- /Chatra {/literal} -->
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"pengxiandyou.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="&amp;emsp;&amp;emsp;“奇形怪状，放飞想象！”&amp;emsp;&amp;emsp;“自动生产，尽情创造！”&amp;emsp;&amp;emsp;《异形工厂》（Shapez.io）是一款能让您尽情发挥创造力，充分享受思维乐趣的IO游戏。在无边的地图上开采资源、放置设施、组合图形、高效搭配，持续扩建只属于玩家自己的异形工厂。随着游戏进度推进，图形复杂起来了，同时为每一个图形建造一个工厂非常不讨好。因此着手搭建一个工厂来制作图">
+    <meta name="description" content="&amp;emsp;&amp;emsp;“奇形怪状，放飞想象！”&amp;emsp;&amp;emsp;“自动生产，尽情创造！”&amp;emsp;&amp;emsp;《异形工厂》（Shapez.io）是一款能让您尽情发挥创造力，充分享受思维乐趣的IO游戏。在无边的地图上开采资源、放置设施、组合图形、高效搭配，持续扩建只属于玩家自己的异形工厂。随着游戏进度推进，图形复杂起来了，同时为每一个图形建造一个工厂非常不讨好。因此着手搭建一个工厂来制作图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异形工厂（shapezio）简单制造工厂">
 <meta property="og:url" content="https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/index.html">
@@ -85,7 +84,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102232955%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E5%BC%80%E5%85%B3.PNG">
 <meta property="og:image" content="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220103002820%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E5%AE%9E%E8%A3%85.PNG">
 <meta property="article:published_time" content="2021-08-11T14:15:53.000Z">
-<meta property="article:modified_time" content="2022-10-31T06:46:14.294Z">
+<meta property="article:modified_time" content="2022-11-01T14:39:06.827Z">
 <meta property="article:author" content="小可爱">
 <meta property="article:tag" content="异形工厂">
 <meta property="article:tag" content="shapezio">
@@ -93,60 +92,29 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/Y5Z2iqQ.png">
 
+
 <link rel="canonical" href="https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
 
-  <title>异形工厂（shapezio）简单制造工厂 | 魔装少男的博客</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/","path":"2021/08/11/异形工厂（shapezio）简单制造工厂/","title":"异形工厂（shapezio）简单制造工厂"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>异形工厂（shapezio）简单制造工厂 | 魔装少男的博客</title>
   
 
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?497aa34d870c1d7996acc609bf1d5afd";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?497aa34d870c1d7996acc609bf1d5afd"></script>
 
 
 
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <!--我自定义的搜索-->
 <script async="true" src="https://pengxiandyou.gitee.io/src/js/search-my.js"></script>
 <script type="text/javascript">
@@ -161,26 +129,26 @@
 </script>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">魔装少男的博客</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">魔装少男的博客</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">我可爱又美丽却能唤来死亡 <br>  虽然我可爱又迷人,但我能招来死亡</p>
   </div>
@@ -194,48 +162,17 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">51</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">29</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">40</span></a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
-
-  </li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">51</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">40</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+
+ <input type="text" value="B:我爱你" name="wd" id="kw2" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw2').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
+
+
         </a>
       </li>
-      <li class="menu-item menu-item-search-my">
-      <a>
-      <i class="fa fa-search fa-fw"></i>
-      <input type="text" value="B:我爱你" name="wd" id="kw2" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw2').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i></a>
-      </li>
+
 
       <li class="menu-item menu-item-gonggao-my">
       <div style=" border:1px solid #ffc0cb"><div>
@@ -250,23 +187,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -274,350 +210,18 @@
   </div>
 
 </div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
-
-  <a href="https://github.com/pengxiandyou" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="小可爱">
-      <meta itemprop="description" content="已经毕业了，现在是西部计划志愿者">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="魔装少男的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          异形工厂（shapezio）简单制造工厂
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-11 22:15:53" itemprop="dateCreated datePublished" datetime="2021-08-11T22:15:53+08:00">2021-08-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-31 14:46:14" itemprop="dateModified" datetime="2022-10-31T14:46:14+08:00">2022-10-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/%E6%95%99%E7%A8%8B%E5%90%91/" itemprop="url" rel="index"><span itemprop="name">教程向</span></a>
-                </span>
-            </span>
-          <br/>
-
-<span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-<span title="post.wordcount">
-    3.9k 字
-</span> | 
-<span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-<span title="post.min2read">
-    13 分钟
-</span>
-<br/>
-          
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" >
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-           </span>
-            <div class="post-description"><p>&emsp;&emsp;“奇形怪状，放飞想象！”</p><p>&emsp;&emsp;“自动生产，尽情创造！”</p><p>&emsp;&emsp;《异形工厂》（Shapez.io）是一款能让您尽情发挥创造力，充分享受思维乐趣的IO游戏。<br/>在无边的地图上开采资源、放置设施、组合图形、高效搭配，持续扩建只属于玩家自己的异形工厂。</p><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1318690/extras/store_page_gif.gif?t=1628330822" /><p>随着游戏进度推进，图形复杂起来了，同时为每一个图形建造一个工厂非常不讨好。因此着手搭建一个工厂来制作图形</p><p>&emsp;&emsp;游戏可以在steam找到。<a href="https://store.steampowered.com/app/1318690/Shapezio/?l=schinese" target="_blank" rel="noopener">地址</a></p></div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" one-link-mark="yes"><img data-src="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" alt="shapez.io Logo" data-canonical-src="https://i.imgur.com/Y5Z2iqQ.png" style="max-width:100%;"></a></p>
-
-<p>&emsp;&emsp;你还为每过一关就要再造一个生产线而感到烦恼吗？快来建造一个工厂吧。我这个工厂简单易懂，甚至可以不用电路，仅需一点点操作。</p>
-<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><p>&emsp;&emsp;为了能做这个工厂，你必须要解锁图片中的设施。不用每一个都完全解锁，每种有一个就行。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811224510%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A6%81%E6%B1%82.PNG" alt="要求"></p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>&emsp;&emsp;我们制作工厂是为了尽可能解放双手的操作，因此在设计之初暂不考虑效率，先解决有无的问题。速度不行的话还可以堆数量。虽然这不是一个完全自动化的工厂，但慢慢改嘛。</p>
-<p>&emsp;&emsp;由于暂时没有电路加持，工厂只能造简单的图形。类似于<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234108%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9C%BA1.png" alt="机2_1">)和<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234139%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82.png" alt="机1_1">，这种图形暂时只能单独造机器。自动化的方式还没思考出来。</p>
-<style>
-    img[alt="机1_1"]
-    {
-        display:inline-block;
-        margin: 0;
-    }
-     img[alt="机2_1"]
-    {
-        display:inline-block;
-        margin: 0;
-    }
-</style>
-
-<p>&emsp;&emsp;该教程是根据关卡徐徐渐进的，未解锁的物品如果能被替换，就会先被替换，解锁后更改。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>&emsp;&emsp;最终思路：从底层出发，对每一层进行分解。首先将原材料染色，然后进行旋转，接着根据产出材料的种类选择合成方式（二、三、四，一直接走旁边产物通道）。合成出每一层后再根据层数进行叠加。</p>
-<h2 id="开搓"><a href="#开搓" class="headerlink" title="开搓"></a>开搓</h2><p>&emsp;&emsp;先看一个整体图，好有一个直观的感受。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234757%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B7%A5%E5%8E%82.PNG" alt="全 - 副本"></p>
-<p>&emsp;&emsp;在异形工厂中，所有图形都可以分解为一下四中图形的组合，我们将他们作为原材料输入到工厂中。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812000843%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99.PNG" alt="原材料"></p>
-<p>&emsp;&emsp;可以在地图上找到相应的图形进行开采，或者单独为每种材料供应。如果采用图中挖掘包含所有材料的图形的话，要注意安装垃圾桶防止堵塞。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812001517%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99%E7%94%9F%E4%BA%A7.PNG" alt="原材料生成"></p>
-<p>&emsp;&emsp;前期，我刚可以开始造工厂时，关卡要求都是两层图形。因此我们先考虑两层。不过在考虑两层前，我们先考虑一层。我们将图形分为四个象限。先进行染色在进行旋转。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812002147%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90.PNG" alt="一个象限"></p>
-<p>&emsp;&emsp;这个工厂的一部分属于染色旋转区。由于没有颜料供应，染色器处于阻塞状态，没有产物输出。对于无色图形，我们通过控制传送带的断连来输出产物。在输出位置可以看到，我做了相应的旋转。这是为了旋转到相应的象限。</p>
-<p>&emsp;&emsp;相信你从上图中看出来，现阶段的工厂还需要我们操作，不过已经不用频繁造生成线了。这就像工厂生成物品一样，需要操作一些机器。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812002917%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D.PNG" alt="基础颜色分配器"></p>
-<p>&emsp;&emsp;这是我们的颜料分配器。它从下方输入7种颜料，从右侧输出颜料。可以看到，图中有4排传送带，它依次对应颜色的材料。将两者结合就可以得到下面这张图。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812003527%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D%E4%BA%BA%E6%95%B0.PNG" alt="颜色和象限"></p>
-<p>&emsp;&emsp;要使用它首先要人为确定该层该象限的图形和颜色。确定好后，选择对应材料的传送带，顺着传送带回走。在颜料分配区，选择对应的颜色，用传送带连接上平衡器。（在使用过程中，我有一种以前那种一次性烧录芯片烧录程序的感觉，虽然我没操作过，但我看过。）</p>
-<p>&emsp;&emsp;在这一个区域，总的来说，染色的话就用传送带连接对应平衡器。如果是无色的话，就断开所有颜色分配的传送带连接，连接上无色分配的传送带（在输出位置）。在关卡结束后，要断开所有自己手动连接添上的传送带。</p>
-<p>&emsp;&emsp;相信你已经造好了一个象限所需要的装置（上图），接下来，将其复制，拢共制作4份共4个象限，记得修改输出位置的旋转角度。制作好的效果类似于下图。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812005816%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83.PNG" alt="一个单元"></p>
-<p>&emsp;&emsp;仔细观察上图，你会发现4个红色的地方。这个地方是垃圾桶，因为我不是单独供应原材料，如果不销毁多余的材料就无法剪出需要的材料。后期解锁过滤器后可以修改并保存大量原材料。</p>
-<p>&emsp;&emsp;将上面的装置复制一份就可以处理两层图形了，再复制两份就可以最多处理四层图形了。效果类似于下图。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812010756%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%824%E5%8D%95%E5%85%83.PNG" alt="4层"></p>
-<p>&emsp;&emsp;接下来就是颜料供应了。我的供应是这样的。这个随你造了，反正都差不多。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812011016%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E4%BE%9B%E5%BA%94.PNG" alt="颜色"></p>
-<p>&emsp;&emsp;颜料齐全后，就可以制造单层图形了。这里面要考虑只有一个象限、只有两个象限、只有三个象限、四个象限都有。因为当前无法自动化，先手工连接对应的合成模块。我的合成模块如下图。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812011635%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A8%A1%E5%9D%97.PNG" alt="合成模块"></p>
-<p>&emsp;&emsp;现在可以制造出每一层了，接下来就是层与层之间的叠加了。要考虑那个在下，那个在上。从左至右，分别是最底层、上一层、再上一层和最顶层。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812012432%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8F%A0%E5%8A%A0.PNG" alt="叠加区域"></p>
-<p>&emsp;&emsp;叠加层数也是通过传送带的断连来控制。</p>
-<p>&emsp;&emsp;到此时，一个需要人为操作而不要造的工厂就诞生了。它的使用方式是，分析每层每个象限是什么，要什么颜色。连接上传送带输出染色后的材料。接着根据每层的情况选择合适数量的合成模块制造出每一层。最后根据层数连接对应传送带。最最后通过该关卡后，要断开你所有连接的传送带。</p>
-<p>&emsp;&emsp;到这里，教程就可以算做是结束了。针对后期不在要求数量而是要求速度（产量），可以先挂机存储，合适时机在释放。</p>
-<hr color="pink">
-
-<p>&emsp;&emsp;随着关卡的解锁，新的装置解锁后，可以修改原设置，使之更方便。</p>
-<h2 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h2><p>&emsp;&emsp;在解锁过滤器后，原先通过拆掉或连上传送带的动作可以利用过滤器和开关来简化动作，这样就只需要左击开关就可以控制流向了。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812170124%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%97%A0%E8%89%B2%E8%BF%87%E6%BB%A4%E5%99%A8.PNG" alt="无色开关"></p>
-<p>&emsp;&emsp;当然在颜色分配器上，也可以修改，使之更容易操作，减少右键带来的误操作。有点久了，忘了合并器是在什么时候解锁的了，如何你没有解锁，也可以用平衡器替换合并器进行改造。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812170535%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E8%89%B2%E5%BC%80%E5%85%B3.PNG" alt="开关颜色分配"></p>
-<p>&emsp;&emsp;如果想直观显示颜色，可以像上面接个容器或者像下面一样接上显示器。</p>
-<p><img data-src="https://i.loli.net/2021/08/12/fXtQZw8u1zslRd6.png" alt="显示颜色"></p>
-<p>&emsp;&emsp;有了过滤器和容器，就可以在原材料制作处进行改进了。这样就不用担心原材料消耗不同而导致阻塞必须添加垃圾桶的境况。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812174618%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A7%A3%E5%86%B3%E9%98%BB%E5%A1%9E.PNG" alt="解决阻塞"></p>
-<h2 id="某某生产教程"><a href="#某某生产教程" class="headerlink" title="某某生产教程"></a>某某生产教程</h2><p>&emsp;&emsp;整体思路：通过叠加缩小图形，再通过剪切的方式将其保留在需要的大图形上。</p>
-<h3 id="CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw"><a href="#CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw" class="headerlink" title="CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw"></a>CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw</h3><p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812174910%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="原型机1"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812175112%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%9F%E6%88%90%E6%9C%BA.PNG" alt="单个生成机1"></p>
-<p><img data-src="https://i.loli.net/2021/08/12/1JYxCVpy8eHhSWE.png" alt="电路"></p>
-<h3 id="RuCw–Cw-—-Ru–"><a href="#RuCw–Cw-—-Ru–" class="headerlink" title="RuCw–Cw:—-Ru–"></a>RuCw–Cw:—-Ru–</h3><p><img data-src="https://i.loli.net/2021/08/12/jh4lHDQENw18qMe.png" alt="&quot;RuCw--Cw:----Ru--&quot;"></p>
-<p>&emsp;&emsp;等待更新</p>
-<h2 id="较高程度自动化"><a href="#较高程度自动化" class="headerlink" title="较高程度自动化"></a>较高程度自动化</h2><p><del>我目前已经解锁全部设施了，已经在思考了。</del></p>
-<p><img data-src="https://tva1.sinaimg.cn/large/006Xzox4ly1gdur6fuq71j306o06oaab.jpg" alt="别催了，虽然每人催"></p>
-<p><del>等待更新和等待思考</del></p>
-<p>&emsp;&emsp;我这个和一般的自动化不一样，这个是将最底层视为第一层，因为在最初考虑时，还没有电线解锁，只能用自己手动操作。电路设计上，优先考虑不改变工厂布局和原有设计。</p>
-<p>&emsp;&emsp;先看整体电路布局。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215742%20%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%9B%BE%E5%BD%A2%E6%A3%80%E6%B5%8B%E5%90%88%E6%88%90.PNG" alt="2021-08-22_215944"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215831%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%B5%E8%B7%AF%E6%95%B4%E4%BD%93%E4%B8%8B.PNG" alt="2021-08-23_212313"></p>
-<p>&emsp;&emsp;第一步将基地图像信号引出。在解锁自动化前，相信你已经知道有悬空的图形（就是上面的生产教程）了 。因此，我们要先进行判读图形是否是悬空图形。检测电路如下。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215931%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A3%80%E6%B5%8B.PNG" alt="图像信号合成检测"></p>
-<p>&emsp;&emsp;它的原理是将图形拆分一层后将其和下一次拆分后的图形进行叠加，接着重复，最后将结果进行比较，根据结果将图像信号分别传输到不同位置。这两个位置在最后叠加方式不同。一个是按原有设计：最底层和上一层叠加，叠加结果和再上一层叠加，最后再和最顶层合成。另一个是：最顶层和下一层叠加，叠加结果和再下一层叠加，最后和最底层叠加。分这两种是为了尽可能合成悬空图形。</p>
-<blockquote>
-<p>作为后，写博客时，发现我做复杂了，因此我先说整体思路吧，后面的内容就一个地方做复杂了，它其实是可以删掉的。</p>
-<p>首先将图像信号分层，将每一层信号分成4个象限，对每个象限进行分析颜色和图形，通过与门控制对应图形的对应颜色开关进行染色（无色也是一种颜色），将象限的图形和颜色信号输出到合成层的地方，根据信号进行合成。最后根据层信号进行层与层之间的合成。</p>
-</blockquote>
-<p>&emsp;&emsp;我们先采用原本设计好的叠加方式，也就是第一种方式。（<font color = red>此处理论可删除，只须改动合成层的电路逻辑</font>）在我的设计中，从左至右，4个单元分别是最底层、倒数第二层、倒数第三层和最顶层。层与层之间是先叠加最底层和倒数第二层，然后在叠加倒数第三层，最后叠加最顶层。然而模拟拆分器先拆分出最顶层，因此最底层不确定是在哪一根线输出。所以要做一个不管有几层输入，都会依次从最低层开始输出的机器。（此电路可以删除的，不过叠加的就要思考一下了）</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225900%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%8E%9F%E5%9E%8B.PNG" alt="逆序机1"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225954%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%AE%9E%E8%A3%85.PNG" alt="逆序机2"></p>
-<p>&emsp;&emsp;这个机器如果输入1会输出1，如果输入12会输出21，如果输入123会输出321，如果输入1234会输出4321。至于原理，我就解释不清楚了，因为我是一个目标一个目标实现的。做成这个的思想就是遇到问题不要害怕，将难题分解或一步一步解决。首先就是先实现2个的，再实现3个的，最后实现4个，也不用考虑简化呀什么的，能用就行。</p>
-<p>&emsp;&emsp;接下来就是每一层的信号送到对应每一层的单元（如果不对应，随意的话，需要考虑叠加的判断），每个单元里有分为四个象限。因此需要提取出每个象限的图形和颜色。</p>
-<p>&emsp;&emsp;<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102230023%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90%E5%9B%BE%E5%BD%A2%E5%92%8C%E9%A2%9C%E8%89%B2%E6%8B%86%E5%88%86.PNG" alt="颜色和图形"></p>
-<p>&emsp;&emsp;这个简单机器就是提取象限的颜色和图形。每个象限的机器不太一样，因为比较简单就自己做了，只要能输出颜色（无色）和图形（无）信号就行了。不要担心无色和却项，通过与可以解决。</p>
-<p>&emsp;&emsp;有颜色和图形信号后，就可以考虑染色了。通过比较器在指定位置输出图形信号到后面的染色区，通过比较器在指定位置输出颜色信号。这其中将无色信号输送到染色区了。染料通过图形信号和颜色信号的与运算控制指定的染料开关。如下图。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102215944%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E6%96%99%E5%8C%BA%E6%8E%A7%E5%88%B6.PNG" alt="染色材料"></p>
-<p>&emsp;&emsp;在染色区，染料输送过来后，会自动合成。对于无色的输出，同样是使用与运算进行控制。染色后就送至合成区，同时将图像信号输送到合成区，用于后续判断等。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225724%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E8%89%B2%E6%8E%A7%E5%88%B6.PNG" alt="无色"></p>
-<p>&emsp;&emsp;在合成区，原先的合成是收到切换的，现在要改成自动化。原先做了3个合成来合成2个、3个、4个象限的图形。最开始想到的判断象限数量来切换使用不同的路径。问题是如何判断数量、如何判断是那几个道出材料、以及如何切换，要设计的话得很久，天荒地老的那种（夸张）。因此，我重新设计了一个合成模块。</p>
-<p>&emsp;&emsp;思路也比较简单。一步一步分析，首先，总体思路选择两两合成——两个象限合成一个，两个象限合成一个，再一合成就完了。因为这种不用考虑那么多。我们在前面象限拆分时，往下输送了该象限的图形信号，因此可以判断当前道的材料有无。如果4条道都有，那么关闭通道，让材料进入合成。如果有有3条道有材料，可以通过与运算判断。与出1说明2条道有，关闭通道让材料进入合成，另外一边则与出0，打开通道让有材料的通过，而合成器会因为只有一边输入导致阻塞，无法输出。如果有2条道有，可以理解3条道中的两条紧挨的道，或者是两条3条道中独立的那一条。后续则是这样的，它的情况就考虑1条道和2条道，仿照前面的就可以了。理解不了就看图，师傅领进门，修行看个人。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225703%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="合成新方式"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225629%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA%E7%94%B5%E8%B7%AF.PNG" alt="新和成电路"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102230420%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF%E5%AE%9E%E8%A3%85.PNG" alt="层"></p>
-<p>&emsp;&emsp;层与层的叠加基本不变，只是此刻你应该可以有单层的图像信号了（前面通过分层、逆序已经得到了）。有了图形信号就可将不要的删除了，优化一下，加快速度。同时有了层信号可以对层与层的合成进行判断了。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102231258%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF.PNG" alt="合成层"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102231357%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E6%8E%A7%E5%88%B6.PNG" alt="层层控制"></p>
-<p>&emsp;&emsp;很快，你发现提交要求不在是数量而是速度了，然而一个工厂的合成速度肯定是不足的，解决 办法可以是多几个工厂或者将产品存储起来，一定时间后释放，此时，速度就与传动带速度相关了。时间可以用一个物品在传送带上走，用一个检测器输出信号就可以了。开信号需要持续一定时间，关信号也要持续一段时间，而检测器只输出很短的信号，因此，使用一个SR锁存器进行信号切换。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102232342%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E9%94%81%E5%AD%98.PNG" alt="SR锁存"></p>
-<p>&emsp;&emsp;输入一个短脉冲，它就会改变输出信号。然而，这种SR锁存会在短脉冲来的时候将输出变成高频，但影响不大。当然开和关的持续时间不一样，所以可以在不同状态下，让物品在不同传送带上走。同时也可以加一个开关来控制是否启用计时。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102232955%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E5%BC%80%E5%85%B3.PNG" alt="状态切换抖动"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220103002820%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E5%AE%9E%E8%A3%85.PNG" alt="2021-08-23_212643"></p>
-<p>&emsp;&emsp;到这，自动化基本就完成了，剩下的基本上是优化和改进了。</p>
-<h2 id="完全自动化"><a href="#完全自动化" class="headerlink" title="完全自动化"></a>完全自动化</h2><p>包含叠加时恰好无共同象限，导致3层变2层，4层变3层等情况。</p>
-<p>难，应该很难想出来。</p>
-<p>（20220102）将另一种叠加方式做出来，加上全局开关基本就完全自动化了。相信大家可以完成了（老师视角）。</p>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>如果某一层同一材料在不同象限都有使用，那么会由于合成不足，拖慢速度。可以通过提高传送带速度或每一象限单独供应原料。</p>
-<h2 id="意想不到"><a href="#意想不到" class="headerlink" title="意想不到"></a>意想不到</h2><ol>
-<li>我在设计的时候是把最底层作为第一层的，结果模拟拆分器把最顶层作为第一层的。</li>
-</ol>
-
-    </div>
-
-    
-    
-    
-        <div class="reward-container">
-  <div>打赏</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
-        <img src="/images/wechatpay.png" alt="小可爱 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div style="display: inline-block;">
-        <img src="/images/alipay.png" alt="小可爱 支付宝">
-        <p>支付宝</p>
-      </div>
-
-  </div>
-</div>
-
-          <div>
-      
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/">异形工厂（shapezio）简单制造工厂</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 小可爱 的个人博客">小可爱</a></p>
-  <p><span>发布时间:</span>2021年08月11日 - 22:15</p>
-  <p><span>最后更新:</span>2022年10月31日 - 14:46</p>
-  <p><span>原始链接:</span><a href="/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/" title="异形工厂（shapezio）简单制造工厂">https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-	});
-    });  
-</script>
-
-
-      
-</div>
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82/" rel="tag"><i class="fa fa-tag"></i> 异形工厂</a>
-              <a href="/tags/shapezio/" rel="tag"><i class="fa fa-tag"></i> shapezio</a>
-              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i> 自动化</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/07/13/%E5%85%B3%E4%BA%8E%E6%88%91%E6%83%B3%E7%89%A9%E5%B0%BD%E5%85%B6%E7%94%A8%EF%BC%8C%E5%9C%A8SD%E5%8D%A1%E4%B8%8A%E5%AE%89%E8%A3%85kali%E3%80%81pe%EF%BC%8C%E7%94%9A%E8%87%B3%E5%A4%9A%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%B9%B6%E4%BD%93%E9%AA%8Ckali%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%80%8C%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E5%BC%95%E5%AF%BC%E4%B8%8D%E7%AC%A6%E5%90%88%E9%A2%84%E6%9C%9F%E7%9A%84%E8%BF%99%E6%A0%B7%E4%B8%80%E4%BB%B6%E4%BA%8B%E3%80%82%E2%80%94%E2%80%94%E5%BA%94%E8%AF%A5%E6%98%AF%E8%BF%99%E6%A0%B7/" rel="prev" title="关于我想物尽其用，在SD卡上安装kali、pe，甚至多系统，并体验kali安装过程而导致电脑引导不符合预期的这样一件事。——应该是这样">
-      <i class="fa fa-chevron-left"></i> 关于我想物尽其用，在SD卡上安装kali、pe，甚至多系统，并体验kali安装过程而导致电脑引导不符合预期的这样一件事。——应该是这样
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
         </li>
@@ -626,69 +230,63 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#要求"><span class="nav-number">1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开搓"><span class="nav-number">4.</span> <span class="nav-text">开搓</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改进"><span class="nav-number">5.</span> <span class="nav-text">改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#某某生产教程"><span class="nav-number">6.</span> <span class="nav-text">某某生产教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw"><span class="nav-number">6.1.</span> <span class="nav-text">CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RuCw–Cw-—-Ru–"><span class="nav-number">6.2.</span> <span class="nav-text">RuCw–Cw:—-Ru–</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#较高程度自动化"><span class="nav-number">7.</span> <span class="nav-text">较高程度自动化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完全自动化"><span class="nav-number">8.</span> <span class="nav-text">完全自动化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺点"><span class="nav-number">9.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#意想不到"><span class="nav-number">10.</span> <span class="nav-text">意想不到</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%90%93"><span class="nav-number">4.</span> <span class="nav-text">开搓</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">5.</span> <span class="nav-text">改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%90%E6%9F%90%E7%94%9F%E4%BA%A7%E6%95%99%E7%A8%8B"><span class="nav-number">6.</span> <span class="nav-text">某某生产教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CbCuCbCu-Sr%E2%80%94%E2%80%94-%E2%80%93CrSrCr-CwCwCwCw"><span class="nav-number">6.1.</span> <span class="nav-text">CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RuCw%E2%80%93Cw-%E2%80%94-Ru%E2%80%93"><span class="nav-number">6.2.</span> <span class="nav-text">RuCw–Cw:—-Ru–</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%83%E9%AB%98%E7%A8%8B%E5%BA%A6%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">较高程度自动化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-number">8.</span> <span class="nav-text">完全自动化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-number">9.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%84%8F%E6%83%B3%E4%B8%8D%E5%88%B0"><span class="nav-number">10.</span> <span class="nav-text">意想不到</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="小可爱"
       src="/images/%E5%A4%B4%E5%83%8F.jpg">
   <p class="site-author-name" itemprop="name">小可爱</p>
   <div class="site-description" itemprop="description">已经毕业了，现在是西部计划志愿者</div>
 </div>
-<div class="site-state-wrap motion-element">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+        <a href="/archives/">
           <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">51</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
-  <div class="sidebar-button motion-element">
-    <a onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
-    比较直接的联系我
-  </a>
+  <div class="sidebar-button site-overview-item animated">
+    <button><i class="fa fa-comment"></i>
+      比较直接的联系我
+    </button>
   </div>
-  <div class="links-of-author motion-element">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/pengxiandyou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/pengxiandyou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.coolapk.com/u/1385475" title="酷安 → https:&#x2F;&#x2F;www.coolapk.com&#x2F;u&#x2F;1385475" rel="noopener" target="_blank"><i class="fa fa-fw fa-"></i>酷安</a>
+        <a href="https://www.coolapk.com/u/1385475" title="酷安 → https:&#x2F;&#x2F;www.coolapk.com&#x2F;u&#x2F;1385475" rel="noopener" target="_blank">酷安</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://space.bilibili.com/20837528" title="B站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;20837528" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>B站</a>
+        <a href="https://space.bilibili.com/20837528" title="B站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;20837528" rel="noopener" target="_blank"><i class="fab fa-tv fa-fw"></i>B站</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://gitee.com/pengxiandyou" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fa fa-fw fa-gitee"></i>Gitee</a>
+        <a href="https://gitee.com/pengxiandyou" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fab fa-gitee fa-fw"></i>Gitee</a>
       </span>
   </div>
 
 
-
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      <i class="fa fa-fw fa-link"></i>
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
       友情链接
     </div>
     <ul class="links-of-blogroll-list">
@@ -716,39 +314,400 @@
     </ul>
   </div>
 
+        </div>
       </div>
+
+
 
             <div>
           <i class="fa fa-search fa-fw"></i>
       <input type="text" value="B:我爱你" name="wd" id="kw1" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw1').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
       </div>
-
-      
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
 
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/pengxiandyou" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="小可爱">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="魔装少男的博客">
+      <meta itemprop="description" content="已经毕业了，现在是西部计划志愿者">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="异形工厂（shapezio）简单制造工厂 | 魔装少男的博客">
+      <meta itemprop="description" content="<p>&emsp;&emsp;“奇形怪状，放飞想象！”</p><p>&emsp;&emsp;“自动生产，尽情创造！”</p><p>&emsp;&emsp;《异形工厂》（Shapez.io）是一款能让您尽情发挥创造力，充分享受思维乐趣的IO游戏。<br/>在无边的地图上开采资源、放置设施、组合图形、高效搭配，持续扩建只属于玩家自己的异形工厂。</p><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1318690/extras/store_page_gif.gif?t=1628330822" /><p>随着游戏进度推进，图形复杂起来了，同时为每一个图形建造一个工厂非常不讨好。因此着手搭建一个工厂来制作图形</p><p>&emsp;&emsp;游戏可以在steam找到。<a target="_blank" rel="noopener" href="https://store.steampowered.com/app/1318690/Shapezio/?l=schinese">地址</a></p>">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          异形工厂（shapezio）简单制造工厂
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-11 22:15:53" itemprop="dateCreated datePublished" datetime="2021-08-11T22:15:53+08:00">2021-08-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-01 22:39:06" itemprop="dateModified" datetime="2022-11-01T22:39:06+08:00">2022-11-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B8%B8%E6%88%8F/%E6%95%99%E7%A8%8B%E5%90%91/" itemprop="url" rel="index"><span itemprop="name">教程向</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description"><p>&emsp;&emsp;“奇形怪状，放飞想象！”</p><p>&emsp;&emsp;“自动生产，尽情创造！”</p><p>&emsp;&emsp;《异形工厂》（Shapez.io）是一款能让您尽情发挥创造力，充分享受思维乐趣的IO游戏。<br/>在无边的地图上开采资源、放置设施、组合图形、高效搭配，持续扩建只属于玩家自己的异形工厂。</p><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1318690/extras/store_page_gif.gif?t=1628330822" /><p>随着游戏进度推进，图形复杂起来了，同时为每一个图形建造一个工厂非常不讨好。因此着手搭建一个工厂来制作图形</p><p>&emsp;&emsp;游戏可以在steam找到。<a target="_blank" rel="noopener" href="https://store.steampowered.com/app/1318690/Shapezio/?l=schinese">地址</a></p></div>
+
+          
+<span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+<span title="post.wordcount">
+    17k 字
+</span> | 
+<span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+<span title="post.min2read">
+    15 mins. 分钟
+</span>
+<br/>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" one-link-mark="yes"><img data-src="https://camo.githubusercontent.com/fca8e5562f29b0a07a42391b3679cd98f91d592fa16ff5c7bce303164e255298/68747470733a2f2f692e696d6775722e636f6d2f59355a326971512e706e67" alt="shapez.io Logo" data-canonical-src="https://i.imgur.com/Y5Z2iqQ.png" style="max-width:100%;"></a></p>
+
+<p>\uooa0\u00a0你还为每过一关就要再造一个生产线而感到烦恼吗？快来建造一个工厂吧。我这个工厂简单易懂，甚至可以不用电路，仅需一点点操作。</p>
+<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><p>&amp;emsp;&amp;emsp;为了能做这个工厂，你必须要解锁图片中的设施。不用每一个都完全解锁，每种有一个就行。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811224510%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A6%81%E6%B1%82.PNG" alt="要求"></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>&amp;emsp;&amp;emsp;我们制作工厂是为了尽可能解放双手的操作，因此在设计之初暂不考虑效率，先解决有无的问题。速度不行的话还可以堆数量。虽然这不是一个完全自动化的工厂，但慢慢改嘛。</p>
+<p>&amp;emsp;&amp;emsp;由于暂时没有电路加持，工厂只能造简单的图形。类似于<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234108%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9C%BA1.png" alt="机2_1">和<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234139%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82.png" alt="机1_1">，这种图形暂时只能单独造机器。自动化的方式还没思考出来。</p>
+<style>
+    img[alt="机1_1"]
+    {
+        display:inline-block;
+        margin: 0;
+    }
+     img[alt="机2_1"]
+    {
+        display:inline-block;
+        margin: 0;
+    }
+</style>
+
+<p>&amp;emsp;&amp;emsp;该教程是根据关卡徐徐渐进的，未解锁的物品如果能被替换，就会先被替换，解锁后更改。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>&amp;emsp;&amp;emsp;最终思路：从底层出发，对每一层进行分解。首先将原材料染色，然后进行旋转，接着根据产出材料的种类选择合成方式（二、三、四，一直接走旁边产物通道）。合成出每一层后再根据层数进行叠加。</p>
+<h2 id="开搓"><a href="#开搓" class="headerlink" title="开搓"></a>开搓</h2><p>&amp;emsp;&amp;emsp;先看一个整体图，好有一个直观的感受。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210811234757%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B7%A5%E5%8E%82.PNG" alt="全 - 副本"></p>
+<p>&amp;emsp;&amp;emsp;在异形工厂中，所有图形都可以分解为一下四中图形的组合，我们将他们作为原材料输入到工厂中。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812000843%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99.PNG" alt="原材料"></p>
+<p>&amp;emsp;&amp;emsp;可以在地图上找到相应的图形进行开采，或者单独为每种材料供应。如果采用图中挖掘包含所有材料的图形的话，要注意安装垃圾桶防止堵塞。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812001517%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E6%9D%90%E6%96%99%E7%94%9F%E4%BA%A7.PNG" alt="原材料生成"></p>
+<p>&amp;emsp;&amp;emsp;前期，我刚可以开始造工厂时，关卡要求都是两层图形。因此我们先考虑两层。不过在考虑两层前，我们先考虑一层。我们将图形分为四个象限。先进行染色在进行旋转。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812002147%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90.PNG" alt="一个象限"></p>
+<p>&amp;emsp;&amp;emsp;这个工厂的一部分属于染色旋转区。由于没有颜料供应，染色器处于阻塞状态，没有产物输出。对于无色图形，我们通过控制传送带的断连来输出产物。在输出位置可以看到，我做了相应的旋转。这是为了旋转到相应的象限。</p>
+<p>&amp;emsp;&amp;emsp;相信你从上图中看出来，现阶段的工厂还需要我们操作，不过已经不用频繁造生成线了。这就像工厂生成物品一样，需要操作一些机器。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812002917%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D.PNG" alt="基础颜色分配器"></p>
+<p>&amp;emsp;&amp;emsp;这是我们的颜料分配器。它从下方输入7种颜料，从右侧输出颜料。可以看到，图中有4排传送带，它依次对应颜色的材料。将两者结合就可以得到下面这张图。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812003527%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E5%88%86%E9%85%8D%E4%BA%BA%E6%95%B0.PNG" alt="颜色和象限"></p>
+<p>&amp;emsp;&amp;emsp;要使用它首先要人为确定该层该象限的图形和颜色。确定好后，选择对应材料的传送带，顺着传送带回走。在颜料分配区，选择对应的颜色，用传送带连接上平衡器。（在使用过程中，我有一种以前那种一次性烧录芯片烧录程序的感觉，虽然我没操作过，但我看过。）</p>
+<p>&amp;emsp;&amp;emsp;在这一个区域，总的来说，染色的话就用传送带连接对应平衡器。如果是无色的话，就断开所有颜色分配的传送带连接，连接上无色分配的传送带（在输出位置）。在关卡结束后，要断开所有自己手动连接添上的传送带。</p>
+<p>&amp;emsp;&amp;emsp;相信你已经造好了一个象限所需要的装置（上图），接下来，将其复制，拢共制作4份共4个象限，记得修改输出位置的旋转角度。制作好的效果类似于下图。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812005816%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83.PNG" alt="一个单元"></p>
+<p>&amp;emsp;&amp;emsp;仔细观察上图，你会发现4个红色的地方。这个地方是垃圾桶，因为我不是单独供应原材料，如果不销毁多余的材料就无法剪出需要的材料。后期解锁过滤器后可以修改并保存大量原材料。</p>
+<p>&amp;emsp;&amp;emsp;将上面的装置复制一份就可以处理两层图形了，再复制两份就可以最多处理四层图形了。效果类似于下图。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812010756%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%824%E5%8D%95%E5%85%83.PNG" alt="4层"></p>
+<p>&amp;emsp;&amp;emsp;接下来就是颜料供应了。我的供应是这样的。这个随你造了，反正都差不多。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812011016%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E6%96%99%E4%BE%9B%E5%BA%94.PNG" alt="颜色"></p>
+<p>&amp;emsp;&amp;emsp;颜料齐全后，就可以制造单层图形了。这里面要考虑只有一个象限、只有两个象限、只有三个象限、四个象限都有。因为当前无法自动化，先手工连接对应的合成模块。我的合成模块如下图。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812011635%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A8%A1%E5%9D%97.PNG" alt="合成模块"></p>
+<p>&amp;emsp;&amp;emsp;现在可以制造出每一层了，接下来就是层与层之间的叠加了。要考虑那个在下，那个在上。从左至右，分别是最底层、上一层、再上一层和最顶层。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812012432%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8F%A0%E5%8A%A0.PNG" alt="叠加区域"></p>
+<p>&amp;emsp;&amp;emsp;叠加层数也是通过传送带的断连来控制。</p>
+<p>&amp;emsp;&amp;emsp;到此时，一个需要人为操作而不要造的工厂就诞生了。它的使用方式是，分析每层每个象限是什么，要什么颜色。连接上传送带输出染色后的材料。接着根据每层的情况选择合适数量的合成模块制造出每一层。最后根据层数连接对应传送带。最最后通过该关卡后，要断开你所有连接的传送带。</p>
+<p>&amp;emsp;&amp;emsp;到这里，教程就可以算做是结束了。针对后期不在要求数量而是要求速度（产量），可以先挂机存储，合适时机在释放。</p>
+<hr color="pink">
+
+<p>&amp;emsp;&amp;emsp;随着关卡的解锁，新的装置解锁后，可以修改原设置，使之更方便。</p>
+<h2 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h2><p>&amp;emsp;&amp;emsp;在解锁过滤器后，原先通过拆掉或连上传送带的动作可以利用过滤器和开关来简化动作，这样就只需要左击开关就可以控制流向了。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812170124%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%97%A0%E8%89%B2%E8%BF%87%E6%BB%A4%E5%99%A8.PNG" alt="无色开关"></p>
+<p>&amp;emsp;&amp;emsp;当然在颜色分配器上，也可以修改，使之更容易操作，减少右键带来的误操作。有点久了，忘了合并器是在什么时候解锁的了，如何你没有解锁，也可以用平衡器替换合并器进行改造。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812170535%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%A2%9C%E8%89%B2%E5%BC%80%E5%85%B3.PNG" alt="开关颜色分配"></p>
+<p>&amp;emsp;&amp;emsp;如果想直观显示颜色，可以像上面接个容器或者像下面一样接上显示器。</p>
+<p><img data-src="https://i.loli.net/2021/08/12/fXtQZw8u1zslRd6.png" alt="显示颜色"></p>
+<p>&amp;emsp;&amp;emsp;有了过滤器和容器，就可以在原材料制作处进行改进了。这样就不用担心原材料消耗不同而导致阻塞必须添加垃圾桶的境况。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812174618%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%A7%A3%E5%86%B3%E9%98%BB%E5%A1%9E.PNG" alt="解决阻塞"></p>
+<h2 id="某某生产教程"><a href="#某某生产教程" class="headerlink" title="某某生产教程"></a>某某生产教程</h2><p>&amp;emsp;&amp;emsp;整体思路：通过叠加缩小图形，再通过剪切的方式将其保留在需要的大图形上。</p>
+<h3 id="CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw"><a href="#CbCuCbCu-Sr——-–CrSrCr-CwCwCwCw" class="headerlink" title="CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw"></a>CbCuCbCu:Sr——:–CrSrCr:CwCwCwCw</h3><p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812174910%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="原型机1"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210812175112%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%9F%E6%88%90%E6%9C%BA.PNG" alt="单个生成机1"></p>
+<p><img data-src="https://i.loli.net/2021/08/12/1JYxCVpy8eHhSWE.png" alt="电路"></p>
+<h3 id="RuCw–Cw-—-Ru–"><a href="#RuCw–Cw-—-Ru–" class="headerlink" title="RuCw–Cw:—-Ru–"></a>RuCw–Cw:—-Ru–</h3><p><img data-src="https://i.loli.net/2021/08/12/jh4lHDQENw18qMe.png" alt="&quot;RuCw--Cw:----Ru--&quot;"></p>
+<p>&amp;emsp;&amp;emsp;等待更新</p>
+<h2 id="较高程度自动化"><a href="#较高程度自动化" class="headerlink" title="较高程度自动化"></a>较高程度自动化</h2><p><del>我目前已经解锁全部设施了，已经在思考了。</del></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006Xzox4ly1gdur6fuq71j306o06oaab.jpg" alt="别催了，虽然每人催"></p>
+<p><del>等待更新和等待思考</del></p>
+<p>&amp;emsp;&amp;emsp;我这个和一般的自动化不一样，这个是将最底层视为第一层，因为在最初考虑时，还没有电线解锁，只能用自己手动操作。电路设计上，优先考虑不改变工厂布局和原有设计。</p>
+<p>&amp;emsp;&amp;emsp;先看整体电路布局。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215742%20%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%9B%BE%E5%BD%A2%E6%A3%80%E6%B5%8B%E5%90%88%E6%88%90.PNG" alt="2021-08-22_215944"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215831%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%94%B5%E8%B7%AF%E6%95%B4%E4%BD%93%E4%B8%8B.PNG" alt="2021-08-23_212313"></p>
+<p>&amp;emsp;&amp;emsp;第一步将基地图像信号引出。在解锁自动化前，相信你已经知道有悬空的图形（就是上面的生产教程）了 。因此，我们要先进行判读图形是否是悬空图形。检测电路如下。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210824215931%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%90%88%E6%88%90%E6%A3%80%E6%B5%8B.PNG" alt="图像信号合成检测"></p>
+<p>&amp;emsp;&amp;emsp;它的原理是将图形拆分一层后将其和下一次拆分后的图形进行叠加，接着重复，最后将结果进行比较，根据结果将图像信号分别传输到不同位置。这两个位置在最后叠加方式不同。一个是按原有设计：最底层和上一层叠加，叠加结果和再上一层叠加，最后再和最顶层合成。另一个是：最顶层和下一层叠加，叠加结果和再下一层叠加，最后和最底层叠加。分这两种是为了尽可能合成悬空图形。</p>
+<blockquote>
+<p>作为后，写博客时，发现我做复杂了，因此我先说整体思路吧，后面的内容就一个地方做复杂了，它其实是可以删掉的。</p>
+<p>首先将图像信号分层，将每一层信号分成4个象限，对每个象限进行分析颜色和图形，通过与门控制对应图形的对应颜色开关进行染色（无色也是一种颜色），将象限的图形和颜色信号输出到合成层的地方，根据信号进行合成。最后根据层信号进行层与层之间的合成。</p>
+</blockquote>
+<p>&amp;emsp;&amp;emsp;我们先采用原本设计好的叠加方式，也就是第一种方式。（<font color = red>此处理论可删除，只须改动合成层的电路逻辑</font>）在我的设计中，从左至右，4个单元分别是最底层、倒数第二层、倒数第三层和最顶层。层与层之间是先叠加最底层和倒数第二层，然后在叠加倒数第三层，最后叠加最顶层。然而模拟拆分器先拆分出最顶层，因此最底层不确定是在哪一根线输出。所以要做一个不管有几层输入，都会依次从最低层开始输出的机器。（此电路可以删除的，不过叠加的就要思考一下了）</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225900%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%8E%9F%E5%9E%8B.PNG" alt="逆序机1"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225954%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E9%80%86%E5%BA%8F%E6%9C%BA%E5%AE%9E%E8%A3%85.PNG" alt="逆序机2"></p>
+<p>&amp;emsp;&amp;emsp;这个机器如果输入1会输出1，如果输入12会输出21，如果输入123会输出321，如果输入1234会输出4321。至于原理，我就解释不清楚了，因为我是一个目标一个目标实现的。做成这个的思想就是遇到问题不要害怕，将难题分解或一步一步解决。首先就是先实现2个的，再实现3个的，最后实现4个，也不用考虑简化呀什么的，能用就行。</p>
+<p>&amp;emsp;&amp;emsp;接下来就是每一层的信号送到对应每一层的单元（如果不对应，随意的话，需要考虑叠加的判断），每个单元里有分为四个象限。因此需要提取出每个象限的图形和颜色。</p>
+<p>&amp;emsp;&amp;emsp;<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102230023%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E8%B1%A1%E9%99%90%E5%9B%BE%E5%BD%A2%E5%92%8C%E9%A2%9C%E8%89%B2%E6%8B%86%E5%88%86.PNG" alt="颜色和图形"></p>
+<p>&amp;emsp;&amp;emsp;这个简单机器就是提取象限的颜色和图形。每个象限的机器不太一样，因为比较简单就自己做了，只要能输出颜色（无色）和图形（无）信号就行了。不要担心无色和却项，通过与可以解决。</p>
+<p>&amp;emsp;&amp;emsp;有颜色和图形信号后，就可以考虑染色了。通过比较器在指定位置输出图形信号到后面的染色区，通过比较器在指定位置输出颜色信号。这其中将无色信号输送到染色区了。染料通过图形信号和颜色信号的与运算控制指定的染料开关。如下图。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102215944%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E6%96%99%E5%8C%BA%E6%8E%A7%E5%88%B6.PNG" alt="染色材料"></p>
+<p>&amp;emsp;&amp;emsp;在染色区，染料输送过来后，会自动合成。对于无色的输出，同样是使用与运算进行控制。染色后就送至合成区，同时将图像信号输送到合成区，用于后续判断等。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225724%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%9F%93%E8%89%B2%E6%8E%A7%E5%88%B6.PNG" alt="无色"></p>
+<p>&amp;emsp;&amp;emsp;在合成区，原先的合成是收到切换的，现在要改成自动化。原先做了3个合成来合成2个、3个、4个象限的图形。最开始想到的判断象限数量来切换使用不同的路径。问题是如何判断数量、如何判断是那几个道出材料、以及如何切换，要设计的话得很久，天荒地老的那种（夸张）。因此，我重新设计了一个合成模块。</p>
+<p>&amp;emsp;&amp;emsp;思路也比较简单。一步一步分析，首先，总体思路选择两两合成——两个象限合成一个，两个象限合成一个，再一合成就完了。因为这种不用考虑那么多。我们在前面象限拆分时，往下输送了该象限的图形信号，因此可以判断当前道的材料有无。如果4条道都有，那么关闭通道，让材料进入合成。如果有有3条道有材料，可以通过与运算判断。与出1说明2条道有，关闭通道让材料进入合成，另外一边则与出0，打开通道让有材料的通过，而合成器会因为只有一边输入导致阻塞，无法输出。如果有2条道有，可以理解3条道中的两条紧挨的道，或者是两条3条道中独立的那一条。后续则是这样的，它的情况就考虑1条道和2条道，仿照前面的就可以了。理解不了就看图，师傅领进门，修行看个人。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225703%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA.PNG" alt="合成新方式"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102225629%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E5%8E%9F%E5%9E%8B%E6%9C%BA%E7%94%B5%E8%B7%AF.PNG" alt="新和成电路"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102230420%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E6%96%B0%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF%E5%AE%9E%E8%A3%85.PNG" alt="层"></p>
+<p>&amp;emsp;&amp;emsp;层与层的叠加基本不变，只是此刻你应该可以有单层的图像信号了（前面通过分层、逆序已经得到了）。有了图形信号就可将不要的删除了，优化一下，加快速度。同时有了层信号可以对层与层的合成进行判断了。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102231258%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E7%94%B5%E8%B7%AF.PNG" alt="合成层"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102231357%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E5%B1%82%E5%90%88%E6%88%90%E6%8E%A7%E5%88%B6.PNG" alt="层层控制"></p>
+<p>&amp;emsp;&amp;emsp;很快，你发现提交要求不在是数量而是速度了，然而一个工厂的合成速度肯定是不足的，解决 办法可以是多几个工厂或者将产品存储起来，一定时间后释放，此时，速度就与传动带速度相关了。时间可以用一个物品在传送带上走，用一个检测器输出信号就可以了。开信号需要持续一定时间，关信号也要持续一段时间，而检测器只输出很短的信号，因此，使用一个SR锁存器进行信号切换。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102232342%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E9%94%81%E5%AD%98.PNG" alt="SR锁存"></p>
+<p>&amp;emsp;&amp;emsp;输入一个短脉冲，它就会改变输出信号。然而，这种SR锁存会在短脉冲来的时候将输出变成高频，但影响不大。当然开和关的持续时间不一样，所以可以在不同状态下，让物品在不同传送带上走。同时也可以加一个开关来控制是否启用计时。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220102232955%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2%E5%BC%80%E5%85%B3.PNG" alt="状态切换抖动"></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20220103002820%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82SR%E5%AE%9E%E8%A3%85.PNG" alt="2021-08-23_212643"></p>
+<p>&amp;emsp;&amp;emsp;到这，自动化基本就完成了，剩下的基本上是优化和改进了。</p>
+<h2 id="完全自动化"><a href="#完全自动化" class="headerlink" title="完全自动化"></a>完全自动化</h2><p>包含叠加时恰好无共同象限，导致3层变2层，4层变3层等情况。</p>
+<p>难，应该很难想出来。</p>
+<p>（20220102）将另一种叠加方式做出来，加上全局开关基本就完全自动化了。相信大家可以完成了（老师视角）。</p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>如果某一层同一材料在不同象限都有使用，那么会由于合成不足，拖慢速度。可以通过提高传送带速度或每一象限单独供应原料。</p>
+<h2 id="意想不到"><a href="#意想不到" class="headerlink" title="意想不到"></a>意想不到</h2><ol>
+<li>我在设计的时候是把最底层作为第一层的，结果模拟拆分器把最顶层作为第一层的。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>打赏</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="小可爱 微信">
+        <span>微信</span>
       </div>
-    </main>
+      <div>
+        <img src="/images/alipay.png" alt="小可爱 支付宝">
+        <span>支付宝</span>
+      </div>
 
-    <footer class="footer">
-      <div class="footer-inner">
+  </div>
+</div>
+
+
+
+          <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/">异形工厂（shapezio）简单制造工厂</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问  的个人博客"></a></p>
+  <p><span>发布时间:</span>2021年08月11日 - 22:15</p>
+  <p><span>最后更新:</span>2022年11月01日 - 22:39</p>
+  <p><span>原始链接:</span><a href="/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/" title="异形工厂（shapezio）简单制造工厂">https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://pengxiandyou.github.io/2021/08/11/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82%EF%BC%88shapezio%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+
+      
+</div>
+          <div class="post-tags">
+              <a href="/tags/%E5%BC%82%E5%BD%A2%E5%B7%A5%E5%8E%82/" rel="tag"># 异形工厂</a>
+              <a href="/tags/shapezio/" rel="tag"># shapezio</a>
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag"># 自动化</a>
+          </div>
+
         
 
-        
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/07/13/%E5%85%B3%E4%BA%8E%E6%88%91%E6%83%B3%E7%89%A9%E5%B0%BD%E5%85%B6%E7%94%A8%EF%BC%8C%E5%9C%A8SD%E5%8D%A1%E4%B8%8A%E5%AE%89%E8%A3%85kali%E3%80%81pe%EF%BC%8C%E7%94%9A%E8%87%B3%E5%A4%9A%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%B9%B6%E4%BD%93%E9%AA%8Ckali%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%80%8C%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E5%BC%95%E5%AF%BC%E4%B8%8D%E7%AC%A6%E5%90%88%E9%A2%84%E6%9C%9F%E7%9A%84%E8%BF%99%E6%A0%B7%E4%B8%80%E4%BB%B6%E4%BA%8B%E3%80%82%E2%80%94%E2%80%94%E5%BA%94%E8%AF%A5%E6%98%AF%E8%BF%99%E6%A0%B7/" rel="prev" title="关于我想物尽其用，在SD卡上安装kali、pe，甚至多系统，并体验kali安装过程而导致电脑引导不符合预期的这样一件事。——应该是这样">
+                  <i class="fa fa-chevron-left"></i> 关于我想物尽其用，在SD卡上安装kali、pe，甚至多系统，并体验kali安装过程而导致电脑引导不符合预期的这样一件事。——应该是这样
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
 
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
 
 
 <div class="copyright">
-  
   &copy; 
   <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
-    <i class="fa fa-heartbeat"></i>
+    <i class="heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">小可爱</span>
 </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">252k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:49</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
 
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
@@ -771,7 +730,7 @@ setInterval("createtime()",250);
 </script>
 
 
-  <script src='https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js'></script>
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
   <script>
     if (window.mermaid) {
       
@@ -779,114 +738,43 @@ setInterval("createtime()",250);
     }
   </script>
 
-
-        
-<div class="busuanzi-count">
-  <!--<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
-  <script async src="https://pengxiandyou.gitee.io/src/js/busuanzi-my.js"></script>
-    <span  >
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span >
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
 
-<script src="/js/utils.js"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"QoLQx5ntEgvMDisbP"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
 
-<script src="/js/motion.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"forest","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.min.js","integrity":"sha256-G58AID1YoX5YaEtWfXSI0VLrZ6N4kvNvwg0BI8zUFxE="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
+  <script src="/js/third-party/pace.js"></script>
 
-
-<script src="/js/next-boot.js"></script>
-
-<script src="/js/bookmark.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
   
 
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-  <script>
-    (function(d, w, c) {
-      w.ChatraID = 'pengxiandyou@gmail.com';
-      var s = d.createElement('script');
-      w[c] = w[c] || function() {
-        (w[c].q = w[c].q || []).push(arguments);
-      };
-      s.async = true;
-      s.src = 'https://call.chatra.io/chatra.js';
-      if (d.head) d.head.appendChild(s);
-    })(document, window, 'Chatra');
-  </script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 
 
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
-
-  
-
-   <!-- 点击出现社会主义彩色文字 -->
+  <!-- 点击出现社会主义彩色文字 -->
  <!--<script type="text/javascript" src="/js/shzyhxjzg.js"></script>
 --><!-- 点击动画 --><!--
  <script type="text/javascript" src="/js/love.js"></script>
@@ -923,5 +811,9 @@ $(document).ready(function(){
 
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+
+
+<script src="/live2d-widget/autoload.js"></script>
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-miku"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
