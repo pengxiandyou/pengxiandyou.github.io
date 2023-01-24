@@ -189,7 +189,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD"><span class="nav-number">1.</span> <span class="nav-text">你好</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%A0%E5%A5%BD"><span class="nav-number">1.</span> <span class="nav-text"> 你好</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text"> 参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -382,7 +382,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -403,9 +403,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><p>&amp;emsp;&amp;emsp;很久以前看过程序羊（自己去B站找）用mac编译过JDK。我是windows，不方便，虽然可以用虚拟机安装一个ubuntu（我挺喜欢kali的，但是我没学，虽然知道一些攻击，因为不是很想像以前一样当脚本小子），但我就想在windows上搞，并且不想安装那些软件——用一次就卸载。我就想用我电脑现有的完成，所以一直拖。</p>
-<p>&amp;emsp;&amp;emsp;算上这次我一共编译过两次工具，第一次是在PVZ里面。作者提供了一个外挂的源代码，要我们自己编译。还有就是这一次。首先去lua的官网下载源代码，不想编译就多看看下载其他的。</p>
-<p>&amp;emsp;&amp;emsp;首先是解压，由于是在windows上，所以可以尝试多次解压出来。我用7z试过。不过我还是在Cmder里用<code>tar -zxvf lua-5.3.4.tar.gz -C lua</code>，lua这个文件夹要存在。解压后终端进入到src文件夹下，执行<code>mingw32-make.exe mingw</code>。其中<code>mingw32-make.exe</code>是因为mingw的<code>make</code>是这个，<code>mingw</code>在官方的直到文档里提到过，自己看。</p>
+        <h1 id="你好"><a class="markdownIt-Anchor" href="#你好"></a> 你好</h1>
+<p>  很久以前看过程序羊（自己去B站找）用mac编译过JDK。我是windows，不方便，虽然可以用虚拟机安装一个ubuntu（我挺喜欢kali的，但是我没学，虽然知道一些攻击，因为不是很想像以前一样当脚本小子），但我就想在windows上搞，并且不想安装那些软件——用一次就卸载。我就想用我电脑现有的完成，所以一直拖。</p>
+<p>  算上这次我一共编译过两次工具，第一次是在PVZ里面。作者提供了一个外挂的源代码，要我们自己编译。还有就是这一次。首先去lua的官网下载源代码，不想编译就多看看下载其他的。</p>
+<p>  首先是解压，由于是在windows上，所以可以尝试多次解压出来。我用7z试过。不过我还是在Cmder里用<code>tar -zxvf lua-5.3.4.tar.gz -C lua</code>，lua这个文件夹要存在。解压后终端进入到src文件夹下，执行<code>mingw32-make.exe mingw</code>。其中<code>mingw32-make.exe</code>是因为mingw的<code>make</code>是这个，<code>mingw</code>在官方的直到文档里提到过，自己看。</p>
 <blockquote>
 <P>
      Do "<kbd>make</kbd>" and see if your platform is listed.
@@ -423,9 +424,10 @@
 </p><p>
 </p>
 </blockquote>
-<p>&amp;emsp;&amp;emsp;测试也简单，在src文件下，进入终端输入<code>lua</code>，执行<code>print &quot;hello world&quot;</code>，没问题还可以建一个lua文件<code>echo print &quot;Hello World&quot; &gt;&gt; test.lua</code>，然后执行<code>dofile(&quot;test.lua&quot;)</code>。还可以添加环境变量，这样在哪里都可以执行了，比如我在<code>D:\桌面\github--page</code>下，我可以在lua里执行<code>dofile(&quot;../编程/lua/lua-5.3.4/src/test.lua&quot;)</code>，再比如我在桌面，我可以<code> dofile(&quot;./编程/lua/lua-5.3.4/src/test.lua&quot;)</code>。</p>
-<p>&amp;emsp;&amp;emsp;完事。但是编译JDk可不简单。假期末尾其实还简单了解了netcat，这东西好玩，功能挺强大的，东西不是很多，虽然又忘的差不多了。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<p>  测试也简单，在src文件下，进入终端输入<code>lua</code>，执行<code>print &quot;hello world&quot;</code>，没问题还可以建一个lua文件<code>echo print &quot;Hello World&quot; &gt;&gt; test.lua</code>，然后执行<code>dofile(&quot;test.lua&quot;)</code>。还可以添加环境变量，这样在哪里都可以执行了，比如我在<code>D:\桌面\github--page</code>下，我可以在lua里执行<code>dofile(&quot;../编程/lua/lua-5.3.4/src/test.lua&quot;)</code>，再比如我在桌面，我可以<code>dofile(&quot;./编程/lua/lua-5.3.4/src/test.lua&quot;)</code>。</p>
+<p>  完事。但是编译JDk可不简单。假期末尾其实还简单了解了netcat，这东西好玩，功能挺强大的，东西不是很多，虽然又忘的差不多了。</p>
+<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Allen-rg/p/11454911.html">win10 ‘make’ 不是内部或外部命令</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38391755/article/details/80380786">Makefile教程（绝对经典，所有问题看这一篇足够了）</a>(太长了，没看多少)</li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/quicmous/article/details/102987619">lua 源代码初次编译</a></li>
@@ -543,14 +545,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">252k</span>
+    <span title="站点总字数">242k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:49</span>
+    <span title="站点阅读时长">3:40</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -634,8 +636,9 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
 
 
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-server-three-blue.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀!","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://npm.elemecdn.com/@waline/emojis@1.0.1/bilibili","el":"#waline","comment":true,"path":"/2021/03/03/%E5%85%B3%E4%BA%8E%E6%88%91%E6%83%B3%E7%BC%96%E8%AF%91JDK%E4%BD%86%E5%BC%BA%E8%BF%AB%E7%97%87%E5%92%8C%E7%9F%A5%E8%AF%86%E4%B8%8D%E5%85%81%E8%AE%B8%E8%BF%99%E4%BB%B6%E4%BA%8B/"}</script>

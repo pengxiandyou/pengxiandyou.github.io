@@ -188,7 +188,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E5%88%97%E9%93%BE%E6%8E%A5"><span class="nav-number">1.</span> <span class="nav-text">系列链接</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E5%88%97%E9%93%BE%E6%8E%A5"><span class="nav-number">1.</span> <span class="nav-text"> 系列链接</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -412,96 +412,119 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="系列链接"><a href="#系列链接" class="headerlink" title="系列链接"></a>系列链接</h1><p><a href="https://pengxiandyou.github.io/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/">MySQL简单笔记一</a><br/></p>
+        <h1 id="系列链接"><a class="markdownIt-Anchor" href="#系列链接"></a> 系列链接</h1>
+<p><a href="https://pengxiandyou.github.io/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/">MySQL简单笔记一</a><br/></p>
 <p><a href="https://pengxiandyou.github.io/2019/08/23/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%BA%8C%E4%B9%8BDDL/">MySQL简单笔记二之DDL</a><br/></p>
 <p><a href="https://pengxiandyou.github.io/2019/08/26/MySQL%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%E4%B9%8BDMl%E5%92%8CDQL/">MySQL简单学习笔记三之DMl和DQL</a><br/></p>
 <p><a href="https://pengxiandyou.github.io/2019/08/27/MySQL%E8%AF%AD%E6%B3%95%E7%9A%84Oracle%E7%BB%83%E4%B9%A0%E8%A1%A8%E5%88%86%E4%BA%AB/">MySQL语法的Oracle练习表分享</a><br/></p>
 <center > <font size=10>DML</font></center>
 1. 添加数据
-
    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- insert into 表名(列123...) values(值123..)</span><br><span class="line">INSERT INTO student VALUES(5,&#x27;eee&#x27;,15);</span><br><span class="line">INSERT INTO student(id,NAME,age) VALUES(6,&#x27;fff&#x27;,60);</span><br><span class="line">INSERT INTO student(id,NAME) VALUES(7,&#x27;ggg&#x27;);</span><br><span class="line">INSERT INTO student VALUES(8,&#x27;hhh&#x27;,NULL);</span><br><span class="line">INSERT INTO student VALUES(9,&#x27;iii&#x27;,DEFAULT);</span><br><span class="line">-- 插入 varchar 或 date 型的数据要用 单引号 引起来</span><br></pre></td></tr></table></figure>
-
 <ol start="2">
-<li><p>修改数据</p>
+<li>
+<p>修改数据</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- update 表 set 列1=值1....</span><br><span class="line">-- 无条件则改所有行的该列值</span><br><span class="line">UPDATE student SET age=35;</span><br><span class="line">UPDATE student SET age=35 WHERE id=1;</span><br><span class="line">UPDATE student SET NAME=&#x27;zs&#x27;,age=32 WHERE id=10;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>删除数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-- delete from </span><br><span class="line">-- 没有条件删除全表</span><br><span class="line">DELETE FROM student </span><br><span class="line">DELETE FROM student WHERE id=8;</span><br><span class="line">-- truncate table 表 删除全表,先删后建表 DDL 不属于DML</span><br><span class="line">DELETE FROM student WHERE id=9 AND NAME=iii;</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>删除数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-- delete from </span><br><span class="line">-- 没有条件删除全表</span><br><span class="line">DELETE FROM student </span><br><span class="line">DELETE FROM student WHERE id=8;</span><br><span class="line">-- truncate table 表 删除全表,先删后建表 DDL 不属于DML</span><br><span class="line">DELETE FROM student WHERE id=9 AND NAME=iii;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <hr/>
 <center > <font size=10>DQL</font></center>
 1. 查询
-
    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- select 列名123.. from 表名</span><br><span class="line">-- *所有列</span><br><span class="line">SELECT * FROM student;</span><br><span class="line">SELECT id ,`name` ,age FROM student; </span><br></pre></td></tr></table></figure>
-
 <ol start="2">
-<li><p>条件查询</p>
+<li>
+<p>条件查询</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-- 条件查询 = != &lt;&gt; &lt; &lt;= &gt;= &gt; </span><br><span class="line">-- between...and; in(set); is null; and; or; not; </span><br><span class="line">SELECT * FROM student WHERE age =20 AND gender=&#x27;女&#x27;;</span><br><span class="line">SELECT * FROM student WHERE age IN(20,35,12);</span><br><span class="line">SELECT * FROM student WHERE age NOT IN(20,35,12);</span><br><span class="line">SELECT * FROM student WHERE NOT(age=20 OR age=35 OR age=12 );</span><br><span class="line">SELECT * FROM student WHERE NAME IS NULL ;</span><br><span class="line">SELECT * FROM student WHERE NAME IS NOT NULL ;</span><br><span class="line">SELECT * FROM student WHERE age&gt;=10 AND age&lt;=60;</span><br><span class="line">SELECT * FROM student WHERE age BETWEEN 10 AND 60;</span><br><span class="line">SELECT * FROM student WHERE age NOT BETWEEN 15 AND 60;#我试的时候not在age前后都可以</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>模糊查询</p>
+<li>
+<p>模糊查询</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- %代表任意( 1,0,多) _表示一个任意</span><br><span class="line">-- 和like一起使用</span><br><span class="line">SELECT * FROM student WHERE NAME LIKE &#x27;a%&#x27;;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>去重</p>
+<li>
+<p>去重</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT NAME FROM student;</span><br><span class="line">SELECT DISTINCT age FROM student;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>组合数据 如和 可能为空</p>
+<li>
+<p>组合数据 如和 可能为空</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT *,id+age FROM student;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>试用数据的函数 自学 理解为编程语言有返回值</p>
+<li>
+<p>试用数据的函数 自学 理解为编程语言有返回值</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT *,id+IFNULL(age,0)FROM student;</span><br><span class="line">SELECT CURDATE();#用select输出</span><br><span class="line">SELECT YEAR(CURDATE());</span><br><span class="line">SELECT ADDDATE(CURDATE(),10);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>给列名起别名</p>
+<li>
+<p>给列名起别名</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT id sid,NAME sname,age sage FROM student;</span><br><span class="line">SELECT id AS sid,NAME AS sname,age AS sage FROM student;</span><br><span class="line">SELECT *,id+age AS &#x27;和&#x27; FROM student;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>排序 默认升序<code>asc</code></p>
+<li>
+<p>排序 默认升序<code>asc</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student ORDER BY age;</span><br><span class="line">SELECT * FROM student ORDER BY age ASC;</span><br><span class="line">SELECT * FROM student ORDER BY age DESC;#降序</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>指定多个参考列</p>
+<li>
+<p>指定多个参考列</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student ORDER BY age ASC,NAME ASC;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>顺序</p>
+<li>
+<p>顺序</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/*顺序</span><br><span class="line">select</span><br><span class="line">from</span><br><span class="line">where -- 筛选</span><br><span class="line">group by</span><br><span class="line">having</span><br><span class="line">order by</span><br><span class="line">limit	-- 排序</span><br><span class="line">*/</span><br><span class="line">SELECT * FROM student WHERE age BETWEEN 10 AND 60 ORDER BY NAME;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>聚合函数 数据统计</p>
+<li>
+<p>聚合函数 数据统计</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- sum() max() min() avg() count()</span><br><span class="line">SELECT SUM(id) ,AVG(age),MAX(age),MIN(age) FROM student;</span><br><span class="line">SELECT COUNT(*) FROM student ;#写* 列(会统计非空)都可 一般用 * 主键</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>分组查询</p>
+<li>
+<p>分组查询</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- group by</span><br><span class="line">SELECT gender,COUNT(*) FROM student GROUP BY gender;</span><br><span class="line">SELECT age,gender,COUNT(*) FROM student GROUP BY age,gender;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>分组再筛选</p>
+<li>
+<p>分组再筛选</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- having 统计后再筛选</span><br><span class="line">SELECT  age,gender,COUNT(*) FROM student GROUP BY age,gender HAVING COUNT(*)&gt;=2;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>分页 limit 叶索引 页大小</p>
+<li>
+<p>分页 limit 叶索引 页大小</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student LIMIT 0,2;</span><br><span class="line">SELECT * FROM student LIMIT 1,2;</span><br><span class="line">SELECT * FROM student LIMIT 5;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>连接</p>
+<li>
+<p>连接</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student AS stu,course AS cou WHERE stu.`course_id`=cou.`id`;</span><br></pre></td></tr></table></figure>
-
 <ol>
-<li><p>内连接</p>
+<li>
+<p>内连接</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student stu INNER JOIN course cou ON stu.`course_id`=cou.`id`;#inner可以省</span><br><span class="line">SELECT * FROM student stu </span><br><span class="line">INNER JOIN course cou </span><br><span class="line">ON stu.`course_id`=cou.`id` #一般连接条件</span><br><span class="line">WHERE stu.`gender`=&#x27;男&#x27;;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>左外连接  左边全显示</p>
+<li>
+<p>左外连接  左边全显示</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student stu </span><br><span class="line">LEFT OUTER JOIN course cou </span><br><span class="line">ON stu.`course_id`=cou.`id`;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>右外连接</p>
+<li>
+<p>右外连接</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student stu </span><br><span class="line">RIGHT OUTER JOIN course cou </span><br><span class="line">ON stu.`course_id`=cou.`id`;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>完全外连接 </p>
+<li>
+<p>完全外连接</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student stu </span><br><span class="line">LEFT OUTER JOIN course cou </span><br><span class="line">ON stu.`course_id`=cou.`id`</span><br><span class="line">UNION</span><br><span class="line">SELECT * FROM student stu </span><br><span class="line">RIGHT OUTER JOIN course cou </span><br><span class="line">ON stu.`course_id`=cou.`id`;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>交叉连接</p>
+<li>
+<p>交叉连接</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student ,course ;</span><br><span class="line">SELECT * FROM student CROSS JOIN course;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>自然连接 内 也可以 加 <code>right</code> <code> left</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student NATURAL JOIN course;</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>自然连接 内 也可以 加 <code>right</code> <code>left</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM student NATURAL JOIN course;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 </li>
-<li><p>子查询</p>
+<li>
+<p>子查询</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">-- 功能最强大 </span><br><span class="line">-- 查询嵌套 </span><br><span class="line">/*select (子查询)</span><br><span class="line">from (子查询)</span><br><span class="line">where (子查询)</span><br><span class="line">*/</span><br><span class="line">-- 比eee年龄高的学生</span><br><span class="line">SELECT * FROM student WHERE age&gt;(SELECT age FROM student WHERE NAME=&#x27;eee&#x27;);</span><br><span class="line">-- 比男生最大年龄还大的女士 大于所有</span><br><span class="line">SELECT * FROM student WHERE gender!=&#x27;男&#x27; AND age&gt;ALL(SELECT age FROM student WHERE gender=&#x27;男&#x27;);</span><br><span class="line">--  大于任意 最低</span><br><span class="line">SELECT * FROM student WHERE gender!=&#x27;男&#x27; AND age&gt;ANY(SELECT age FROM student WHERE gender=&#x27;男&#x27;);</span><br><span class="line">-- 和aaa这个女士学同一门课的女士 </span><br><span class="line">SELECT * FROM student </span><br><span class="line">WHERE (gender,course_id) IN (SELECT gender,course_id FROM student WHERE NAME =&#x27;aaa&#x27;) AND NAME!=&#x27;aaa&#x27;;</span><br><span class="line">-- 查询学生和课程</span><br><span class="line">SELECT NAME,course FROM student s,(SELECT * FROM course) c WHERE s.`course_id`=c.id ORDER BY NAME; </span><br><span class="line">-- 相关子查询</span><br><span class="line">SELECT NAME, (SELECT course FROM course c WHERE s.`course_id`=c.id) FROM student s ORDER BY NAME; </span><br></pre></td></tr></table></figure>
 </li>
-<li><p>了解事务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#手动开事务,将若干个语句作为一个原子操作</span><br><span class="line">star transaction;</span><br><span class="line">语句</span><br><span class="line">commit;#提交</span><br><span class="line">rollback;#回滚</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>了解事务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#手动开事务,将若干个语句作为一个原子操作</span><br><span class="line">star transaction;</span><br><span class="line">语句</span><br><span class="line">commit;#提交</span><br><span class="line">rollback;#回滚</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 
     </div>
@@ -615,14 +638,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">252k</span>
+    <span title="站点总字数">242k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:49</span>
+    <span title="站点阅读时长">3:40</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -706,8 +729,9 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
 
 
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-server-three-blue.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀!","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://npm.elemecdn.com/@waline/emojis@1.0.1/bilibili","el":"#waline","comment":true,"path":"/2019/08/26/MySQL%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%E4%B9%8BDMl%E5%92%8CDQL/"}</script>

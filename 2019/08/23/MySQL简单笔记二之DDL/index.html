@@ -188,7 +188,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">一 数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">二 表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E7%BA%A6%E6%9D%9F"><span class="nav-number">3.</span> <span class="nav-text">三 约束</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text"> 一 数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text"> 二 表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E7%BA%A6%E6%9D%9F"><span class="nav-number">3.</span> <span class="nav-text"> 三 约束</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -414,85 +414,108 @@
     <div class="post-body" itemprop="articleBody">
         <hr/>
 <font color=pink size =10>学习要自己思考,举一反三,保持好奇心(比如我在这里这么干会怎么样). </font>
-
 <hr/>
 <span id="more"></span>
 # 系列链接
 [MySQL简单笔记一](https://pengxiandyou.github.io/2019/08/22/MySQL简单笔记一/)<br/>
-
 <p><a href="https://pengxiandyou.github.io/2019/08/23/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%BA%8C%E4%B9%8BDDL/">MySQL简单笔记二之DDL</a><br/></p>
 <p><a href="https://pengxiandyou.github.io/2019/08/26/MySQL%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%E4%B9%8BDMl%E5%92%8CDQL/">MySQL简单学习笔记三之DMl和DQL</a><br/></p>
 <p><a href="https://pengxiandyou.github.io/2019/08/27/MySQL%E8%AF%AD%E6%B3%95%E7%9A%84Oracle%E7%BB%83%E4%B9%A0%E8%A1%A8%E5%88%86%E4%BA%AB/">MySQL语法的Oracle练习表分享</a><br/></p>
-<h1 id="一-数据库"><a href="#一-数据库" class="headerlink" title="一 数据库"></a>一 数据库</h1><ol>
-<li><p>创建数据库</p>
+<h1 id="一-数据库"><a class="markdownIt-Anchor" href="#一-数据库"></a> 一 数据库</h1>
+<ol>
+<li>
+<p>创建数据库</p>
 <ul>
 <li><code>CREATE DATABASE db2;</code></li>
 <li>不存在就创建 <code>CREATE DATABAS IF NOT EXISTS db2;</code></li>
 </ul>
 </li>
-<li><p>删除数据库</p>
+<li>
+<p>删除数据库</p>
 <ul>
 <li><code>DROP DATABASE db2;</code></li>
 <li>存在就删 <code>DROP DATABASE IF EXISTS db2;</code></li>
 </ul>
 </li>
 </ol>
-<h1 id="二-表"><a href="#二-表" class="headerlink" title="二 表"></a>二 表</h1><ol>
-<li><p>创建表 可以使用&#96;&#96;(Tab上面的键)避免关键字冲突 NAME也可以创建</p>
+<h1 id="二-表"><a class="markdownIt-Anchor" href="#二-表"></a> 二 表</h1>
+<ol>
+<li>
+<p>创建表 可以使用``(Tab上面的键)避免关键字冲突 NAME也可以创建</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE stu(</span><br><span class="line">id INT,</span><br><span class="line">`name` VARCHAR(10),</span><br><span class="line">age INT</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>删除表 <code>DROP TABLE stu;</code></p>
+<li>
+<p>删除表 <code>DROP TABLE stu;</code></p>
 </li>
-<li><p>修改表</p>
+<li>
+<p>修改表</p>
 <ol>
-<li><p>添加列</p>
+<li>
+<p>添加列</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE stu ADD(</span><br><span class="line">address VARCHAR(10),</span><br><span class="line">email VARCHAR(20)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>修改列类型 <code>ALTER TABLE stu MODIFY email VARCHAR(50);</code></p>
+<li>
+<p>修改列类型 <code>ALTER TABLE stu MODIFY email VARCHAR(50);</code></p>
 </li>
-<li><p>修改列名 <code>ALTER TABLE stu CHANGE address addr VARCHAR(50);</code></p>
+<li>
+<p>修改列名 <code>ALTER TABLE stu CHANGE address addr VARCHAR(50);</code></p>
 </li>
-<li><p>删除列 <code>ALTER TABLE stu DROP email;</code></p>
+<li>
+<p>删除列 <code>ALTER TABLE stu DROP email;</code></p>
 </li>
-<li><p>修改表名 <code>ALTER TABLE stu RENAME TO student;</code></p>
+<li>
+<p>修改表名 <code>ALTER TABLE stu RENAME TO student;</code></p>
 </li>
 </ol>
 </li>
 </ol>
-<h1 id="三-约束"><a href="#三-约束" class="headerlink" title="三 约束"></a>三 约束</h1><ol>
-<li><p>主键约束</p>
+<h1 id="三-约束"><a class="markdownIt-Anchor" href="#三-约束"></a> 三 约束</h1>
 <ol>
-<li><pre><code class="mysql">CREATE TABLE t1(
+<li>
+<p>主键约束</p>
+<ol>
+<li>
+<pre class="highlight"><code class="mysql">CREATE TABLE t1(
 id INT PRIMARY KEY,
 NAME VARCHAR(10)
 );
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 添加主键 `ALTER TABLE t1 ADD PRIMARY KEY(id);`</span><br><span class="line"></span><br><span class="line">3. 删除主键 `ALTER TABLE t1 DROP PRIMARY KEY;`</span><br><span class="line"></span><br><span class="line">4. 自动增长 </span><br><span class="line"></span><br><span class="line">   ```mysql</span><br><span class="line">   CREATE TABLE t1(</span><br><span class="line">   id INT PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">   NAME VARCHAR(10)</span><br><span class="line">   );</span><br></pre></td></tr></table></figure>
+
 </code></pre>
 </li>
-<li><p>修改让自动增长 <code>ALTER TABLE t1 CHANGE id id INT AUTO_INCREMENT;</code></p>
+<li>
+<p>修改让自动增长 <code>ALTER TABLE t1 CHANGE id id INT AUTO_INCREMENT;</code></p>
 </li>
-<li><p>修改不让自动增长 <code>ALTER TABLE t1 CHANGE id id INT;</code></p>
+<li>
+<p>修改不让自动增长 <code>ALTER TABLE t1 CHANGE id id INT;</code></p>
 </li>
 </ol>
 </li>
-<li><p>非空约束</p>
+<li>
+<p>非空约束</p>
 <ol>
-<li><pre><code class="mysql">CREATE TABLE t1(
+<li>
+<pre class="highlight"><code class="mysql">CREATE TABLE t1(
 id INT PRIMARY KEY,
 NAME VARCHAR(10) NOT NULL
 );
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   2. 修改 仿照修改自动增长</span><br><span class="line"></span><br><span class="line">3. 唯一键约束</span><br><span class="line"></span><br><span class="line">   1. ```</span><br><span class="line">      CREATE TABLE t1(</span><br><span class="line">      id INT PRIMARY KEY,</span><br><span class="line">      NAME VARCHAR(10) UNIQUE</span><br><span class="line">      );</span><br></pre></td></tr></table></figure>
+
 </code></pre>
 </li>
-<li><p>删除唯一键 <code>ALTER TABLE t1 DROP INDEX NAME;</code></p>
+<li>
+<p>删除唯一键 <code>ALTER TABLE t1 DROP INDEX NAME;</code></p>
 </li>
-<li><p>修改表,创建唯一键 索引 <code>ALTER TABLE t1 ADD CONSTRAINT uq_name UNIQUE(NAME);</code></p>
+<li>
+<p>修改表,创建唯一键 索引 <code>ALTER TABLE t1 ADD CONSTRAINT uq_name UNIQUE(NAME);</code></p>
 </li>
 </ol>
 </li>
-<li><p>外键约束 </p>
+<li>
+<p>外键约束</p>
 <ol>
-<li><pre><code>-- 命名 fk_子表名_列名
+<li>
+<pre class="highlight"><code class="">-- 命名 fk_子表名_列名
 --      fk_主表名_子表名_列名
 CREATE TABLE dep(
 did INT PRIMARY KEY,
@@ -506,9 +529,11 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 );
 </code></pre>
 </li>
-<li><p>删除外键 <code>ALTER TABLE emp DROP FOREIGN KEY fk_dep_emp_did;</code></p>
+<li>
+<p>删除外键 <code>ALTER TABLE emp DROP FOREIGN KEY fk_dep_emp_did;</code></p>
 </li>
-<li><p>添加外键 <code>ALTER TABLE emp ADD CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did);</code></p>
+<li>
+<p>添加外键 <code>ALTER TABLE emp ADD CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did);</code></p>
 </li>
 </ol>
 </li>
@@ -625,14 +650,14 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">252k</span>
+    <span title="站点总字数">242k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:49</span>
+    <span title="站点阅读时长">3:40</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -716,8 +741,9 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
 
 
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-server-three-blue.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀!","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://npm.elemecdn.com/@waline/emojis@1.0.1/bilibili","el":"#waline","comment":true,"path":"/2019/08/23/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%BA%8C%E4%B9%8BDDL/"}</script>

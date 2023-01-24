@@ -406,7 +406,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -427,35 +427,35 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p> &amp;emsp;&amp;emsp;刚开时想的是，大家肯定和我一样，勤俭持家。于是，在互联网上搜索一些教程和工具，看有没有傻瓜工具一键完成的。结果没有，而且都很麻烦。印象比较深的有两种方式。一种是通过虚拟机安装kali。不知道为什么，我当时就是不想用，还觉得有点不可靠。第二种方式是先安装kali，然后备份，接着用老毛桃操作，再接着分区工具分20G出来，5G给kali还原用，15G拿来做持久化。我就是因为像大白菜、老毛桃等这些工具不干净，才用的微PE的。</p>
-<p>&amp;emsp;&amp;emsp;然后因为教程基本就这些，我就想自己尝试。最初想法是先分好区，然后分别安装。结果一格式化就全盘格式化。GG。</p>
-<p>&amp;emsp;&amp;emsp;手机上查查，电脑上查查，找到一个工具——YUMI。这个工具好，比较傻瓜。但还是失败了。怎么失败的忘了，反正就是失败了。</p>
-<p>&amp;emsp;&amp;emsp;上厕所的时候，我有发现了一个工具。这个工具堪称神器，简直就是我这种人的福音。这个工具就是ventoy。第一次失败是因为分区的问题，当时没有预留空间，在kali安装分区后就失败了。第二次就搞好了。这个工具对我来说，使用那些不用安装的iso真的很方便。</p>
-<p>&amp;emsp;&amp;emsp;kali安装过程中为了搞清楚要有哪些分区的照片。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713195307%E5%A4%A7%E8%87%B4%E5%88%86%E5%8C%BA.jpg" alt="大致分区" title="要有什么分区"></p>
-<p>&amp;emsp;&amp;emsp;最后启动成功的画面照片。我当时超高兴。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713195510kali2021%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.jpg" alt="kali安装成功" title="启动成功"></p>
-<p>&amp;emsp;&amp;emsp;当然啦，为了确认真的成功了还要方法测试。初步测试还是很成功的，只要拔掉插上再测试一遍就可以的。但是出现想不到的画面了，后来也出现的几次应该都是同一个界面，但还是有点区别。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713200025grub%E7%95%8C%E9%9D%A2.jpg" alt="我不喜欢的界面" title="GRUB"></p>
-<p>&amp;emsp;&amp;emsp;找到的教程里有提到在里不停的找，但我没找到。</p>
-<p>&amp;emsp;&amp;emsp;但我再次用读卡器插上SD卡后，有可以进到kali的引导界面（应该是）。这个界面里有<code>Windows Boot Manager</code>和	<code>system setup</code>，我当时还感叹，挺智能的，不错。结果后来就感觉不对了。虽然可以通过<code>Windows Boot Manager</code>到达我以前双系统的选择界面（应该是UEFI的引导吧）。而且都可以成功进入。因此就是不停的进入两个PE、win10、kali和插拔。最后在PE的工具里删除了一些UEFI BOIS启动项。因为通过观察，我感觉有多个引导在起作用。如过没猜错，应该是先启动到kali的，再根据选项启动我以前笔记本启动项。至于为什么敢删，是因为我之前机械硬盘坏了，用过PE，再加上观察类别，还有保存呢。删除后，拔掉SD卡也可以正常进入系统了，SD卡里的PE也可以启动。至于kali没关心了，因为以后肯定重新安装。就算要启动也可以恢复启动项来启动。</p>
-<p>&amp;emsp;&amp;emsp;本以为皆大欢喜了，笔记本本身安装的PE没用了，重启也没有系统选择界面，直接就进系统了。通过设置里的高级启动，又可以见到选择界面，但是表面上是PE，但进入后仍是win10。反复进SD卡里的PE检查，想着可能引导坏了，尝试过修复引导，添加过启动项，重新安装过PE都没效果（我又想到应该方法，我观察过efi文件的位置，查阅微PE的资料应该可以通过添加启动项试试。）。最后还发现了两个问题。希望第二个问题是自欺欺人。</p>
-<p>&amp;emsp;&amp;emsp;BOIS变了，两个选项不能选，还有一些选项没有了，十分简陋，就连更改启动顺序的也不见了。网络上常见的修改也找不到。</p>
-<p>&amp;emsp;&amp;emsp;另外一个就是我尝试再安装PE时发现的。我认为应该是UEFI的。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713201149%E5%90%AF%E5%8A%A8%E7%B1%BB%E5%9E%8B%E4%B8%8D%E6%98%AFUEFI.PNG" alt="启动类型" title="我认为应该是UEFI，后来安慰自己是兼容，两种都有"></p>
-<p>&amp;emsp;&amp;emsp;查阅BOIS的相关教程时，生成的信息图。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203149cmd%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_130614"><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203216winr%E7%94%9F%E6%88%90%E7%9A%84%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_183519"></p>
-<p>&amp;emsp;&amp;emsp;我试过刷BOIS，但是找的工具不想。而且也不敢强刷，毕竟笔记本就一个，而且囊中羞涩。保持理性。</p>
-<p>&amp;emsp;&amp;emsp;在这次过程中下载的工具。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203659Sd%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E5%B7%A5%E5%85%B7.PNG" alt="2021-07-13_203646" title="工具"></p>
-<p>&amp;emsp;&amp;emsp;这过程中浏览的历史。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203802SD%E5%8D%A1%E6%B5%8F%E8%A7%88%E5%8E%86%E5%8F%B2.PNG" alt="2021-07-13_183150" title="浏览历史"></p>
-<p>&amp;emsp;&amp;emsp;最后的结果就是双系统的PE找不着，启动不了。SD卡里的PE可以用，kali可以通过手段启动。有失有得。</p>
+        <p>  刚开时想的是，大家肯定和我一样，勤俭持家。于是，在互联网上搜索一些教程和工具，看有没有傻瓜工具一键完成的。结果没有，而且都很麻烦。印象比较深的有两种方式。一种是通过虚拟机安装kali。不知道为什么，我当时就是不想用，还觉得有点不可靠。第二种方式是先安装kali，然后备份，接着用老毛桃操作，再接着分区工具分20G出来，5G给kali还原用，15G拿来做持久化。我就是因为像大白菜、老毛桃等这些工具不干净，才用的微PE的。</p>
+<p>  然后因为教程基本就这些，我就想自己尝试。最初想法是先分好区，然后分别安装。结果一格式化就全盘格式化。GG。</p>
+<p>  手机上查查，电脑上查查，找到一个工具——YUMI。这个工具好，比较傻瓜。但还是失败了。怎么失败的忘了，反正就是失败了。</p>
+<p>  上厕所的时候，我有发现了一个工具。这个工具堪称神器，简直就是我这种人的福音。这个工具就是ventoy。第一次失败是因为分区的问题，当时没有预留空间，在kali安装分区后就失败了。第二次就搞好了。这个工具对我来说，使用那些不用安装的iso真的很方便。</p>
+<p>  kali安装过程中为了搞清楚要有哪些分区的照片。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713195307%E5%A4%A7%E8%87%B4%E5%88%86%E5%8C%BA.jpg" alt="大致分区" title="要有什么分区" /></p>
+<p>  最后启动成功的画面照片。我当时超高兴。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713195510kali2021%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.jpg" alt="kali安装成功" title="启动成功" /></p>
+<p>  当然啦，为了确认真的成功了还要方法测试。初步测试还是很成功的，只要拔掉插上再测试一遍就可以的。但是出现想不到的画面了，后来也出现的几次应该都是同一个界面，但还是有点区别。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713200025grub%E7%95%8C%E9%9D%A2.jpg" alt="我不喜欢的界面" title="GRUB" /></p>
+<p>  找到的教程里有提到在里不停的找，但我没找到。</p>
+<p>  但我再次用读卡器插上SD卡后，有可以进到kali的引导界面（应该是）。这个界面里有<code>Windows Boot Manager</code>和	<code>system setup</code>，我当时还感叹，挺智能的，不错。结果后来就感觉不对了。虽然可以通过<code>Windows Boot Manager</code>到达我以前双系统的选择界面（应该是UEFI的引导吧）。而且都可以成功进入。因此就是不停的进入两个PE、win10、kali和插拔。最后在PE的工具里删除了一些UEFI BOIS启动项。因为通过观察，我感觉有多个引导在起作用。如过没猜错，应该是先启动到kali的，再根据选项启动我以前笔记本启动项。至于为什么敢删，是因为我之前机械硬盘坏了，用过PE，再加上观察类别，还有保存呢。删除后，拔掉SD卡也可以正常进入系统了，SD卡里的PE也可以启动。至于kali没关心了，因为以后肯定重新安装。就算要启动也可以恢复启动项来启动。</p>
+<p>  本以为皆大欢喜了，笔记本本身安装的PE没用了，重启也没有系统选择界面，直接就进系统了。通过设置里的高级启动，又可以见到选择界面，但是表面上是PE，但进入后仍是win10。反复进SD卡里的PE检查，想着可能引导坏了，尝试过修复引导，添加过启动项，重新安装过PE都没效果（我又想到应该方法，我观察过efi文件的位置，查阅微PE的资料应该可以通过添加启动项试试。）。最后还发现了两个问题。希望第二个问题是自欺欺人。</p>
+<p>  BOIS变了，两个选项不能选，还有一些选项没有了，十分简陋，就连更改启动顺序的也不见了。网络上常见的修改也找不到。</p>
+<p>  另外一个就是我尝试再安装PE时发现的。我认为应该是UEFI的。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713201149%E5%90%AF%E5%8A%A8%E7%B1%BB%E5%9E%8B%E4%B8%8D%E6%98%AFUEFI.PNG" alt="启动类型" title="我认为应该是UEFI，后来安慰自己是兼容，两种都有" /></p>
+<p>  查阅BOIS的相关教程时，生成的信息图。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203149cmd%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_130614" /><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203216winr%E7%94%9F%E6%88%90%E7%9A%84%E4%BF%A1%E6%81%AF.PNG" alt="2021-07-13_183519" /></p>
+<p>  我试过刷BOIS，但是找的工具不想。而且也不敢强刷，毕竟笔记本就一个，而且囊中羞涩。保持理性。</p>
+<p>  在这次过程中下载的工具。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203659Sd%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E5%B7%A5%E5%85%B7.PNG" alt="2021-07-13_203646" title="工具" /></p>
+<p>  这过程中浏览的历史。<img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210713203802SD%E5%8D%A1%E6%B5%8F%E8%A7%88%E5%8E%86%E5%8F%B2.PNG" alt="2021-07-13_183150" title="浏览历史" /></p>
+<p>  最后的结果就是双系统的PE找不着，启动不了。SD卡里的PE可以用，kali可以通过手段启动。有失有得。</p>
 <blockquote>
 <p>祸兮福所倚，福兮祸所伏</p>
 </blockquote>
-<p>&amp;emsp;&amp;emsp;假如我将我的系统盘里的东西（C盘）复制出来，完整保存注册表和环境变量，然后格了（低格还是什么格）我的固态，在里装上我的系统，最后恢复注册表和环境变量。这样是否可以做到和原先一样，所有软件正常运行，环境也是正确的，安装过的软件也可以在卸载管理里找到？</p>
-<p>&amp;emsp;&amp;emsp;注册表里包含环境变量。</p>
-<p>&amp;emsp;&amp;emsp;我始终觉得解决这件事理论上应该是一个不难的事，一种直觉。第一步，首先是解决开机见到系统选择界面。于是，我用bcdedit复制了一个，同时，我直接打bcdedit命令看到，看到了pe的path。于是去pe里把UEFI启动项里复制的<code>Windows Boot Manager</code>再次修改了，换成了path位置里的efi文件。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720200755msconfig%E5%92%8Cbcdedit.PNG" alt="2021-07-20_190200" title="两者不一样"></p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720200848%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%87%8C%E7%9A%84%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194107"></p>
-<p>&amp;emsp;&amp;emsp;重启，见到了系统选择界面。点击pe，不是进的pe，而是像重新启动，再次进入系统选择界面。very good。有戏。于是我重新进入win10，安装微pe。我发现启动类型变成UEFI了，非常开心。</p>
-<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720201247UEFI%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194329"></p>
-<p>&amp;emsp;&amp;emsp;重新安装后，启动，进入pe，ok，启动，进入win10，ok，删除复制的win10，启动，进入pe，ok，启动，进入win10，ok。</p>
-<p>&amp;emsp;&amp;emsp;由于之前重新买了u盘，因此SD卡的利用就换了，那就是win to go 和kali to go结合在一起。生命不息，折腾不止。最后就只剩文中提到的问题了。</p>
+<p>  假如我将我的系统盘里的东西（C盘）复制出来，完整保存注册表和环境变量，然后格了（低格还是什么格）我的固态，在里装上我的系统，最后恢复注册表和环境变量。这样是否可以做到和原先一样，所有软件正常运行，环境也是正确的，安装过的软件也可以在卸载管理里找到？</p>
+<p>  注册表里包含环境变量。</p>
+<p>  我始终觉得解决这件事理论上应该是一个不难的事，一种直觉。第一步，首先是解决开机见到系统选择界面。于是，我用bcdedit复制了一个，同时，我直接打bcdedit命令看到，看到了pe的path。于是去pe里把UEFI启动项里复制的<code>Windows Boot Manager</code>再次修改了，换成了path位置里的efi文件。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720200755msconfig%E5%92%8Cbcdedit.PNG" alt="2021-07-20_190200" title="两者不一样" /></p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720200848%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E9%87%8C%E7%9A%84%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194107" /></p>
+<p>  重启，见到了系统选择界面。点击pe，不是进的pe，而是像重新启动，再次进入系统选择界面。very good。有戏。于是我重新进入win10，安装微pe。我发现启动类型变成UEFI了，非常开心。</p>
+<p><img data-src="https://raw.githubusercontent.com/pengxiandyou/pengxiandyou.github.io/e5377a530ddc6d6995303bbfc75547513f025f3b/imgbed/2021/20210720201247UEFI%E5%90%AF%E5%8A%A8.PNG" alt="2021-07-20_194329" /></p>
+<p>  重新安装后，启动，进入pe，ok，启动，进入win10，ok，删除复制的win10，启动，进入pe，ok，启动，进入win10，ok。</p>
+<p>  由于之前重新买了u盘，因此SD卡的利用就换了，那就是win to go 和kali to go结合在一起。生命不息，折腾不止。最后就只剩文中提到的问题了。</p>
 
     </div>
 
@@ -572,14 +572,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">252k</span>
+    <span title="站点总字数">242k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:49</span>
+    <span title="站点阅读时长">3:40</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -663,8 +663,9 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
 
 
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-server-three-blue.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀!","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://npm.elemecdn.com/@waline/emojis@1.0.1/bilibili","el":"#waline","comment":true,"path":"/2021/07/13/%E5%85%B3%E4%BA%8E%E6%88%91%E6%83%B3%E7%89%A9%E5%B0%BD%E5%85%B6%E7%94%A8%EF%BC%8C%E5%9C%A8SD%E5%8D%A1%E4%B8%8A%E5%AE%89%E8%A3%85kali%E3%80%81pe%EF%BC%8C%E7%94%9A%E8%87%B3%E5%A4%9A%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%B9%B6%E4%BD%93%E9%AA%8Ckali%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%80%8C%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E5%BC%95%E5%AF%BC%E4%B8%8D%E7%AC%A6%E5%90%88%E9%A2%84%E6%9C%9F%E7%9A%84%E8%BF%99%E6%A0%B7%E4%B8%80%E4%BB%B6%E4%BA%8B%E3%80%82%E2%80%94%E2%80%94%E5%BA%94%E8%AF%A5%E6%98%AF%E8%BF%99%E6%A0%B7/"}</script>
