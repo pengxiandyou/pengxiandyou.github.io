@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--<link rel="stylesheet" href="http://www.eteste.com/bulma.css">-->
+			<link rel="stylesheet" href="bulma.css">
+		<style type="text/css">
+				
+		.tile.is-parent {
+			  width: 300px;
+			}
+		.input.is-small,
+		.textarea.is-small {
+		  border-radius: 2px;
+		  font-size: 0.75rem;
+		  width: 250px;
+		}	
+        #calculator{
+	            position: absolute;
+	            top: 50%;
+	            left: 50%;
+	            -webkit-transform: translate(-50%, -50%);
+	            -moz-transform: translate(-50%, -50%);
+	            -ms-transform: translate(-50%, -50%);
+	            -o-transform: translate(-50%, -50%);
+	            transform: translate(-50%, -50%);
+	        }	
+		</style>
+		<title>计算器</title>
+
+	</head>
+	<body>
+		 <div class="tile is-parent" id="calculator" >
+                            <article class="tile is-child box" >
+            <p class="title">计算器</p>
+            <p class="subtitle"></p>
+            
+            <form name="calculator">
+                                <p class="field">
+                <input id="display" type="text" name="display" readonly class="input is-small">
+              </p>
+                                <p class="field">
+                <input class="button digits is-small" type="button" value="7" onclick="calculator.display.value += '7'">
+                <input class="button digits is-small" type="button" value="8" onclick="calculator.display.value += '8'">
+                <input class="button digits is-small" type="button" value="9" onclick="calculator.display.value += '9'">
+                <input class="button mathButtons is-small" type="button" value="+" onclick="calculator.display.value += ' + '">
+              </p>
+                                <p class="field">
+                <input class="button digits is-small" type="button" value="4" onclick="calculator.display.value += '4'">
+                <input class="button digits is-small" type="button" value="5" onclick="calculator.display.value += '5'">
+                <input class="button digits is-small" type="button" value="6" onclick="calculator.display.value += '6'">
+                <input class="button mathButtons is-small" type="button" value="-" onclick="calculator.display.value += ' - '">
+              </p>
+                                <p class="field">
+                <input class="button digits is-small" type="button" value="1" onclick="calculator.display.value += '1'">
+                <input class="button digits is-small" type="button" value="2" onclick="calculator.display.value += '2'">
+                <input class="button digits is-small" type="button" value="3" onclick="calculator.display.value += '3'">
+                <input class="button mathButtons is-small" type="button" value="x" onclick="calculator.display.value += ' * '">
+              </p>
+                                <p class="field">
+                <input id="clearButton" class="button is-small" type="button" value="C" onclick="calculator.display.value = ''">
+                <input class="button digits is-small" type="button" value="0" onclick="calculator.display.value += '0'">
+                <input class="button mathButtons is-small" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+                <input class="button mathButtons is-small" type="button" value="/" onclick="calculator.display.value += ' / '">
+              </p>
+                              </form>
+            
+          </article>
+                          </div>
+      </div>
+	</body>
+</html>
+
+
+

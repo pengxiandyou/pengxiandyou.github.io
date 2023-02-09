@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>导航</title>
+        <style type="text/css">
+		.yc{
+			display: none;
+		}
+	</style>
+
+<script type="text/javascript">
+    		var isT = 0;
+            var Ted = 0;
+            document.onkeydown = function(e){
+            	if (Ted==0) {
+	                var evn = e||event;
+	                var code = evn.keyCode||evn.which||evn.charCode;
+	                if(code==65){
+	                    isT += 1;
+	                }
+	                if(code==66){
+	                    isT += 1;
+	                }
+	                if(code==67){
+	                    isT += 1;
+	                }
+	                if(isT==3){
+	                	ele=document.getElementById("yc");
+						ele.style.display="inline";
+						Ted=1;
+	                }
+            	}
+            }
+            document.onkeyup = function(e){
+                if (Ted==0) {
+	                if(e.keyCode==65||e.keyCode==66||e.keyCode==67){
+	                	console.log(isT)
+	                }else{
+	                	isT=0;
+	                	console.log(isT,isT)
+	                }
+                }
+            }
+	</script>
+	</head>
+	<body>
+        <a href="https://pengxiandyou.github.io" name="github"> 我的博客</a>
+		<br>
+		<a href="src/work/SituationAndPolicy" name="gitee"> 大三形势与政策ppt</a>
+		<br>
+		<a href="src/game/click" name="gitee"> 自制垃圾点击游戏</a>
+		<br>
+		<a href="experiment1" name="gitee"> 数据结构第一次上机实验报告</a>
+        <br>
+		<a href="src/work/DataStructure/experiment2" name="gitee"> 数据结构第二次上机实验报告</a>
+         <br>
+		<a href="src/code/ParenthesisMatching" name="gitee"> 括号匹配改进代码</a>
+         <br> 
+		<a href="src/code/BaseConversion" name="gitee"> 进制转换高级代码</a>
+        <br> 
+		<a href="src/download/open/HanoiTowerAnimation" name="gitee"> 下载汉诺塔wmv文件</a>
+         <br> 
+        <a href="src/download/open/DancePartner" name="gitee"> 下载舞伴.csv.zip</a>  
+         <br> 
+		<a href="src/code/HanoiTowerAnimation" name="gitee"> 哈诺塔代码及截图及gif及文件</a>  
+        <br>
+		<a href="src/game/t-rex-runner" name="gitee"> 小恐龙游戏</a>
+        <br> 
+		<a href="src/code/StatisticalBinaryTree" name="gitee"> 二叉树统计代码</a>  
+        <br> 
+		<a href="https://ubc2.github.io/links/menu.html" name="other-github"> 10492猎奇 谨慎观看</a> 
+        <br> 
+		<a href="src/generpage/Peach" name="gitee"> 想屁吃</a>  
+        <br> 
+		<a href="src/generpage/Updatin" name="gitee"> 等待更新</a> 
+        <br> 
+		<a href="src/Tool/Calculator" name="gitee"> 计算器</a> 
+         <br>
+		<a href="src/work/DataStructure/experiment3" name="gitee"> 数据结构第三次上机实验报告</a>
+           <br>
+		<a href="src/work/DataStructure/experiment4" name="gitee"> 数据结构第四次上机实验报告</a>
+           <br>
+		<a href="src/work/DataStructure/experiment5" name="gitee"> 数据结构第五次上机实验报告</a>
+          <br>
+		<a href="src/work/AlgorithmAnalysisAndDesign/experiment1" name="gitee"> 算法分析与设计平面最近点对问题实验报告</a>
+        <br />
+        <a href="src/work/AlgorithmAnalysisAndDesign/experiment2/图搜索算法的应用实验报告.html" name="gitee">算法分析与设计图搜索算法的应用实验报告</a>
+         <br />
+         <div class="yc" id="yc">
+        <a href="src/everything/成绩单/" name="gitee">成绩单</a> <br />
+        <a href="src/everything/简历/" name="gitee">简历（手机显示不了）</a>
+        <br/>
+        <a href="src/everything/简历/猿辅导.html" name="gitee">猿辅导简历（手机显示不了）</a>
+        <br/>
+        <a href="src/everything/证书奖励/1/" name="gitee">证书奖励1</a>
+         </div>
+    </body>
+</html>

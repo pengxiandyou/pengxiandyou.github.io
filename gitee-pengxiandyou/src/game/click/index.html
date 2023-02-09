@@ -1,0 +1,96 @@
+<!DOCTYPE html  >
+
+<head>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" />
+<meta name="description" />
+<title>点击游戏</title>
+
+<!--引用百度地图API-->
+<style type="text/css">
+	#my {
+			width: 30px;
+			height: 30px;
+		font-size: 12px;
+			border-color: pink;
+			background-color: pink;
+			
+			position: relative;
+			top:300px;
+			left: 500px;
+			
+	}
+
+</style>
+<script type="text/javascript">
+	function show(){
+		
+		var flag;
+		var mystle=document.getElementById("my");
+	
+			//alert(window.getComputedStyle(mystle,null).width);
+			var myleft=window.getComputedStyle(mystle,null).left;
+			var mytop=window.getComputedStyle(mystle,null).top;
+			myleft=myleft.replace("px","");
+			do {
+				myleft= Number(myleft)+(-60+Math.random()*120);
+				if(myleft<80 || myleft>1000){
+					flag=true;
+				}else{
+					flag=false;
+				
+				}
+			}while(flag);
+			
+			mystle.style.left=myleft+"px";
+			mytop=mytop.replace("px","");	
+			do {
+				mytop= Number(mytop)+(-60+Math.random()*120);
+				if(mytop<80 || mytop>700){
+					flag=true;
+				}else{
+					flag=false;
+					
+				}
+			}while(flag);
+		
+						
+			mystle.style.top=mytop+"px";
+		
+	}
+	function end(){
+		alert("祝贺你,你赢了");
+	}
+
+</script>
+</head>
+
+<body style="background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565103810181&di=5570d73333e72ebf6f7c0a8c13c27584&imgtype=0&src=http%3A%2F%2Fimg8.zol.com.cn%2Fbbs%2Fupload%2F13484%2F13483443.jpg)">
+  <!--百度地图容器-->
+ <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=26092806&auto=1&height=66"></iframe>
+
+<!--
+<embed src="https://music.163.com/outchain/player?type=2&id=26092806&auto=1&height=66" type="audio/mpeg" autostart="true" loop="true" hidden="true"></embed>
+-->
+<p id="my" onmouseover="show()" onclick="end()">点我呀 </p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
