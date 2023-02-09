@@ -3083,6 +3083,9 @@ mark.search-keyword {
   font-family: 'Lato', "PingFang SC", "华文新魏", sans-serif;
   font-size: 20px;
 }
+.post-body h1 {
+  text-align: center;
+}
 .post-body h2 {
   font-size: 23px;
   font-weight: bold;
@@ -3269,6 +3272,55 @@ hr {
   color: #fc6423;
   border-bottom: none;
   border-bottom: 1px solid #fc6423;
+}
+article img[myImgName=MyImg] {
+  border: 10px solid #f3f3f3 !important;
+  border-radius: 50%;
+  border-top: 10px solid #ffc0cb !important;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite !important;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .hbe,
 .hbe:after,
