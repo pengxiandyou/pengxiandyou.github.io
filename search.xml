@@ -3990,22 +3990,119 @@ a2-->a3</pre>
 <h3 id="optional类"><a class="markdownIt-Anchor" href="#optional类"></a> Optional类</h3>
 <p>  Optional&lt;T&gt;类(java.util.Optional)是一个容器类，它可以保存类型T的值，代表这个值存在。或者仅仅保存null，表示这个值不存在。原来用null表示一个值不存在，现在Optional可以更好的表达这个概念。并且可以避免空指针异常。如果值存在则<code>isPresent()</code>方法会返回true，调用<code>get()</code>方法会返回该对象。</p>
 <p><img data-src="https://img-blog.csdnimg.cn/9f9fb67f3dfe409d984be5253c370262.png" alt="Optional&lt;T&gt;" /></p>
-<h2 id="9的新的特性"><a class="markdownIt-Anchor" href="#9的新的特性"></a> 9的新的特性</h2>
+<h2 id="9的新的特性我不喜欢的提供链接自己看12"><a class="markdownIt-Anchor" href="#9的新的特性我不喜欢的提供链接自己看12"></a> 9的新的特性（我不喜欢的提供链接自己看<a href="https://www.cnblogs.com/niujifei/p/15068333.html">①</a><a href="https://www.cnblogs.com/niujifei/p/15072786.html">②</a>）</h2>
 <ul>
-<li>⭐️模块化系统</li>
-<li>⭐️jShell命令</li>
-<li>多版本兼容jar包</li>
-<li>接口的私有方法</li>
-<li>钻石操作符<code>&lt;&gt;</code>的使用升级</li>
-<li>语法改进：try语句</li>
-<li>String存储结构变更</li>
-<li>便利的集合特性：<code>of()</code></li>
-<li>增强的Stream API</li>
-<li>全新的HTTP客户端API</li>
+<li>⭐️<a href="https://zhuanlan.zhihu.com/p/347111596">模块化系统</a></li>
+<li>⭐️<a href="https://zhuanlan.zhihu.com/p/28828422">jShell命令</a></li>
+<li><a href="https://juejin.cn/post/7220375870228168762">多版本兼容jar包</a></li>
+<li><a href="https://juejin.cn/post/7119302465530363918">接口的私有方法</a></li>
+<li><a href="https://juejin.cn/post/6844903565970898958">钻石操作符<code>&lt;&gt;</code>的使用升级</a></li>
+<li><a href="https://www.cnblogs.com/wzlbigdata/p/8278385.html">语法改进：try语句</a>（自动关闭的流要实现Closeable\AutoCloseable）</li>
+<li><a href="https://www.cnblogs.com/wzlbigdata/p/8278392.html">String存储结构变更</a></li>
+<li><a href="https://juejin.cn/post/7123206242037661703">便利的集合特性：</a><code>of()</code></li>
+<li><a href="https://juejin.cn/post/6885091518558765069">增强的Stream API</a></li>
+<li><a href="https://www.jianshu.com/p/62e8185a857c">全新的HTTP客户端API</a></li>
 <li>Deprecated的相关API</li>
-<li>javadoc的HTML5支持</li>
-<li>Javascript擎升级：Nashorn（11中被干掉了）</li>
-<li>java的动态编译器</li>
+<li><a href="https://www.twle.cn/c/yufei/java9/java9-basic-javadoc.html">javadoc的HTML5支持</a></li>
+<li><a href="https://www.jianshu.com/p/5822d2f3fe2c">Javascript擎升级：Nashorn</a>（11中被干掉了）</li>
+<li><a href="https://www.cnblogs.com/wzlbigdata/p/8278413.html">java的动态编译器</a></li>
+</ul>
+<h2 id="10的新特性"><a class="markdownIt-Anchor" href="#10的新特性"></a> 10的新特性</h2>
+<p>  <code>var</code>和集合的<code>copyOf</code>方法，其他的就不管了。</p>
+<h2 id="11的新特性"><a class="markdownIt-Anchor" href="#11的新特性"></a> 11的新特性</h2>
+<ul>
+<li>
+<p>String的新增的方法：<code>isBlank()</code>、<code>strip()</code>去除首尾空白、<code>&quot; Javastack &quot;.stripTrailing();</code>去除尾部空白、<code>&quot; Javastack &quot;.stripLeading();</code>去除首部空白、<code>&quot;Java&quot;.repeat(3);//&quot;JavaJavaJava&quot;</code>复制字符串、<code>&quot;A\nB\nC&quot;.lines().count();</code>行数统计</p>
+</li>
+<li>
+<p>Optional的<code>isEmpty()</code></p>
+</li>
+<li>
+<p><code>(@Deprecated var t) -&gt; System.out.println(t.toupperCase());</code>局部变量类型推断的升级</p>
+</li>
+<li>
+<p>全新的HTTP客户端API</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HttpClient</span> <span class="variable">client</span> <span class="operator">=</span>HttpClient.newHttpClient();</span><br><span class="line"><span class="type">HttpRequest</span> <span class="variable">request</span> <span class="operator">=</span> HttpRequest.newBuilder(URI.create(<span class="string">&quot;http://127.0.0.1:8080/test/&quot;</span>)).build();</span><br><span class="line">BodyHandler&lt;String&gt; responseBodyHandler = BodyHandlers.ofstring();</span><br><span class="line">HttpResponse&lt;string&gt; response = client.send(request, responseBodyHandler);</span><br><span class="line"><span class="type">String</span> <span class="variable">body</span> <span class="operator">=</span> response.body();</span><br><span class="line">System.out.println(body)</span><br></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HttpClient</span> <span class="variable">client</span> <span class="operator">=</span> HttpClient.newHttpClient();</span><br><span class="line"><span class="type">HttpRequest</span> <span class="variable">request</span> <span class="operator">=</span>HttpRequest.newBuilder(URI.create(<span class="string">&quot;http://127.0.0.1:8080/test/&quot;</span>)).build);</span><br><span class="line">BodyHandler&lt;String&gt; responseBodyHandler= BodyHandlers.ofString();</span><br><span class="line">CompletableFuture&lt;HttpResponse&lt;String&gt;&gt; sendAsync = client.sendAsync(request,responseBodyHandler);</span><br><span class="line">sendAsync.thenApply(t-&gt;t.body()).thenAccept(System.out::println);</span><br><span class="line"><span class="comment">//HttpResponse&lt;String&gt;response= sendAsync.get();</span></span><br><span class="line"><span class="comment">//string body=response.body();</span></span><br><span class="line"><span class="comment">//System.out.println(body);</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>更简化的编译运行程序：<code>java Test.java</code></p>
+<ul>
+<li>执行源文件中的第一个类，第一个类必须包含主方法。</li>
+<li>并且不可以使用其他源文件中的自定义类，本文件中的自定文类是可以使用的。</li>
+</ul>
+</li>
+<li>
+<p>废弃Nashorn引擎，需要的话，可以考虑GraaIVM</p>
+</li>
+<li>
+<p>ZGC是一个并发，基于region，压缩型的垃圾收集器，只有root扫描阶段会STW(stop the world)，因此GC停顿时间不会随着堆的增长和存活对象的增长而变长。</p>
+<ul>
+<li>GC暂停时间不会超过10mS</li>
+<li>既能处理几百兆的小堆，也能处理几个T的大堆（OMG）</li>
+<li>和G1相比，应用吞吐能力不会下降超过15%</li>
+<li>为未来的GC功能和利用colord指针以及Load barriers优化奠定基础</li>
+<li>初始只支持64位系统</li>
+</ul>
+</li>
+<li>
+<p><em>Unicode10</em></p>
+</li>
+<li>
+<p><em>Deprecate the Pack200 Tools and APl</em></p>
+</li>
+<li>
+<p><em>新的Epsilon垃圾收集器</em></p>
+</li>
+<li>
+<p><em>完全支持Linux容器（包括Docker）</em></p>
+</li>
+<li>
+<p><em>支持G1上的并行完全垃圾收集</em></p>
+</li>
+<li>
+<p><em>最新的HTTPS安全协议TLS1.3</em></p>
+</li>
+<li>
+<p><em>JavaFlightRecorder</em></p>
+</li>
+</ul>
+<h2 id="到17的新特性"><a class="markdownIt-Anchor" href="#到17的新特性"></a> 到17的新特性</h2>
+<ul>
+<li>
+<p>在14之前，进行类型转换的时候，最好进行<code>instanceof</code>判断，再进行转换。</p>
+<p>之后可以这样：</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;hello,Java14&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(obj <span class="keyword">instanceof</span> string str)&#123;</span><br><span class="line">    System.out.println(str.contains(<span class="string">&quot;Java&quot;</span>));</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;非string类型&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code> 14引入预览，15二次预览，16转正，可以放心使用了。
+</code></pre>
+</li>
+<li>
+<p>switch表达式，12预览，13二次预览，14转正。12中引入<code>case L -&gt;</code>来替代<code>break</code>，用变量接收结果~~（必须有default）~~。13引入<code>yield</code>，用于返回指定的数据，结束switch结构。switch表达式（返回值）应该使用<code>yield</code>，switch语句（不返回值）应该便用<code>break</code>。</p>
+</li>
+<li>
+<p>switch的模式匹配，17预览。</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">formatted</span> <span class="operator">=</span> <span class="keyword">switch</span>(o)&#123;</span><br><span class="line">    <span class="keyword">case</span> Integer i:</span><br><span class="line">    	yield <span class="string">&quot;int &quot;</span> + i;</span><br><span class="line">    <span class="keyword">case</span> Long l:</span><br><span class="line">  		yield <span class="string">&quot;long &quot;</span> + l;</span><br><span class="line">    <span class="keyword">case</span> Double d:</span><br><span class="line">   		yield <span class="string">&quot;double &quot;</span> + d;</span><br><span class="line">    <span class="keyword">case</span> String s:</span><br><span class="line">    	yield <span class="string">&quot;String &quot;</span> + s;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    	yield o.toString();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>文本块，13预览，14二次预览，15转正。 14加入<code>\</code>取消换行，<code>\s</code>表示空格。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">“”“</span><br><span class="line">各种字符串</span><br><span class="line">“”“</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>record的使用。实现一个简单的数据载体类，为了避免编写：构造函数，访可器，<code>equals()</code>，<code>hashCode()</code>，<code>toString()</code>等，Java14推出record。record是一种全新的类型，它本质上是一个final类，同时所有的属性都是final修饰，它会自动编译出<code>public get</code>、<code>hashcode</code>、<code>equals</code>、<code>toString</code>、构造器等结构，减少了代码编写量。</p>
+</li>
+<li>
+<p>密封类。在Java中如果想让一个类不能被继谜承和修改，这时我们应该使用<code>fina1</code>关键字对类进行修饰。不过这种要么可<br />
+以继承，要么不能继承的机制不够灵活，有些时候我们可能想让某个类可以被某些类型继承，但是不能随意继<br />
+承，是做不到的。Java15尝试解决这个问题，引入了<code>sealed</code>类，被<code>sealed</code>修饰的类可以指定子类。这样这<br />
+个类就只能被指定的类继承。15预览，16二次预览，17转正。  //子类要为<code>final</code>或<code>sealed</code>或<code>non-sealed</code>（无限制）</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title class_">Person</span> permits Student,Teacher,Worker&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>12中，String实现<code>Constable</code>接口，新增<code>transform（Function）</code>方法。17中，标记删除Applet API（9标记过时）。9之后，不允许使用<code>_</code>作为变量。</p>
+</li>
+<li>
+<p>9以后，默认G1 GC；10为G1提供并行的Full GC；12可中断的G1 Mixed GC，增强G1，自动返回未用堆内存给操作系统；~~Shenandoah GC:低停顿时间的GC；15shenandoah垃圾回收算法转正；~~11 引入革命性的 ZGC；12ZGC功能转正；16ZGC并发线程处理</p>
+</li>
 </ul>
 <h1 id="其他-2"><a class="markdownIt-Anchor" href="#其他-2"></a> 其他</h1>
 <p>这个输入皮肤挺好看的。</p>
