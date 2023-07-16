@@ -3272,6 +3272,18 @@ hr {
   border-bottom: none;
   border-bottom: 1px solid #fc6423;
 }
+.post-body a,
+.post-header a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body a:hover,
+.post-header a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
 article img[myImgName=MyImg] {
   border: 10px solid #f3f3f3 !important;
   border-radius: 50%;
