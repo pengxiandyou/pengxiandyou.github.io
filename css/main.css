@@ -1583,7 +1583,6 @@ header.header {
   line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .post-toc .nav .nav-child {
   display: none;
@@ -1682,6 +1681,7 @@ header.header {
   color: #f0f;
   display: inline-block;
   margin: 0 5px;
+  animation: icon-animate 1.33s ease-in-out infinite;
 }
 .busuanzi-count #busuanzi_container_site_uv {
   display: none;
@@ -3058,7 +3058,6 @@ mark.search-keyword {
 }
 .sidebar-inner {
   border-radius: 30px 30px 30px 30px;
-  position: absolute;
   overflow: hidden;
   box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
