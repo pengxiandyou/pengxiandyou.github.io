@@ -1332,13 +1332,13 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 <p>将模板里的pengxiandyou.cf等自定义用到的域名变更为主题模板定义<code>&#123;&#123; them.blogurl &#125;&#125;</code></p>
 </li>
 <li>
-<p>修改主题文件下的<code>_vendors.yml</code>的mermaid版本为<code>10.6.1</code>，同时修改主题配置文件</p>
+<p><s>修改主题文件下的<code>_vendors.yml</code>的mermaid版本为<code>10.6.1</code>，同时修改主题配置文件</s></p>
 </li>
 <li>
 <p><s>leancloud成功绑定域名 <a href="comms.19980118.xyz">comms.19980118.xyz</a> vercel成功绑定 <a href="comm.19980118.xyz">comm.19980118.xyz</a></s> 量子绑定：代理</p>
 </li>
 <li>
-<p>将vercel的环境变量<code>ADMIN_URL</code>，由<code>https://pengxiandyou.avosapps.us</code>改为<code>https://comms.19980118.xyz/</code></p>
+<p><s>将vercel的环境变量<code>ADMIN_URL</code>，由<code>https://pengxiandyou.avosapps.us</code>改为</s><code>https://comms.19980118.xyz/</code></p>
 </li>
 </ul>
 <p>​	<br />
