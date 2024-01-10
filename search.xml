@@ -1309,8 +1309,9 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 </ul>
 <h2 id="遗留问题"><a class="markdownIt-Anchor" href="#遗留问题"></a> 遗留问题</h2>
 <ul>
-<li>2024年1月10日   vercel和leancloud无法成功绑定域名，提示重定向次数过多。评论管理地址：<a href="https://waline-server-three-blue.vercel.app/ui">https://waline-server-three-blue.vercel.app/ui</a> <a href="pengxiandyou.avosapps.us">pengxiandyou.avosapps.us</a> 要代理访问</li>
+<li>2024年1月10日   <s>vercel</s>和<s>leancloud</s>无法成功绑定域名，提示重定向次数过多。评论管理地址：<a href="https://waline-server-three-blue.vercel.app/ui">https://waline-server-three-blue.vercel.app/ui</a> <a href="pengxiandyou.avosapps.us">pengxiandyou.avosapps.us</a> 要代理访问，<a href="comms.19980118.xyz"><strong>comms.19980118.xyz</strong></a> <span style="color:#000099;">量子绑定</span></li>
 <li>leancloud保持唤醒</li>
+<li>评论要开代理才展示</li>
 </ul>
 <h2 id="历史"><a class="markdownIt-Anchor" href="#历史"></a> 历史</h2>
 <ul>
@@ -1332,7 +1333,15 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 <li>
 <p>修改主题文件下的<code>_vendors.yml</code>的mermaid版本为<code>10.6.1</code>，同时修改主题配置文件</p>
 </li>
+<li>
+<p><s>leancloud成功绑定域名 <a href="comms.19980118.xyz">comms.19980118.xyz</a> vercel成功绑定 <a href="comm.19980118.xyz">comm.19980118.xyz</a></s> 量子绑定</p>
+</li>
+<li>
+<p>将vercel的环境变量<code>ADMIN_URL</code>，由<code>https://pengxiandyou.avosapps.us</code>改为<code>https://comms.19980118.xyz/</code></p>
+</li>
 </ul>
+<p>​	<br />
+​</p>
 </li>
 </ul>
 ]]></content>
@@ -4451,6 +4460,7 @@ a2-->a3</pre>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fold_hider&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;close hider_title&quot;</span>&gt;</span>点击显示/隐藏代码<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;fold&quot;</span>&gt;</span></span><br><span class="line">        要隐藏的部分</span><br><span class="line">        25338785</span><br><span class="line">        54535</span><br><span class="line">        2424</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="思维导图"><a class="markdownIt-Anchor" href="#思维导图"></a> 思维导图</h2>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% markmap 400px %&#125;</span><br><span class="line"></span><br><span class="line">- links</span><br><span class="line">	--色的人</span><br><span class="line">	--使得法国</span><br><span class="line"></span><br><span class="line">- **inline** ~~text~~ *styles*</span><br><span class="line"></span><br><span class="line">- multiline</span><br><span class="line">	text</span><br><span class="line"></span><br><span class="line">- `inline code`</span><br><span class="line"></span><br><span class="line">- ```js代码块</span><br><span class="line">	console.log(&#x27;code block&#x27;);</span><br><span class="line">	console.log(&#x27;code block&#x27;);</span><br><span class="line"></span><br><span class="line">- latex - $x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;$</span><br><span class="line"></span><br><span class="line">&#123;% endmarkmap %&#125;</span><br></pre></td></tr></table></figure>
+<p>另一种用<code>#</code>的不展示了。另外高版本的mermaid支持思维导图。</p>
 <h2 id="画图"><a class="markdownIt-Anchor" href="#画图"></a> 画图</h2>
 <ul>
 <li><a href="https://blog.csdn.net/qq_36075612/article/details/118161100">[使用Typora画 流程图、时序图、顺序图、甘特图、等图详解_typora流程图-CSDN博客]</a></li>
