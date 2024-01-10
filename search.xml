@@ -1306,10 +1306,11 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 <h2 id="计划"><a class="markdownIt-Anchor" href="#计划"></a> 计划</h2>
 <ul>
 <li>实现长图片、效果图等侧边排列合适内容与文字竖向排列。实现方式：代码块标记或<code>&#123;% ? %&#125;</code>标记，修改渲染模板。可能涉及css。</li>
+<li>当评论泛滥时，启用反垃圾 ，<code>AKISMET_KEY</code> <a href="https://akismet.com/developers/">https://akismet.com/developers/</a></li>
 </ul>
 <h2 id="遗留问题"><a class="markdownIt-Anchor" href="#遗留问题"></a> 遗留问题</h2>
 <ul>
-<li>2024年1月10日   <s>vercel</s>和<s>leancloud</s>无法成功绑定域名，提示重定向次数过多。评论管理地址：<a href="https://waline-server-three-blue.vercel.app/ui">https://waline-server-three-blue.vercel.app/ui</a> <a href="pengxiandyou.avosapps.us">pengxiandyou.avosapps.us</a> 要代理访问，<a href="comms.19980118.xyz"><strong>comms.19980118.xyz</strong></a> <span style="color:#000099;">量子绑定</span></li>
+<li>2024年1月10日   <s>vercel</s>和<s>leancloud</s>无法成功绑定域名，提示重定向次数过多。评论管理地址：<a href="https://waline-server-three-blue.vercel.app/ui">https://waline-server-three-blue.vercel.app/ui</a> <a href="pengxiandyou.avosapps.us">pengxiandyou.avosapps.us</a> 要代理访问，<a href="comms.19980118.xyz"><strong>comms.19980118.xyz</strong></a> <span style="color:#000099;">量子绑定：代理</span></li>
 <li>leancloud保持唤醒</li>
 <li>评论要开代理才展示</li>
 </ul>
@@ -1325,7 +1326,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 <p>将域名变更为 <a href="19980118.xyz">19980118.xyz</a></p>
 </li>
 <li>
-<p>评论邮箱提醒失效，提示密码错误，leancloud唤醒后就这样了</p>
+<p><s>评论邮箱提醒失效，提示密码错误，leancloud唤醒后就这样了</s>似乎解决了</p>
 </li>
 <li>
 <p>将模板里的pengxiandyou.cf等自定义用到的域名变更为主题模板定义<code>&#123;&#123; them.blogurl &#125;&#125;</code></p>
@@ -1334,7 +1335,7 @@ CONSTRAINT fk_dep_emp_did FOREIGN KEY(did) REFERENCES dep(did)
 <p>修改主题文件下的<code>_vendors.yml</code>的mermaid版本为<code>10.6.1</code>，同时修改主题配置文件</p>
 </li>
 <li>
-<p><s>leancloud成功绑定域名 <a href="comms.19980118.xyz">comms.19980118.xyz</a> vercel成功绑定 <a href="comm.19980118.xyz">comm.19980118.xyz</a></s> 量子绑定</p>
+<p><s>leancloud成功绑定域名 <a href="comms.19980118.xyz">comms.19980118.xyz</a> vercel成功绑定 <a href="comm.19980118.xyz">comm.19980118.xyz</a></s> 量子绑定：代理</p>
 </li>
 <li>
 <p>将vercel的环境变量<code>ADMIN_URL</code>，由<code>https://pengxiandyou.avosapps.us</code>改为<code>https://comms.19980118.xyz/</code></p>
