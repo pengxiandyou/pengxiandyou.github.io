@@ -39,14 +39,14 @@
 <!-- /Chatra {/literal} -->
 
 
-<link rel="canonical" href="https://19980118.xyz/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/">
+<link rel="canonical" href="https://19980118.xyz/categories/%E4%B8%8D%E5%88%86%E7%B1%BB/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://19980118.xyz/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/","path":"2019/08/22/MySQL简单笔记一/","title":"MySQL简单笔记一"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/不分类/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>MySQL简单笔记一 | 魔装少男的博客</title>
+<title>分类: 不分类 | 魔装少男的博客</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -208,7 +208,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -221,7 +221,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E5%88%97%E9%93%BE%E6%8E%A5"><span class="nav-number">1.</span> <span class="nav-text"> 系列链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#font-colorblue-aligncentermysql-font"><span class="nav-number">2.</span> <span class="nav-text"> mysql: </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2-net-startstop-mysql"><span class="nav-number">2.1.</span> <span class="nav-text"> 启动停止 net start&#x2F;stop mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E9%99%86-mysql-u%E7%94%A8%E6%88%B7%E5%90%8D-p%E5%AF%86%E7%A0%81"><span class="nav-number">2.2.</span> <span class="nav-text"> 登陆 mysql -u用户名 -p密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%80%E5%87%BA-quitexit"><span class="nav-number">2.3.</span> <span class="nav-text"> 退出 quit；exit；</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89font-colorgreen%E6%95%B0%E6%8D%AE%E5%BA%93font-show-font-colorgreendatabasesfont"><span class="nav-number">2.4.</span> <span class="nav-text"> 查看所有数据库 show databases;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93-create-database-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D"><span class="nav-number">2.5.</span> <span class="nav-text"> 新建数据库 create database 数据库名；</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%99%E7%94%A8%E6%88%B7%E7%94%A8-font-colorred%E4%B8%80%E8%88%AC%E4%B8%8D%E7%94%A8font"><span class="nav-number">2.6.</span> <span class="nav-text"> test数据库给用户用 一般不用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93-ues-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D"><span class="nav-number">2.7.</span> <span class="nav-text"> 进入数据库 ues 数据库名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84font-colorgren%E8%A1%A8font-show-font-colorgreentablesfont"><span class="nav-number">2.8.</span> <span class="nav-text"> 查看当前数据库的表 show tables;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84-desc-%E8%A1%A8%E5%90%8D"><span class="nav-number">2.9.</span> <span class="nav-text"> 查看表的结构 desc 表名；</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9F%90%E5%BC%A0%E8%A1%A8%E7%9A%84%E6%95%B0%E6%8D%AE-select-from-%E8%A1%A8%E5%90%8D"><span class="nav-number">2.10.</span> <span class="nav-text"> 查看某张表的数据 select * from 表名；</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sql%E8%AF%AD%E5%8F%A5%E5%AE%98%E6%96%B9%E5%BB%BA%E8%AE%AE%E5%A4%A7%E5%86%99-font-colorred%E6%88%91%E4%BB%AC%E4%B8%80%E8%88%AC%E5%B0%8F%E5%86%99%E6%9C%AC%E8%BA%AB%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99font"><span class="nav-number">2.11.</span> <span class="nav-text"> sql语句官方建议大写 我们一般小写,本身不区分大小写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sql%E8%AF%AD%E5%8F%A5%E5%88%86%E7%B1%BB"><span class="nav-number">2.12.</span> <span class="nav-text"> SQL语句分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8"><span class="nav-number">3.</span> <span class="nav-text"> 表:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%94%AF%E4%B8%80%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="nav-number">4.</span> <span class="nav-text"> 唯一键约束：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E7%BA%A6%E6%9D%9F"><span class="nav-number">5.</span> <span class="nav-text"> 检查约束</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="nav-number">6.</span> <span class="nav-text"> 外键约束：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8C%83%E5%BC%8F"><span class="nav-number">7.</span> <span class="nav-text"> 范式：</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -315,314 +314,51 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner category posts-collapse">
 
 
   
-
-
-<script>
-$("document").ready(function(){
-  // 在这里写你的代码...
-  //var e1 = $("article[class='post-content'][lang='zh-CN']")[0];
-  //$("e1").css("display","blok;");
-  hbeLoader();
-
-
-
-});
-</script>
-<div class="post-block">
   
   
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN"   >
-    <link itemprop="mainEntityOfPage" href="https://19980118.xyz/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="小可爱">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="魔装少男的博客">
-      <meta itemprop="description" content="西部计划完结">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="MySQL简单笔记一 | 魔装少男的博客">
-      <meta itemprop="description" content="这是MySQL学习的简单入门,没多少知识点.知识点还是以最新的为准.">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          MySQL简单笔记一
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h1 class="collection-header">不分类
+          <small>分类</small>
         </h1>
+      </div>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-08-22 17:04:13" itemprop="dateCreated datePublished" datetime="2019-08-22T17:04:13-04:00">2019-08-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2019-12-01 07:08:51" itemprop="dateModified" datetime="2019-12-01T07:08:51-05:00">2019-12-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-            <div class="post-description">这是MySQL学习的简单入门,没多少知识点.知识点还是以最新的为准.</div>
-
-          
-        </div>
-      </header>
-
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody" >
-        <h1 id="系列链接"><a class="markdownIt-Anchor" href="#系列链接"></a> 系列链接</h1>
-<p><a target="_blank" rel="noopener" href="https://pengxiandyou.github.io/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/">MySQL简单笔记一</a><br/></p>
-<p><a target="_blank" rel="noopener" href="https://pengxiandyou.github.io/2019/08/23/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%BA%8C%E4%B9%8BDDL/">MySQL简单笔记二之DDL</a><br/></p>
-<p><a target="_blank" rel="noopener" href="https://pengxiandyou.github.io/2019/08/26/MySQL%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%E4%B9%8BDMl%E5%92%8CDQL/">MySQL简单学习笔记三之DMl和DQL</a><br/></p>
-<p><a target="_blank" rel="noopener" href="https://pengxiandyou.github.io/2019/08/27/MySQL%E8%AF%AD%E6%B3%95%E7%9A%84Oracle%E7%BB%83%E4%B9%A0%E8%A1%A8%E5%88%86%E4%BA%AB/">MySQL语法的Oracle练习表分享</a><br/></p>
-<h1 id="font-colorblue-aligncentermysql-font"><a class="markdownIt-Anchor" href="#font-colorblue-aligncentermysql-font"></a> <font color=blue align=center>mysql: </font></h1>
-<h2 id="启动停止-net-startstop-mysql"><a class="markdownIt-Anchor" href="#启动停止-net-startstop-mysql"></a> 启动停止 net start/stop mysql</h2>
-<h2 id="登陆-mysql-u用户名-p密码"><a class="markdownIt-Anchor" href="#登陆-mysql-u用户名-p密码"></a> 登陆 mysql -u用户名 -p密码</h2>
-<h2 id="退出-quitexit"><a class="markdownIt-Anchor" href="#退出-quitexit"></a> 退出 quit；exit；</h2>
-<h2 id="查看所有font-colorgreen数据库font-show-font-colorgreendatabasesfont"><a class="markdownIt-Anchor" href="#查看所有font-colorgreen数据库font-show-font-colorgreendatabasesfont"></a> 查看所有<font color=green>数据库</font> show <font color=green>databases</font>;</h2>
-<h2 id="新建数据库-create-database-数据库名"><a class="markdownIt-Anchor" href="#新建数据库-create-database-数据库名"></a> 新建数据库 create database 数据库名；</h2>
-<h2 id="test数据库给用户用-font-colorred一般不用font"><a class="markdownIt-Anchor" href="#test数据库给用户用-font-colorred一般不用font"></a> test数据库给用户用 <font color=red>一般不用</font></h2>
-<h2 id="进入数据库-ues-数据库名"><a class="markdownIt-Anchor" href="#进入数据库-ues-数据库名"></a> 进入数据库 ues 数据库名</h2>
-<h2 id="查看当前数据库的font-colorgren表font-show-font-colorgreentablesfont"><a class="markdownIt-Anchor" href="#查看当前数据库的font-colorgren表font-show-font-colorgreentablesfont"></a> 查看当前数据库的<font color=gren>表</font> show <font color=green>tables</font>;</h2>
-<h2 id="查看表的结构-desc-表名"><a class="markdownIt-Anchor" href="#查看表的结构-desc-表名"></a> 查看表的结构 desc 表名；</h2>
-<h2 id="查看某张表的数据-select-from-表名"><a class="markdownIt-Anchor" href="#查看某张表的数据-select-from-表名"></a> 查看某张表的数据 select * from 表名；</h2>
-<h2 id="sql语句官方建议大写-font-colorred我们一般小写本身不区分大小写font"><a class="markdownIt-Anchor" href="#sql语句官方建议大写-font-colorred我们一般小写本身不区分大小写font"></a> sql语句官方建议大写 <font color=red>我们一般小写,本身不区分大小写</font></h2>
-<h2 id="sql语句分类"><a class="markdownIt-Anchor" href="#sql语句分类"></a> SQL语句分类</h2>
-<ol>
-<li>DDL:数据定义语言 Data Definition Language
-<ul>
-<li>对象的创建 删除 修改 :建库 建表 修改表 删除表 删库 <font color=red size =5>create drop alter</font></li>
-</ul>
-</li>
-<li>DML:数据操作语言 Data Manipulation Language
-<ul>
-<li>增删改; 添加数据 删除数据 修改数据 <font color=red size =5>insert update delete</font></li>
-</ul>
-</li>
-<li>DCL:数据控制语言 Data Control Language
-<ul>
-<li>创建用户 分配账号密码 分配权限 <font color=red size =5>grant revoke</font></li>
-</ul>
-</li>
-<li>DQL:数据查询语言 Data Query Language
-<ul>
-<li>查询: <font color=red size =5>select</font></li>
-</ul>
-</li>
-<li>DTL:数据事务语言 Data Trasaction Language
-<ul>
-<li>执行事务操作</li>
-</ul>
-</li>
-</ol>
-<h1 id="表"><a class="markdownIt-Anchor" href="#表"></a> 表:</h1>
-<ul>
-<li>
-<p>每列数据类型</p>
-<ul>
-<li>int：整型 从-2<sup>31到2</sup>31-1的整型数据。存储大小为 4个字节</li>
-<li>double：浮点型，例如double（5，2）表示最多5位，其中必须有2位小数，即最大值为999.99；</li>
-<li>decimal：泛型型，在表金钱方面使用该类型，因为不会出现精度缺失问题；</li>
-<li>char：固定长度字符串类型：char（长度）char（10）：该列最大存储10个字符，我的实际字符5，后面会用空格填满</li>
-<li>varchar：可变长度字符串类型；</li>
-<li>text：字符串类型；直接使用改类型，不需要规定长度，会多使用一个专门的空间存储长度</li>
-<li>blob：字节类型；存放二进制字节编码       图片（小说）要真正存储二进制数据，一般结合高级语言</li>
-<li>date：日期类型，格式为：yyyy-MM-dd；</li>
-<li>time：时间类型，格式为：hh:mm:ss</li>
-<li>timestamp：时间戳类型；yyyy-MM-dd hh:mm:ss</li>
-<li>datetime：日期时间yyyy-MM-dd hh:mm:ss   **timestamp和datetime的范围不同 **</li>
-</ul>
-<p>有复合主键 一般不用 底层 索引 底层 二叉树</p>
-</li>
-</ul>
-<h1 id="唯一键约束"><a class="markdownIt-Anchor" href="#唯一键约束"></a> 唯一键约束：</h1>
-<p>该列数据不能重复<br />
-唯一键可以为空 MysQL允许多列为空（SQL Server只允许一列为空)<br />
-唯一键可以多个<br />
-唯一约束的创建：就是创建一个唯一的索引</p>
-<h1 id="检查约束"><a class="markdownIt-Anchor" href="#检查约束"></a> 检查约束</h1>
-<p>MySQL不支持，（Sqlserver和oracle都支持）</p>
-<h1 id="外键约束"><a class="markdownIt-Anchor" href="#外键约束"></a> 外键约束：</h1>
-<p>约束表和表之间的关系<br />
-外键所在的表就是子表<br />
-子表引用数据的表就是主表<br />
-字表的外键列引用主表的主键列（或者唯一键）</p>
-<h1 id="范式"><a class="markdownIt-Anchor" href="#范式"></a> 范式：</h1>
-<p>设计数据库的一个标准，范式的等级越高，冗余越低，<s>一般的项目到瑟三阶范三（传统项目）</s></p>
-<p>互联网项目：大数据，冗余大，基本都是单表<br />
-将一个表的数据拆成多个表：降低冗余，降低查询效率</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-  一阶范式：表中不能套表所有的数据库系统，都不会违反一阶范式</span><br><span class="line">-  二阶范式：满足一阶范式，非主键列必须依赖于主键。一个表中必须要主键  函数依赖：y=f（x）x--&gt;y 删除异常 更新异常 插入异常</span><br><span class="line">-  三阶范式：满足二阶范式，不存在传递依赖 x--&gt;y y--&gt;z x--&gt;z</span><br></pre></td></tr></table></figure>
-<p><font color=red size=10>语句:</font></p>
-<ol>
-<li>数据库
-<ul>
-<li>创建 create database 库名;</li>
-<li>删除 drop database 库名;</li>
-</ul>
-</li>
-</ol>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2024</span>
     </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-          <div class="reward-container">
-  <div>打赏</div>
-  <button>
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="/images/wechatpay.png" alt="小可爱 微信">
-        <span>微信</span>
-      </div>
-      <div>
-        <img src="/images/alipay.png" alt="小可爱 支付宝">
-        <span>支付宝</span>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-01-22T07:47:30-05:00"
+              content="2024-01-22">
+          01-22
+        </time>
       </div>
 
-  </div>
-</div>
-
-
-
-          <div>
-      
-        
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/">MySQL简单笔记一</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 小可爱 的个人博客">小可爱</a></p>
-  <p><span>发布时间:</span>2019年08月22日 - 17:04</p>
-  <p><span>最后更新:</span>2019年12月01日 - 07:08</p>
-  <p><span>原始链接:</span><a href="/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/" title="MySQL简单笔记一">https://19980118.xyz/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://19980118.xyz/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-	});
-    });  
-</script>
-
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/01/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" itemprop="url">
+            <span itemprop="name">个人简历</span>
+          </a>
+      </div>
 
       
-</div>
-          <div class="post-tags">
-              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2019/08/21/%E5%81%87%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%92%8C%E6%80%BB%E7%BB%93/" rel="prev" title="假期学习记录和总结">
-                  <i class="fa fa-chevron-left"></i> 假期学习记录和总结
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2019/08/23/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%BA%8C%E4%B9%8BDDL/" rel="next" title="MySQL简单笔记二之DDL">
-                  MySQL简单笔记二之DDL <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+    </header>
   </article>
-</div>
 
+    </div>
+  </div>
+  
+  
+  
 
-
-
-
-
-
-    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -744,7 +480,7 @@ setInterval("createtime()",250);
   <script src="/js/third-party/math/katex.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://comm.19980118.xyz","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"🤣一起来玩，留下你的足迹吧~。\n 🚀昵称使用QQ号可以自动补全邮箱和显示头像昵称等信息呢。\n 💣请文明评论哦禁止恶意评论！\n ⚠️公开网络空间，请不要发表任何包含个人或其他人的隐私信息。\n 注：评论不成功请二次评论，或者使用魔法。"},"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://unpkg.com/@waline/emojis@1.0.1/weibo","el":"#waline","comment":true,"path":"/2019/08/22/MySQL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0%E4%B8%80/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://comm.19980118.xyz","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"🤣一起来玩，留下你的足迹吧~。\n 🚀昵称使用QQ号可以自动补全邮箱和显示头像昵称等信息呢。\n 💣请文明评论哦禁止恶意评论！\n ⚠️公开网络空间，请不要发表任何包含个人或其他人的隐私信息。\n 注：评论不成功请二次评论，或者使用魔法。"},"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://unpkg.com/@waline/emojis@1.0.1/weibo","el":"#waline","comment":true,"path":"/categories/%E4%B8%8D%E5%88%86%E7%B1%BB/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {

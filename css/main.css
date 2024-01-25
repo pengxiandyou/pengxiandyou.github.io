@@ -3389,6 +3389,19 @@ div.left {
 div.right {
   overflow-wrap: break-word;
 }
+.uknowtoomuch {
+  background-color: #000 !important;
+  color: #000 !important;
+  border-radius: 5px !important;
+}
+.uknowtoomuch a {
+  color: #000 !important;
+}
+.uknowtoomuch:hover,
+.uknowtoomuch:hover a,
+.uknowtoomuch.active {
+  color: #fff !important;
+}
 @-moz-keyframes spin {
   0% {
     transform: rotate(0deg);
