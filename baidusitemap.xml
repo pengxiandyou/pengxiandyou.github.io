@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://19980118.xyz/2024/01/27/Maven%E3%80%81Spring%E3%80%81SpringMVC%E3%80%81MyBatis%E3%80%81SSM%E6%95%B4%E5%90%88%E3%80%81SpringBoot/</loc>
+    <lastmod>2024-02-25</lastmod>
+  </url>
+  <url>
     <loc>https://19980118.xyz/2024/01/22/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/</loc>
-    <lastmod>2024-01-25</lastmod>
+    <lastmod>2024-01-27</lastmod>
   </url>
   <url>
     <loc>https://19980118.xyz/2020/06/06/hello-world/</loc>
