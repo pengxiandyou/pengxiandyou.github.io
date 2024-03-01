@@ -400,14 +400,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">395k</span>
+    <span title="站点总字数">422k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5:59</span>
+    <span title="站点阅读时长">6:24</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -517,6 +517,47 @@ document.addEventListener('page:loaded', () => {
  <!--<script type="text/javascript" src="/js/shzyhxjzg.js"></script>
 --><!-- 点击动画 --><!--
  <script type="text/javascript" src="/js/love.js"></script>
+-->
+<!-- 点击出现社会主义彩色文字 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script><!-- 点击出现爱心 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+<!-- 天气 -->
+<script type="text/javascript">
+WIDGET = {FID: 'apV00Hp0nY'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+<!-- 动态标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+            "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+<!-- 折叠 --><!-- 
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script> -->
+<!-- 背景 -->
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+<script src="/live2d-widget/autoload.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/live2d-widget@^3.1.3/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>
+/javascript" src="/js/love.js"></script>
 -->
 <!-- 点击出现社会主义彩色文字 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script><!-- 点击出现爱心 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
 <!-- 天气 -->
