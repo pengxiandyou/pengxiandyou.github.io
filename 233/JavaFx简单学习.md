@@ -1,16 +1,16 @@
 ---
-title: JavaFx简单学习
+title: JavaFX简单学习
 abstract:
 copyright: true
 categories:
   - 笔记
   - java
-  - JavaFx
+  - JavaFX
 description: <p>&emsp;&emsp;想要玩点东西，所以就简单学学。</p><p>&emsp;&emsp;你问为什么不学些新的。我暂时不想，就是叛逆。</p><p>&emsp;&emsp;以前简单使用过Swing，所以这里面也是简单记记。</p><p>&emsp;&emsp;全一点的可以看这些：<a href = "https://openjfx.cn/">JavaFx中文</a> <a href = "https://openjfx.io/index.html">JavaFx英文</a> <a href = "https://docs.oracle.com/javafx/2/api/index.html">老版本文档</a> <a href = "https://openjfx.io/javadoc/18/">比较新版本文档</a></p><p>&emsp;&emsp;笔记内容主要是依据java8，不超过10。</p>
 date: 2023-07-16 22:29:11
 tags:
 - java
-- javaFx
+- javaFX
 password:
 command:
 ---
@@ -1105,7 +1105,7 @@ textArea.scrollLeftProperty().addListener((observable, oldValue, newValue) -> {
 });
 ```
 
-{% fold 点击显/隐内容 %}
+
 
 ```java
 public class WhatTextField extends Application {
@@ -1191,7 +1191,7 @@ class MyStringconvter extends StringConverter<String>{
 }
 ```
 
-{% endfold %}
+
 
 ### MenuBar，Menu，MenuItem 菜单
 
@@ -1402,7 +1402,7 @@ stringChoiceBox.getSelectionModel().selectedItemProperty().addListener(new Chang
 
 
 
-{% fold 学生类 %}
+
 
 ```java
 /**
@@ -1547,9 +1547,9 @@ public class Student {
 }
 ```
 
-{% endfold %}
 
-{% fold 学生选择 %}
+
+
 
 ```java
 package demo1.l036;
@@ -1666,7 +1666,7 @@ public class StudentChoiceBox extends Application {
 }
 ```
 
-{% endfold %}
+
 
 
 
@@ -1690,7 +1690,7 @@ stringComboBox.setOnAction(event -> {
 });
 ```
 
-{% fold 学生 %}
+
 
 ```java
 package demo1.l037;
@@ -1815,9 +1815,9 @@ public class Student {
 }
 ```
 
-{% endfold %}
 
-{% fold 学生选择 %}
+
+
 
 ```java
 AnchorPane an = new AnchorPane();
@@ -1905,7 +1905,7 @@ editor.textProperty().addListener((observable, oldValue, newValue) -> {
 });
 ```
 
-{% endfold %}
+
 
 ### 颜色选择器ColorPicker和时间选择器DatePicker
 
@@ -3506,7 +3506,7 @@ stage.show();
 });
 ```
 
-{% fold 点击显/隐内容 %}
+
 
 ```java
 public class UseWorker extends Application {
@@ -3615,7 +3615,7 @@ class MyScheduleService extends ScheduledService<Integer>{
 }
 ```
 
-  {% endfold %}
+  
 
   
 
