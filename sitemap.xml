@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://19980118.xyz/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/</loc>
+    
+    <lastmod>2024-03-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://19980118.xyz/2024/03/11/%E9%AA%91%E8%87%AA%E8%A1%8C%E8%BD%A6%E5%8E%BB%E6%89%BE%E5%B7%A5%E4%BD%9C/</loc>
     
     <lastmod>2024-03-11</lastmod>
@@ -982,6 +991,13 @@
   
   <url>
     <loc>https://19980118.xyz/tags/%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://19980118.xyz/tags/JavaFX/</loc>
     <lastmod>2024-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -7928,4 +7928,155 @@ a2-->a3</pre>
         <category>记录</category>
       </categories>
   </entry>
+  <entry>
+    <title>用JavaFX做一个手机文件下载器</title>
+    <url>/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="界面设想"><a class="markdownIt-Anchor" href="#界面设想"></a> 界面设想</h2>
+<p>  刚开始想借鉴windows的文件管理器，于是用工具提取了windows的部分图标。最后改成左侧显示文件夹树，右侧显示选中的文件夹的文件，下方显示下载和上传的进度。</p>
+<img data-src="https://s2.loli.net/2024/03/12/cgXdZ5yvrHISWTQ.png" alt="手机文件下载器的界面" style="zoom:80%;" />
+<h2 id="功能设想"><a class="markdownIt-Anchor" href="#功能设想"></a> 功能设想</h2>
+<p>  我的文件经常下载到&quot;sdcard/download&quot;，所以就以它为根本路径。</p>
+<ul>
+<li>显示路径下文件夹和文件</li>
+<li>下载文件到当前路径</li>
+<li>上传文件
+<ul>
+<li>当前路径</li>
+<li>指定路径</li>
+</ul>
+</li>
+<li>显示上传下载进度</li>
+</ul>
+<h2 id="借助spring"><a class="markdownIt-Anchor" href="#借助spring"></a> 借助Spring</h2>
+<p>  很久以前，我想借助Spring的容器，查看了一些资料，发现大部分都是和SpringBoot搭配。于是这一次我也打算和SpringBoot搭配。通过寻找，找到了&quot;springboot-javafx-support&quot;，但是它支持SpringBoot2，对Java和JavaFx的高版本支持也不太好。但我想尝试一下，看看能不能尽可能解决，因为我想用Java17、SpringBoot3、JavaFX17。最后，策略改变了，借鉴这个<a href="https://zhuanlan.zhihu.com/p/635191317">JavaFX17 整合 SpringBoot 3.1.0 （IDEA2023.1.2 ，jdk17.0.7 ） - 初步整合 - 知乎 (zhihu.com)</a>。</p>
+<p>  后话：我怀疑创建了两个容器，因为我尝试了许多方法，只有一个类里的注入可以成功，其它地方都不能注入成功，容器里没有bean。所以最后主要放入了几个布局类。</p>
+<h2 id="准备环境"><a class="markdownIt-Anchor" href="#准备环境"></a> 准备环境</h2>
+<p>  JavaFX17、Java17、SpringBoot3.0.5、adb(改支持中文的1.0.31、原版1.0.41）</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.openjfx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javafx-controls<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>17.0.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">plugin</span>&gt;</span><span class="comment">&lt;!-- 打包为exe的插件 --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.github.fvarrui<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javapackager<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">goal</span>&gt;</span>package<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>cf.pengxiandyou.JavaFXApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!-- optional --&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">bundleJre</span>&gt;</span>true<span class="tag">&lt;/<span class="name">bundleJre</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">generateInstaller</span>&gt;</span>false<span class="tag">&lt;/<span class="name">generateInstaller</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">administratorRequired</span>&gt;</span>false<span class="tag">&lt;/<span class="name">administratorRequired</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">platform</span>&gt;</span>windows<span class="tag">&lt;/<span class="name">platform</span>&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResources&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResource&gt;file path&lt;/additionalResource&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResource&gt;folder path&lt;/additionalResource&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResource&gt;...&lt;/additionalResource&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;/additionalResources&gt;--&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="具体实现"><a class="markdownIt-Anchor" href="#具体实现"></a> 具体实现</h2>
+<ul>
+<li>
+<p>使用Font Awesome图标</p>
+<p>本来想像网页那样使用图标，但找到的一些方式都不太兼容。最后选择使用字体方式。</p>
+<ol>
+<li><a href="https://fontawesome.com/">Font Awesome</a>下载字体等资源</li>
+<li>借助文本编辑器和正则表达式，从文件里将图标名和Unicode 编码提取出来放到Map里</li>
+<li>在Label里放入从Map里提取的Unicode</li>
+<li>将字体文件读入，应该也可安装后通过名字读入</li>
+<li>为Label设置字体</li>
+</ol>
+</li>
+<li>
+<p>执行adb命令</p>
+<p>借助<code>ProcessBuilder</code>执行命令，封装到工具类</p>
+<ol>
+<li>参数为数组，每一个元素为命令的一部分，即将一条命令放入数组</li>
+<li>通过<code>BufferedReader</code>读取结果的每一行，默认utf-8编码</li>
+<li>将结果封装为<code>List</code>返回</li>
+</ol>
+</li>
+<li>
+<p>读取文件夹和文件信息（应该新建一个线程处理，我当时没有，不过还好不是传输大文件）</p>
+<ol>
+<li>封装<code>TreeItem</code>，赋予文件夹属性</li>
+<li>封装文件夹类，具有名称、路径、文件夹集合、文件集合、修改时间和大小的属性，添加增加大小的方法、文件夹集合和文件集合清除方法</li>
+<li><code>TreeItem</code>作为根结点参数传入</li>
+<li>借助工具类，执行<code>adb shell ls -lt 手机path</code></li>
+<li>使用正则分隔每一行信息提取需要的信息：<code>drwxrws--- 2 u0_a185 media_rw 8192 2023-09-18 23:28 Browser</code>，可以从权限处区分文件和文件夹，可以获得文件大小（文件夹大小不对，可以用内部文件累加），可以获得修改时间，可以获得名称</li>
+<li>封装文件类，继承<code>Label</code>，具有名称、路径、大小、修改时间和后缀，定义一个初始化方法对Label进行一部分设置</li>
+<li>根据每一行信息，创建<code>TreeItem</code>添加到根节点里，创建<code>Label</code>，添加点击下载事件，放到文件集合里</li>
+<li>返回根节点<code>TreeItem</code></li>
+</ol>
+</li>
+<li>
+<p>下载手机文件</p>
+<ol>
+<li>封装下载功能到工具类</li>
+<li>命令为<code>adb pull &quot;手机文件路径&quot; .</code>，路径的双引号还是保留好</li>
+<li>从点击事件里获取手机文件路径</li>
+<li>新开一个线程执行下载</li>
+</ol>
+</li>
+<li>
+<p>上传到手机</p>
+<p>由于拖拽的文件不一定只有一个，所以①命令拼接（不行）②一个文件一个命令</p>
+<ol>
+<li>封装上传功能到工具类</li>
+<li>传入存放路径和文件路径</li>
+<li>命令为<code>adb push &quot;手机存放路径&quot; 文件路径</code></li>
+<li>遍历文件路径，新开线程执行命令</li>
+</ol>
+<ul>
+<li>当前文件夹
+<ol>
+<li><code>FlowPane</code>添加<code>DragOver</code>事件，修改接收模式</li>
+<li><code>FlowPane</code>添加<code>DragDropped</code>事件，获取文件等信息，上传文件</li>
+</ol>
+</li>
+<li>指定文件夹
+<ol>
+<li><code>TreeView</code>设置<code>CellFactory</code></li>
+<li>重写<code>updateItem</code>方法</li>
+<li>给<code>TreeCell</code>添加<code>DragOver</code>事件，修改接收模式和给<code>TreeView</code>获得选择模型<code>focus</code>当前的<code>TreeCell</code></li>
+<li>给<code>TreeCell</code>添加<code>DragDropped</code>事件，获取文件和路径等信息，上传文件</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>进度条</p>
+<ol>
+<li>在<code>HBox</code>放入<code>Label</code>作为文件名和上传下载图标，放入<code>ProgressBar</code>作为进度条，放入<code>Label</code>作为进度条数值</li>
+<li>在工具类封装进度条方法</li>
+<li>创建内部类继承<code>Task</code>，实现<code>call</code>方法，在里面不停读取文件当前大小（封装）与文件总大小进行比较，更新进度</li>
+<li>创建<code>Service&lt;Integer&gt;</code>，实现<code>createTask</code>，返回前面创建的<code>Task</code></li>
+<li>进度条绑定<code>Task</code></li>
+<li>给<code>Task</code>添加监听，修改进度<code>Label</code>的<code>Text</code></li>
+<li>启动<code>Service</code></li>
+</ol>
+</li>
+<li>
+<p>获取文件大小信息</p>
+<ul>
+<li>电脑文件
+<ol>
+<li><code>(new File(path)).length();</code></li>
+</ol>
+</li>
+<li>手机文件
+<ol>
+<li>命令为<code>adb shell ls -lt &quot;手机文件所在文件夹路径&quot; | grep &quot;文件名&quot;</code></li>
+<li>提取信息里的大小返回</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>其它</p>
+<ul>
+<li>一些组件到处使用，所以放到容器，我通过配置类进行注入（笨办法是继承然后添加<code>@Component</code>）</li>
+</ul>
+</li>
+</ul>
+<h2 id="结构"><a class="markdownIt-Anchor" href="#结构"></a> 结构</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:.</span><br><span class="line">│   JavaFXApplication.java</span><br><span class="line">│</span><br><span class="line">├───config</span><br><span class="line">│       BeanConig.java</span><br><span class="line">│</span><br><span class="line">├───control</span><br><span class="line">│       MyDirTreeItem.java</span><br><span class="line">│       MyFileLabel.java</span><br><span class="line">│</span><br><span class="line">├───event</span><br><span class="line">│       StageReadyEvent.java</span><br><span class="line">│</span><br><span class="line">├───factory</span><br><span class="line">│       TreeViewCellFactory.java</span><br><span class="line">│</span><br><span class="line">├───listener</span><br><span class="line">│       DragOverEventHander.java</span><br><span class="line">│       PullFileFromAndroidEventHandler.java</span><br><span class="line">│       PushFileToAndroidEventHandler.java</span><br><span class="line">│       StageReadyListener.java</span><br><span class="line">│       TreeViewItemSelectedListener.java</span><br><span class="line">│</span><br><span class="line">├───pojo</span><br><span class="line">│       MyDir.java</span><br><span class="line">│</span><br><span class="line">├───utils</span><br><span class="line">│       BeanUtils.java</span><br><span class="line">│       PublicVariables.java</span><br><span class="line">│       Utils.java</span><br><span class="line">│</span><br><span class="line">└───view</span><br><span class="line">        MainView.java</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2>
+<p><a href="https://gitee.com/pengxiandyou/java-fx---mobile-file-download">gitee</a></p>
+<p><code>git clone https://gitee.com/pengxiandyou/java-fx---mobile-file-download.git</code></p>
+<h2 id="注意"><a class="markdownIt-Anchor" href="#注意"></a> 注意</h2>
+<ul>
+<li>有adb环境，建议支持中文的版本</li>
+<li>中文版本adb不一定完全支持中文，文件名后缀前的最后一个中文后要有除数字的其它字符</li>
+<li>运行使用<code>java -jar 包</code>，有打包exe，也可双击</li>
+<li>乱码是正常的，<a href="https://news.68idc.cn/buildlang/ask/20150407313056.html#:~:text=%E8%BF%98%E6%98%AF%E5%A4%B1%E8%B4%A5%E4%BA%86%E3%80%82-,%E8%AF%A6%E7%BB%86%E8%A7%A3%E6%9E%90%EF%BC%9A,-1%EF%BC%89%20%E5%88%9A%E6%89%8D%E8%AF%B4">Android ADB 完美支持中文 详细讲解（一） - 鸿网互联 (68idc.cn)</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>adb</tag>
+        <tag>JavaFX</tag>
+      </tags>
+  </entry>
 </search>

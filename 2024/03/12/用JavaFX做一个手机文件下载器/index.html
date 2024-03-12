@@ -39,14 +39,14 @@
 <!-- /Chatra {/literal} -->
 
 
-<link rel="canonical" href="https://19980118.xyz/archives/2019/">
+<link rel="canonical" href="https://19980118.xyz/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2019/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://19980118.xyz/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/","path":"2024/03/12/用JavaFX做一个手机文件下载器/","title":"用JavaFX做一个手机文件下载器"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 魔装少男的博客</title>
+<title>用JavaFX做一个手机文件下载器 | 魔装少男的博客</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -134,7 +134,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">魔装少男的博客</h1>
+      <p class="site-title">魔装少男的博客</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">我可爱又美丽却能唤来死亡 <br>  虽然我可爱又迷人,但我能招来死亡</p>
@@ -208,7 +208,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -221,6 +221,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%95%8C%E9%9D%A2%E8%AE%BE%E6%83%B3"><span class="nav-number">1.</span> <span class="nav-text"> 界面设想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E8%AE%BE%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text"> 功能设想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%9F%E5%8A%A9spring"><span class="nav-number">3.</span> <span class="nav-text"> 借助Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E7%8E%AF%E5%A2%83"><span class="nav-number">4.</span> <span class="nav-text"> 准备环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text"> 具体实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84"><span class="nav-number">6.</span> <span class="nav-text"> 结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">7.</span> <span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number">8.</span> <span class="nav-text"> 注意</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -314,234 +315,350 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        
-        <span class="collection-header">还行! 目前共计 49 篇日志。 继续努力。</span>
-      </div>
 
+
+<script>
+$("document").ready(function(){
+  // 在这里写你的代码...
+  //var e1 = $("article[class='post-content'][lang='zh-CN']")[0];
+  //$("e1").css("display","blok;");
+  hbeLoader();
+
+
+
+});
+</script>
+<div class="post-block">
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN"   >
+    <link itemprop="mainEntityOfPage" href="https://19980118.xyz/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="小可爱">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="魔装少男的博客">
+      <meta itemprop="description" content="西部计划完结">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="用JavaFX做一个手机文件下载器 | 魔装少男的博客">
+      <meta itemprop="description" content="<p>&emsp;&emsp;由于给多个手机刷机，安装了许多手机驱动，我电脑的文件浏览器不能显示主力机的存储。所以我一般用FTP、adb、蓝牙传输文件。但是FTP（快不了多少）和蓝牙速度不快，adb又不支持中文。wifi的方式我嫌麻烦</p><p>&emsp;&emsp;在此次打造过程中，adb似乎支持多线程，那么瓶颈就是端口和线材了。</p>">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          用JavaFX做一个手机文件下载器
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
+
+      <time title="创建时间：2024-03-12 13:31:26 / 修改时间：19:09:35" itemprop="dateCreated datePublished" datetime="2024-03-12T13:31:26+08:00">2024-03-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">记录</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description"><p>&emsp;&emsp;由于给多个手机刷机，安装了许多手机驱动，我电脑的文件浏览器不能显示主力机的存储。所以我一般用FTP、adb、蓝牙传输文件。但是FTP（快不了多少）和蓝牙速度不快，adb又不支持中文。wifi的方式我嫌麻烦</p><p>&emsp;&emsp;在此次打造过程中，adb似乎支持多线程，那么瓶颈就是端口和线材了。</p></div>
+
+          
+        </div>
+      </header>
+
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody" >
+        <h2 id="界面设想"><a class="markdownIt-Anchor" href="#界面设想"></a> 界面设想</h2>
+<p>  刚开始想借鉴windows的文件管理器，于是用工具提取了windows的部分图标。最后改成左侧显示文件夹树，右侧显示选中的文件夹的文件，下方显示下载和上传的进度。</p>
+<img data-src="https://s2.loli.net/2024/03/12/cgXdZ5yvrHISWTQ.png" alt="手机文件下载器的界面" style="zoom:80%;" />
+<h2 id="功能设想"><a class="markdownIt-Anchor" href="#功能设想"></a> 功能设想</h2>
+<p>  我的文件经常下载到&quot;sdcard/download&quot;，所以就以它为根本路径。</p>
+<ul>
+<li>显示路径下文件夹和文件</li>
+<li>下载文件到当前路径</li>
+<li>上传文件
+<ul>
+<li>当前路径</li>
+<li>指定路径</li>
+</ul>
+</li>
+<li>显示上传下载进度</li>
+</ul>
+<h2 id="借助spring"><a class="markdownIt-Anchor" href="#借助spring"></a> 借助Spring</h2>
+<p>  很久以前，我想借助Spring的容器，查看了一些资料，发现大部分都是和SpringBoot搭配。于是这一次我也打算和SpringBoot搭配。通过寻找，找到了&quot;springboot-javafx-support&quot;，但是它支持SpringBoot2，对Java和JavaFx的高版本支持也不太好。但我想尝试一下，看看能不能尽可能解决，因为我想用Java17、SpringBoot3、JavaFX17。最后，策略改变了，借鉴这个<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/635191317">JavaFX17 整合 SpringBoot 3.1.0 （IDEA2023.1.2 ，jdk17.0.7 ） - 初步整合 - 知乎 (zhihu.com)</a>。</p>
+<p>  后话：我怀疑创建了两个容器，因为我尝试了许多方法，只有一个类里的注入可以成功，其它地方都不能注入成功，容器里没有bean。所以最后主要放入了几个布局类。</p>
+<h2 id="准备环境"><a class="markdownIt-Anchor" href="#准备环境"></a> 准备环境</h2>
+<p>  JavaFX17、Java17、SpringBoot3.0.5、adb(改支持中文的1.0.31、原版1.0.41）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.openjfx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javafx-controls<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>17.0.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">plugin</span>&gt;</span><span class="comment">&lt;!-- 打包为exe的插件 --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.github.fvarrui<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javapackager<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">goal</span>&gt;</span>package<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>cf.pengxiandyou.JavaFXApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!-- optional --&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">bundleJre</span>&gt;</span>true<span class="tag">&lt;/<span class="name">bundleJre</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">generateInstaller</span>&gt;</span>false<span class="tag">&lt;/<span class="name">generateInstaller</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">administratorRequired</span>&gt;</span>false<span class="tag">&lt;/<span class="name">administratorRequired</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">platform</span>&gt;</span>windows<span class="tag">&lt;/<span class="name">platform</span>&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResources&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResource&gt;file path&lt;/additionalResource&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResource&gt;folder path&lt;/additionalResource&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;additionalResource&gt;...&lt;/additionalResource&gt;--&gt;</span></span><br><span class="line">                 <span class="comment">&lt;!--            &lt;/additionalResources&gt;--&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="具体实现"><a class="markdownIt-Anchor" href="#具体实现"></a> 具体实现</h2>
+<ul>
+<li>
+<p>使用Font Awesome图标</p>
+<p>本来想像网页那样使用图标，但找到的一些方式都不太兼容。最后选择使用字体方式。</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://fontawesome.com/">Font Awesome</a>下载字体等资源</li>
+<li>借助文本编辑器和正则表达式，从文件里将图标名和Unicode 编码提取出来放到Map里</li>
+<li>在Label里放入从Map里提取的Unicode</li>
+<li>将字体文件读入，应该也可安装后通过名字读入</li>
+<li>为Label设置字体</li>
+</ol>
+</li>
+<li>
+<p>执行adb命令</p>
+<p>借助<code>ProcessBuilder</code>执行命令，封装到工具类</p>
+<ol>
+<li>参数为数组，每一个元素为命令的一部分，即将一条命令放入数组</li>
+<li>通过<code>BufferedReader</code>读取结果的每一行，默认utf-8编码</li>
+<li>将结果封装为<code>List</code>返回</li>
+</ol>
+</li>
+<li>
+<p>读取文件夹和文件信息（应该新建一个线程处理，我当时没有，不过还好不是传输大文件）</p>
+<ol>
+<li>封装<code>TreeItem</code>，赋予文件夹属性</li>
+<li>封装文件夹类，具有名称、路径、文件夹集合、文件集合、修改时间和大小的属性，添加增加大小的方法、文件夹集合和文件集合清除方法</li>
+<li><code>TreeItem</code>作为根结点参数传入</li>
+<li>借助工具类，执行<code>adb shell ls -lt 手机path</code></li>
+<li>使用正则分隔每一行信息提取需要的信息：<code>drwxrws--- 2 u0_a185 media_rw 8192 2023-09-18 23:28 Browser</code>，可以从权限处区分文件和文件夹，可以获得文件大小（文件夹大小不对，可以用内部文件累加），可以获得修改时间，可以获得名称</li>
+<li>封装文件类，继承<code>Label</code>，具有名称、路径、大小、修改时间和后缀，定义一个初始化方法对Label进行一部分设置</li>
+<li>根据每一行信息，创建<code>TreeItem</code>添加到根节点里，创建<code>Label</code>，添加点击下载事件，放到文件集合里</li>
+<li>返回根节点<code>TreeItem</code></li>
+</ol>
+</li>
+<li>
+<p>下载手机文件</p>
+<ol>
+<li>封装下载功能到工具类</li>
+<li>命令为<code>adb pull &quot;手机文件路径&quot; .</code>，路径的双引号还是保留好</li>
+<li>从点击事件里获取手机文件路径</li>
+<li>新开一个线程执行下载</li>
+</ol>
+</li>
+<li>
+<p>上传到手机</p>
+<p>由于拖拽的文件不一定只有一个，所以①命令拼接（不行）②一个文件一个命令</p>
+<ol>
+<li>封装上传功能到工具类</li>
+<li>传入存放路径和文件路径</li>
+<li>命令为<code>adb push &quot;手机存放路径&quot; 文件路径</code></li>
+<li>遍历文件路径，新开线程执行命令</li>
+</ol>
+<ul>
+<li>当前文件夹
+<ol>
+<li><code>FlowPane</code>添加<code>DragOver</code>事件，修改接收模式</li>
+<li><code>FlowPane</code>添加<code>DragDropped</code>事件，获取文件等信息，上传文件</li>
+</ol>
+</li>
+<li>指定文件夹
+<ol>
+<li><code>TreeView</code>设置<code>CellFactory</code></li>
+<li>重写<code>updateItem</code>方法</li>
+<li>给<code>TreeCell</code>添加<code>DragOver</code>事件，修改接收模式和给<code>TreeView</code>获得选择模型<code>focus</code>当前的<code>TreeCell</code></li>
+<li>给<code>TreeCell</code>添加<code>DragDropped</code>事件，获取文件和路径等信息，上传文件</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>进度条</p>
+<ol>
+<li>在<code>HBox</code>放入<code>Label</code>作为文件名和上传下载图标，放入<code>ProgressBar</code>作为进度条，放入<code>Label</code>作为进度条数值</li>
+<li>在工具类封装进度条方法</li>
+<li>创建内部类继承<code>Task</code>，实现<code>call</code>方法，在里面不停读取文件当前大小（封装）与文件总大小进行比较，更新进度</li>
+<li>创建<code>Service&lt;Integer&gt;</code>，实现<code>createTask</code>，返回前面创建的<code>Task</code></li>
+<li>进度条绑定<code>Task</code></li>
+<li>给<code>Task</code>添加监听，修改进度<code>Label</code>的<code>Text</code></li>
+<li>启动<code>Service</code></li>
+</ol>
+</li>
+<li>
+<p>获取文件大小信息</p>
+<ul>
+<li>电脑文件
+<ol>
+<li><code>(new File(path)).length();</code></li>
+</ol>
+</li>
+<li>手机文件
+<ol>
+<li>命令为<code>adb shell ls -lt &quot;手机文件所在文件夹路径&quot; | grep &quot;文件名&quot;</code></li>
+<li>提取信息里的大小返回</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>其它</p>
+<ul>
+<li>一些组件到处使用，所以放到容器，我通过配置类进行注入（笨办法是继承然后添加<code>@Component</code>）</li>
+</ul>
+</li>
+</ul>
+<h2 id="结构"><a class="markdownIt-Anchor" href="#结构"></a> 结构</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">D:.</span><br><span class="line">│   JavaFXApplication.java</span><br><span class="line">│</span><br><span class="line">├───config</span><br><span class="line">│       BeanConig.java</span><br><span class="line">│</span><br><span class="line">├───control</span><br><span class="line">│       MyDirTreeItem.java</span><br><span class="line">│       MyFileLabel.java</span><br><span class="line">│</span><br><span class="line">├───event</span><br><span class="line">│       StageReadyEvent.java</span><br><span class="line">│</span><br><span class="line">├───factory</span><br><span class="line">│       TreeViewCellFactory.java</span><br><span class="line">│</span><br><span class="line">├───listener</span><br><span class="line">│       DragOverEventHander.java</span><br><span class="line">│       PullFileFromAndroidEventHandler.java</span><br><span class="line">│       PushFileToAndroidEventHandler.java</span><br><span class="line">│       StageReadyListener.java</span><br><span class="line">│       TreeViewItemSelectedListener.java</span><br><span class="line">│</span><br><span class="line">├───pojo</span><br><span class="line">│       MyDir.java</span><br><span class="line">│</span><br><span class="line">├───utils</span><br><span class="line">│       BeanUtils.java</span><br><span class="line">│       PublicVariables.java</span><br><span class="line">│       Utils.java</span><br><span class="line">│</span><br><span class="line">└───view</span><br><span class="line">        MainView.java</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/pengxiandyou/java-fx---mobile-file-download">gitee</a></p>
+<p><code>git clone https://gitee.com/pengxiandyou/java-fx---mobile-file-download.git</code></p>
+<h2 id="注意"><a class="markdownIt-Anchor" href="#注意"></a> 注意</h2>
+<ul>
+<li>有adb环境，建议支持中文的版本</li>
+<li>中文版本adb不一定完全支持中文，文件名后缀前的最后一个中文后要有除数字的其它字符</li>
+<li>运行使用<code>java -jar 包</code>，有打包exe，也可双击</li>
+<li>乱码是正常的，<a target="_blank" rel="noopener" href="https://news.68idc.cn/buildlang/ask/20150407313056.html#:~:text=%E8%BF%98%E6%98%AF%E5%A4%B1%E8%B4%A5%E4%BA%86%E3%80%82-,%E8%AF%A6%E7%BB%86%E8%A7%A3%E6%9E%90%EF%BC%9A,-1%EF%BC%89%20%E5%88%9A%E6%89%8D%E8%AF%B4">Android ADB 完美支持中文 详细讲解（一） - 鸿网互联 (68idc.cn)</a></li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-12-01T09:26:31+08:00"
-              content="2019-12-01">
-          12-01
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>打赏</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="小可爱 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="小可爱 支付宝">
+        <span>支付宝</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/12/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%B8%8A%E6%9C%BA%E4%BB%A3%E7%A0%81/" itemprop="url">
-            <span itemprop="name">数据结构第六次上机代码</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-11-22T17:09:01+08:00"
-              content="2019-11-22">
-          11-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/11/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%B8%8A%E6%9C%BA%E4%BB%A3%E7%A0%81/" itemprop="url">
-            <span itemprop="name">数据结构第五次上机代码</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-11-10T08:10:07+08:00"
-              content="2019-11-10">
-          11-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/11/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%B8%8A%E6%9C%BA%E4%BB%A3%E7%A0%81/" itemprop="url">
-            <span itemprop="name">数据结构第四次上机代码</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-10-24T20:16:19+08:00"
-              content="2019-10-24">
-          10-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/10/24/%E6%8B%93%E5%B1%95%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">拓展简单笔记</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-10-24T20:12:43+08:00"
-              content="2019-10-24">
-          10-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/10/24/jQuery%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">jQuery简单笔记</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-10-24T20:08:55+08:00"
-              content="2019-10-24">
-          10-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/10/24/JavaScript%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">JavaScript简单笔记</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-10-23T22:08:01+08:00"
-              content="2019-10-23">
-          10-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/10/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%B8%8A%E6%9C%BA%E4%BB%A3%E7%A0%81/" itemprop="url">
-            <span itemprop="name">数据结构第三次上机代码</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-10-11T18:52:10+08:00"
-              content="2019-10-11">
-          10-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/10/11/%E8%B8%A9%E5%9D%91%E5%87%BA%E5%9D%91%E8%AE%B0%E4%B8%80/" itemprop="url">
-            <span itemprop="name">踩坑出坑记一</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-10-03T11:10:44+08:00"
-              content="2019-10-03">
-          10-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/10/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%8A%E6%9C%BA%E4%BB%A3%E7%A0%81/" itemprop="url">
-            <span itemprop="name">数据结构第二次上机代码</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2019-10-01T21:32:40+08:00"
-              content="2019-10-01">
-          10-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/10/01/CSS%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">CSS简单笔记</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="page-number" href="/archives/2019/page/3/">3</a><a class="extend next" rel="next" href="/archives/2019/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+</div>
 
+
+
+          <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/">用JavaFX做一个手机文件下载器</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 小可爱 的个人博客">小可爱</a></p>
+  <p><span>发布时间:</span>2024年03月12日 - 13:31</p>
+  <p><span>最后更新:</span>2024年03月12日 - 19:09</p>
+  <p><span>原始链接:</span><a href="/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/" title="用JavaFX做一个手机文件下载器">https://19980118.xyz/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://19980118.xyz/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+
+      
+</div>
+          <div class="post-tags">
+              <a href="/tags/adb/" rel="tag"># adb</a>
+              <a href="/tags/JavaFX/" rel="tag"># JavaFX</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/11/%E9%AA%91%E8%87%AA%E8%A1%8C%E8%BD%A6%E5%8E%BB%E6%89%BE%E5%B7%A5%E4%BD%9C/" rel="prev" title="骑自行车去找工作">
+                  <i class="fa fa-chevron-left"></i> 骑自行车去找工作
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -663,7 +780,7 @@ setInterval("createtime()",250);
   <script src="/js/third-party/math/katex.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://comm.19980118.xyz","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"🤣一起来玩，留下你的足迹吧~。\n 🚀昵称使用QQ号可以自动补全邮箱和显示头像昵称等信息呢。\n 💣请文明评论哦禁止恶意评论！\n ⚠️公开网络空间，请不要发表任何包含个人或其他人的隐私信息。\n 注：评论不成功请二次评论，或者使用魔法。"},"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://unpkg.com/@waline/emojis@1.0.1/weibo","el":"#waline","comment":true,"path":"/archives/2019/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://comm.19980118.xyz","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"🤣一起来玩，留下你的足迹吧~。\n 🚀昵称使用QQ号可以自动补全邮箱和显示头像昵称等信息呢。\n 💣请文明评论哦禁止恶意评论！\n ⚠️公开网络空间，请不要发表任何包含个人或其他人的隐私信息。\n 注：评论不成功请二次评论，或者使用魔法。"},"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://unpkg.com/@waline/emojis@1.0.1/weibo","el":"#waline","comment":true,"path":"/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
