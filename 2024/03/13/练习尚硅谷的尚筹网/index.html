@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-barber-shop.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"19980118.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"show_result":true,"style":"mac"},"bookmark":{"enable":true,"color":"#ffc0cb","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+<!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'QoLQx5ntEgvMDisbP';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+
+
+<link rel="canonical" href="https://19980118.xyz/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://19980118.xyz/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/","path":"2024/03/13/练习尚硅谷的尚筹网/","title":"练习尚硅谷的尚筹网"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>练习尚硅谷的尚筹网 | 魔装少男的博客</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?497aa34d870c1d7996acc609bf1d5afd"></script>
+
+
+
+
+<link rel="dns-prefetch" href="https://comm.19980118.xyz">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<!--我自定义的搜索-->
+<script async="true" src="https://pengxiandyou.github.io/gitee-pengxiandyou/src/js/search-my.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+
+    //图片转圈加载
+    $('article img[data-src^="http"]').attr("myImgName","MyImg");
+    $('article img[data-src^="http"]').attr("retry","10");
+    var imgdefereds=[];
+    $('article img').each(function(){
+        var dfd=$.Deferred();
+        $(this).bind('load',function(){
+          dfd.resolve();
+           $(this).attr("myImgName","");
+        }).bind('error',function(){
+         //图片加载错误，加入错误处理
+         
+         var retry = parseInt($(this).attr("retry"));
+         if(retry > 1){
+            var d= new Date();
+            $(this).attr("src",$(this).attr("src")+"?"+d.getTime());
+            $(this).attr("retry",retry-1);
+         }else{
+           $(this).attr("retrysrc",$(this).attr("src"));
+          $(this).bind('click',function(){
+              $(this).attr("src",$(this).attr("retrysrc"));
+              $(this).attr("retry","10");
+          });
+          $(this).attr("src","data:image/image/png;base64,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");
+         }
+          
+          dfd.resolve();
+        })
+//       if(this.complete) 
+//         $(this).attr("class","");
+
+        imgdefereds.push(dfd);
+      })
+      $.when.apply(null,imgdefereds).done(function(){
+        callback();
+       dfd.resolve();
+      });
+
+});
+</script>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">魔装少男的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">我可爱又美丽却能唤来死亡 <br>  虽然我可爱又迷人,但我能招来死亡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">67</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">32</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">50</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+     <li class="menu-item menu-item-search-my">
+      <a>
+      <i class="fa fa-search fa-fw"></i>
+      <input type="text" value="B:我爱你" name="wd" id="kw2" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw2').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
+      </a>
+      </li>
+
+      <li class="menu-item menu-item-gonggao-my" style="opacity: 1; transform: translateY(0px);">
+      <div style=" border:1px solid #ffc0cb"><div>
+  <font color="#ffc0cb">小公告：</font>
+</div>
+<iframe src="https://pengxiandyou.github.io/gitee-pengxiandyou/src/hexo-next/%E5%85%AC%E5%91%8A.html"></iframe>
+</div>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text"> 项目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text"> 项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text"> 搭建环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%B7%A5%E7%A8%8B"><span class="nav-number">3.1.</span> <span class="nav-text"> 创建工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E5%90%88mybatis"><span class="nav-number">3.2.</span> <span class="nav-text"> 整合MyBatis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E6%8F%92%E4%BB%B6"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 逆向工程插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#spring"><span class="nav-number">3.2.2.</span> <span class="nav-text"> Spring</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.3.</span> <span class="nav-text"> 日志系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%BA%8B%E5%8A%A1"><span class="nav-number">3.4.</span> <span class="nav-text"> 声明式事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E8%BF%B0%E5%B1%82"><span class="nav-number">3.5.</span> <span class="nav-text"> 表述层</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小可爱"
+      src="/images/%E5%A4%B4%E5%83%8F.jpg">
+  <p class="site-author-name" itemprop="name">小可爱</p>
+  <div class="site-description" itemprop="description">西部计划完结</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button><i class="fa fa-comment"></i>
+      比较直接的联系我
+    </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/pengxiandyou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.coolapk.com/u/1385475" title="酷安 → https:&#x2F;&#x2F;www.coolapk.com&#x2F;u&#x2F;1385475" rel="noopener" target="_blank">酷安</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/20837528" title="B站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;20837528" rel="noopener" target="_blank"><i class="fab fa-tv fa-fw"></i>B站</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/pengxiandyou" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;pengxiandyou" rel="noopener" target="_blank"><i class="fab fa-gitee fa-fw"></i>Gitee</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://pengxiandyou.gitee.io/src/game/t-rex-runner/" title="https:&#x2F;&#x2F;pengxiandyou.gitee.io&#x2F;src&#x2F;game&#x2F;t-rex-runner&#x2F;" rel="noopener" target="_blank">小恐龙游戏</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+
+
+
+            <div>
+          <i class="fa fa-search fa-fw"></i>
+      <input type="text" value="B:我爱你" name="wd" id="kw1" class="kw" size="15"  autocomplete="off" onkeydown="keyDown(event,this.value)" onfocus="javascript:if(this.value=='B:我爱你')this.value='';" onblur="javascript:if (this.value=='')this.value='B:我爱你'"><i class="fa fa-long-arrow-right" onclick="search(document.getElementById('kw1').value)" style="margin-left:0.35em;margin-top:0.35em;float:right;"></i>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/pengxiandyou" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<script>
+$("document").ready(function(){
+  // 在这里写你的代码...
+  //var e1 = $("article[class='post-content'][lang='zh-CN']")[0];
+  //$("e1").css("display","blok;");
+  hbeLoader();
+
+
+
+});
+</script>
+<div class="post-block">
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN"   >
+    <link itemprop="mainEntityOfPage" href="https://19980118.xyz/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="小可爱">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="魔装少男的博客">
+      <meta itemprop="description" content="西部计划完结">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="练习尚硅谷的尚筹网 | 魔装少男的博客">
+      <meta itemprop="description" content="<p>&emsp;&emsp;SSM、微服务</p><p>&emsp;&emsp;虽然视频比较老，但我尽量用新一点的。</p><p>&emsp;&emsp;他 用exclipse，我用idea.</p>">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          练习尚硅谷的尚筹网
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-13 22:40:57 / 修改时间：23:44:48" itemprop="dateCreated datePublished" datetime="2024-03-13T22:40:57+08:00">2024-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">记录</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>18k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>16 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description"><p>&emsp;&emsp;SSM、微服务</p><p>&emsp;&emsp;虽然视频比较老，但我尽量用新一点的。</p><p>&emsp;&emsp;他 用exclipse，我用idea.</p></div>
+
+          
+        </div>
+      </header>
+
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody" >
+        <h2 id="项目描述"><a class="markdownIt-Anchor" href="#项目描述"></a> 项目描述</h2>
+<p>  相当于一个众筹网。</p>
+<h2 id="项目结构"><a class="markdownIt-Anchor" href="#项目结构"></a> 项目结构</h2>
+<p><img data-src="https://s2.loli.net/2024/03/13/kowDnrGLW86cyYi.png" alt="尚筹网结构" /></p>
+<h2 id="搭建环境"><a class="markdownIt-Anchor" href="#搭建环境"></a> 搭建环境</h2>
+<h3 id="创建工程"><a class="markdownIt-Anchor" href="#创建工程"></a> 创建工程</h3>
+<p>  创建Maven项目，我是一个大的包含三个模块，其中一个模块包含三个子模块。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">D:.</span><br><span class="line">│</span><br><span class="line">├───.idea</span><br><span class="line">│</span><br><span class="line">├───ssm_crowdfunding01-admin-parent 打包pom</span><br><span class="line">│</span><br><span class="line">│   ├───ssm_crowdfunding02-admin-webui 打包war</span><br><span class="line">│</span><br><span class="line">│   ├───ssm_crowdfunding03-admin-component 打包jar</span><br><span class="line">│</span><br><span class="line">│   └───ssm_crowdfunding04-admin-entity 打包jar</span><br><span class="line">│</span><br><span class="line">├───ssm_crowdfunding05-admin-util 打包jar</span><br><span class="line">│</span><br><span class="line">└───ssm_crowdfunding06-admin-reverse 打包jar</span><br></pre></td></tr></table></figure>
+<p>  webui依赖component ，component 依赖entity和util，所以install要从最底层开始。</p>
+<p>  parent管理依赖。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>17<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>17<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring.version</span>&gt;</span>6.0.6<span class="tag">&lt;/<span class="name">spring.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring.security.version</span>&gt;</span>6.0.6<span class="tag">&lt;/<span class="name">spring.security.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.26<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-orm<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjweaver<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.9.9.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cglib<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cglib<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>rc2-1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.37<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.8<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.pagehelper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>pagehelper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>logback-classic<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    其它日志框架的中间转换包--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jcl-over-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jul-to-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.36<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    这个应该有替代--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>jstl<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jstl<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet.jsp<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jsp-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    自己使用json--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.code.gson<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>gson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.10.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    spring-security--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.security.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.security.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-taglibs<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.security.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="整合mybatis"><a class="markdownIt-Anchor" href="#整合mybatis"></a> 整合MyBatis</h3>
+<h4 id="逆向工程插件"><a class="markdownIt-Anchor" href="#逆向工程插件"></a> 逆向工程插件</h4>
+<p>  创建数据库和表。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> FOREIGN_KEY_CHECKS<span class="operator">=</span><span class="number">0</span>;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> `t_admin`;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `t_admin` (</span><br><span class="line">  `id` <span class="type">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;主键&#x27;</span>,</span><br><span class="line">  `login_acct` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;登录账号&#x27;</span>,</span><br><span class="line">  `user_pswd` <span class="type">char</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;登录密码&#x27;</span>,</span><br><span class="line">  `user_name` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;昵称&#x27;</span>,</span><br><span class="line">  `email` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;邮件地址&#x27;</span>,</span><br><span class="line">  `create_time` <span class="type">char</span>(<span class="number">19</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;创建时间&#x27;</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY (`id`)</span><br><span class="line">) ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
+<p>  在reverse模块里配置逆向工程。插件版本要和依赖的core保持一致。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>c3p0<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>c3p0<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.9.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.37<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  在reverse模块里创建<code>generatorConfig.xml</code>，必须是这个名字。由于我项目结构的原因，路径要写绝对路径。约束要求下面的都要有。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">generatorConfiguration</span></span></span><br><span class="line"><span class="meta">        <span class="keyword">PUBLIC</span> <span class="string">&quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="string">&quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">&quot;crowdfundTables&quot;</span> <span class="attr">targetRuntime</span>=<span class="string">&quot;MyBatis3&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--            自动生成注释--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;suppressAllComments&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">commentGenerator</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">connectionURL</span>=<span class="string">&quot;jdbc:mysql://localhost:3306/crowd&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">userId</span>=<span class="string">&quot;root&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">password</span>=<span class="string">&quot;123456&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaTypeResolver</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--默认false，把JDBCDECIMAL和NUMERIC类型解折为Integer，为true时把JDBC DECIMAL</span></span><br><span class="line"><span class="comment">            和NUMERIC类型解析为java.math.BigDecimal --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;forceBigDecimals&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaTypeResolver</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--targetProject：生成Entity类的路径--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetProject</span>=<span class="string">&quot;D:\IntelliJ IDEA\WorkSpace\ssm_crowdfunding\ssm_crowdfunding06-admin-reverse\src\main\java&quot;</span> <span class="attr">targetPackage</span>=<span class="string">&quot;cf.pengxiandyou.crowd.entity&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--enableSubPacka 是否让schema作为包的后缴--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;enableSubPackages&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--从数据库返回的值被清理前后的空格--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;trimString&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--targetProject：XxxMapper.xml映射文件生成的路径--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetProject</span>=<span class="string">&quot;D:\IntelliJ IDEA\WorkSpace\ssm_crowdfunding\ssm_crowdfunding06-admin-reverse\src\main\resources&quot;</span> <span class="attr">targetPackage</span>=<span class="string">&quot;mappers&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;enableSubPackages&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">sqlMapGenerator</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--targetPackage：Mapper接口生成的位置--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">&quot;XMLMAPPER&quot;</span> <span class="attr">targetProject</span>=<span class="string">&quot;D:\IntelliJ IDEA\WorkSpace\ssm_crowdfunding\ssm_crowdfunding06-admin-reverse\src\main\java&quot;</span> <span class="attr">targetPackage</span>=<span class="string">&quot;cf.pengxiandyou.crowd.mapper&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;enableSubPackages&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaClientGenerator</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">&quot;t_admin&quot;</span> <span class="attr">domainObjectName</span>=<span class="string">&quot;Admin&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  在插件里点击<code>mybatis-generator:generate</code>生成代码，会更具配置放在指定位置。找到实体类，添加有参和无参构造器和toString，我用的插件，暂时省力。</p>
+<p>  因为是分模块的，所以要移动一些文件：实体移到entity，mapper接口移到component ，mapper.xml移到webui。</p>
+<h4 id="spring"><a class="markdownIt-Anchor" href="#spring"></a> Spring</h4>
+<p><img data-src="https://s2.loli.net/2024/03/13/boc4sRAlm1jCBJW.png" alt="spring和mybatis整合" /></p>
+<p>  大致思路：</p>
+<p>①子模块加入需要的依赖</p>
+<p>②准备jdbc.properties</p>
+<p>③创建Spring配置文件，专门配置Spring和MyBatis整合相关</p>
+<p>④在Spring的配置文件中加载jdbc.properties属性文件</p>
+<p>⑤配置数据源</p>
+<p>⑥配置sqlSessionFactoryBean</p>
+<p>  ①装配数据源</p>
+<p>  ②指定XxxMapper.xml配置文件的位置</p>
+<p>  ③指定MyBatis全励配置文件的位置（可选，所以创建了空的）</p>
+<p>⑦配置MapperScannerConfigurer</p>
+<p>⑧测试是否可以装配xxxMapper接口并通过这个接口操作数据库</p>
+<p>  步骤：</p>
+<ol>
+<li>
+<p>component使用需要的依赖</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-orm<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjweaver<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cglib<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cglib<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.pagehelper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>pagehelper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    这个应该有替代--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>jstl<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jstl<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    自己使用json--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.code.gson<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>gson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>jdbc.properties放到webui</p>
+ <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jdbc.driverClassName</span>=<span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">jdbc.url</span>=<span class="string">jdbc:mysql://localhost:3306/crowd?useUnicode=true&amp;characterrEncoding=UTF-8</span></span><br><span class="line"><span class="attr">jdbc.username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">jdbc.password</span>=<span class="string">123456</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>mybatis-config.xml放到webui，空的</p>
+</li>
+<li>
+<p>spring-persist-mybatis.xml放到webui</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">contxet:property-placeholder</span> <span class="attr">location</span>=<span class="string">&quot;classpath:jdbc.properties&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    数据源，test测试连接--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;dataSource&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.alibaba.druid.pool.DruidDataSource&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.username&#125;&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.password&#125;&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;driverClassName&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.driverClassName&#125;&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;url&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.url&#125;&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>测试数据源，记得依赖的模块要clean和install</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith(SpringJUnit4ClassRunner.class)</span></span><br><span class="line"><span class="meta">@ContextConfiguration(locations = &#123;&quot;classpath:spring-persist-mybatis.xml&quot;&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestDataSource</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DataSource dataSource;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException &#123;</span><br><span class="line">        <span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> dataSource.getConnection();</span><br><span class="line">        System.out.println(<span class="string">&quot;connection = &quot;</span> + connection);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>sqlSessionFactoryBean</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--    sqlSessionFactoryBean--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;sqlSessionFactoryBean&quot;</span> <span class="attr">class</span>=<span class="string">&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;configLocation&quot;</span> <span class="attr">value</span>=<span class="string">&quot;classpath:mybatis-config.xml&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;mapperLocations&quot;</span> <span class="attr">value</span>=<span class="string">&quot;classpath:mappers/*Mapper.xml&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dataSource&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;dataSource&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    配置MapperScannerConfigurer来扫描Mapper接口所在的包--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;mapperScannerConfigurer&quot;</span> <span class="attr">class</span>=<span class="string">&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;basePackage&quot;</span> <span class="attr">value</span>=<span class="string">&quot;cf.pengxiandyou.crowd.mapper&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>测试Mapper</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testInsert</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">insert</span> <span class="operator">=</span> adminMapper.insert(<span class="keyword">new</span> <span class="title class_">Admin</span>(<span class="literal">null</span>, <span class="string">&quot;小爱&quot;</span>, <span class="string">&quot;123123&quot;</span>, <span class="string">&quot;小爱同学&quot;</span>, <span class="string">&quot;123@qq.com&quot;</span>, <span class="literal">null</span>));</span><br><span class="line">    System.out.println(<span class="string">&quot;insert = &quot;</span> + insert);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>  当测试不通过，不能部署时，可以配置跳过。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">testFailureIgnore</span>&gt;</span>true<span class="tag">&lt;/<span class="name">testFailureIgnore</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  当发现测试执行两边，可以在setting-maven-runner-skip tests打上勾。</p>
+<h3 id="日志系统"><a class="markdownIt-Anchor" href="#日志系统"></a> 日志系统</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>logback-classic<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testLog</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">Logger</span> <span class="variable">logger</span> <span class="operator">=</span> LoggerFactory.getLogger(TestMybatis.class);<span class="comment">//slf4j</span></span><br><span class="line">    logger.info(<span class="string">&quot;info&quot;</span>);</span><br><span class="line">    logger.debug(<span class="string">&quot;debug&quot;</span>);</span><br><span class="line">    logger.warn(<span class="string">&quot;warn&quot;</span>);</span><br><span class="line">    logger.error(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  老版本Spring自带的日志是commons-logging，需要排除，添加。而我使用的是较新的，我翻开到里面是spring-jcl，所以不用排除和添加。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-logging<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jcl-over-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span><span class="comment">&lt;!-- 用于java的log--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jul-to-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.36<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  要配置日志，可以创建<code>logback.xml</code>，网上可以找。默认的我很满意，故我不配置。</p>
+<h3 id="声明式事务"><a class="markdownIt-Anchor" href="#声明式事务"></a> 声明式事务</h3>
+<p><img data-src="https://s2.loli.net/2024/03/13/PVFjzy6pnJN4Kvo.png" alt="声明式事务图示" /></p>
+<p>  推荐使用fitten code插件提示生成，方便省力。</p>
+<p>  spring-persist-tx.xml，放到webui。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--    主要扫描Service--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">&quot;cf.pengxiandyou.crowd.service&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--    事务管理器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;transactionManager&quot;</span> <span class="attr">class</span>=<span class="string">&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--        虽然不在同一个文件，但在同一个容器--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dataSource&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;dataSource&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--    事务切面--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:config</span>&gt;</span><span class="comment">&lt;!-- 如果后面SpringSecurity的UserDetailsService报错，改成实现类--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">&quot;txPointcut&quot;</span> <span class="attr">expression</span>=<span class="string">&quot;execution(* cf.pengxiandyou.crowd.service.*Service.*(..))&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">&quot;txAdvice&quot;</span> <span class="attr">pointcut-ref</span>=<span class="string">&quot;txPointcut&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--    事务通知--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tx:advice</span> <span class="attr">id</span>=<span class="string">&quot;txAdvice&quot;</span> <span class="attr">transaction-manager</span>=<span class="string">&quot;transactionManager&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;get*&quot;</span>  <span class="attr">read-only</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;find*&quot;</span>  <span class="attr">read-only</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;query*&quot;</span>  <span class="attr">read-only</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;count*&quot;</span>  <span class="attr">read-only</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--            增删改--&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- rollback-for 默认运行时异常，建议编译时和运行时异常都回滚--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;save*&quot;</span>  <span class="attr">propagation</span>=<span class="string">&quot;REQUIRES_NEW&quot;</span> <span class="attr">rollback-for</span>=<span class="string">&quot;RuntimeException&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;insert*&quot;</span>  <span class="attr">propagation</span>=<span class="string">&quot;REQUIRES_NEW&quot;</span> <span class="attr">rollback-for</span>=<span class="string">&quot;Exception&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;update*&quot;</span>  <span class="attr">propagation</span>=<span class="string">&quot;REQUIRES_NEW&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;delete*&quot;</span>  <span class="attr">propagation</span>=<span class="string">&quot;REQUIRES_NEW&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tx:advice</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  创建相关代码测试。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AdminServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">AdminService</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> AdminMapper adminMapper;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">saveAdmin</span><span class="params">(Admin admin)</span> &#123;</span><br><span class="line">        adminMapper.insert(admin);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  注意，测试是在webui，而相关代码在component ，所以要记得清理和部署。</p>
+<h3 id="表述层"><a class="markdownIt-Anchor" href="#表述层"></a> 表述层</h3>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>打赏</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="小可爱 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="小可爱 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+
+          <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/">练习尚硅谷的尚筹网</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 小可爱 的个人博客">小可爱</a></p>
+  <p><span>发布时间:</span>2024年03月13日 - 22:40</p>
+  <p><span>最后更新:</span>2024年03月13日 - 23:44</p>
+  <p><span>原始链接:</span><a href="/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/" title="练习尚硅谷的尚筹网">https://19980118.xyz/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://19980118.xyz/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+
+      
+</div>
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/SSM/" rel="tag"># SSM</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/12/%E7%94%A8JavaFX%E5%81%9A%E4%B8%80%E4%B8%AA%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/" rel="prev" title="用JavaFX做一个手机文件下载器">
+                  <i class="fa fa-chevron-left"></i> 用JavaFX做一个手机文件下载器
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小可爱</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">472k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:09</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("07/15/2019 13:14:21");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/Q&A.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"QoLQx5ntEgvMDisbP"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.min.js","integrity":"sha256-G58AID1YoX5YaEtWfXSI0VLrZ6N4kvNvwg0BI8zUFxE="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://comm.19980118.xyz","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"🤣一起来玩，留下你的足迹吧~。\n 🚀昵称使用QQ号可以自动补全邮箱和显示头像昵称等信息呢。\n 💣请文明评论哦禁止恶意评论！\n ⚠️公开网络空间，请不要发表任何包含个人或其他人的隐私信息。\n 注：评论不成功请二次评论，或者使用魔法。"},"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://unpkg.com/@waline/client@v2/dist/waline.js","emoji":"https://unpkg.com/@waline/emojis@1.0.1/weibo","el":"#waline","comment":true,"path":"/2024/03/13/%E7%BB%83%E4%B9%A0%E5%B0%9A%E7%A1%85%E8%B0%B7%E7%9A%84%E5%B0%9A%E7%AD%B9%E7%BD%91/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+
+  <!-- 点击出现社会主义彩色文字 -->
+ <!--<script type="text/javascript" src="/js/shzyhxjzg.js"></script>
+--><!-- 点击动画 --><!--
+ <script type="text/javascript" src="/js/love.js"></script>
+-->
+<!-- 点击出现社会主义彩色文字 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script><!-- 点击出现爱心 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+<!-- 天气 -->
+<script type="text/javascript">
+WIDGET = {FID: 'apV00Hp0nY'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+<!-- 动态标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+            "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+<!-- 折叠 --><!-- 
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script> -->
+<!-- 背景 -->
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+<script src="/live2d-widget/autoload.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/live2d-widget@^3.1.3/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>
