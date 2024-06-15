@@ -8564,6 +8564,8 @@ a2-->a3</pre>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 角色名称已存在</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@ExceptionHandler(&#123;RoleNameAlreadyExistException.class, MySQLIntegrityConstraintViolationException.class&#125;)</span><span class="comment">//这个完整性约束异常要注意其它情况</span></span><br><span class="line"><span class="keyword">public</span> ResultEntity&lt;Object&gt; <span class="title function_">resolveRoleNameAlreadyExistException</span><span class="params">(Exception e)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> ResultEntity.failed(CrowdConstant.MESSAGE_ROLE_NAME_ALREADY_EXIST);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="实现删除"><a class="markdownIt-Anchor" href="#实现删除"></a> 实现删除</h3>
 <p>  果然是单条删除和多条删除用同一个接口。</p>
+<h2 id="记录中断"><a class="markdownIt-Anchor" href="#记录中断"></a> 记录中断</h2>
+<p>  那段时间为了在找工作的同时，也在学习。当时骑车去广汉进厂面试了，因为面试上进厂了。在厂里干了七天，最后放弃了，因为要进行国企面试了。当然，马后炮一下，肯定面上了。目前在干党建，加油。</p>
 ]]></content>
       <categories>
         <category>记录</category>
