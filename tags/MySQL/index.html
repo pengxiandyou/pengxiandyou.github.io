@@ -55,9 +55,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
 <script src="/js/third-party/search/local-search.js" defer></script>
-<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"QoLQx5ntEgvMDisbP"}</script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":false,"id":"QoLQx5ntEgvMDisbP"}</script>
 <script src="/js/third-party/chat/chatra.js" defer></script>
-<script async src="https://call.chatra.io/chatra.js"></script>
+<script src="https://call.chatra.io/chatra.js"></script>
 
 
   <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.1/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
@@ -89,8 +89,7 @@
 
 
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-<!--我自定义的搜索-->
-<script async="true" src="https://pengxiandyou.github.io/gitee-pengxiandyou/src/js/search-my.js"></script>
+
 <script type="text/javascript">
   $(document).ready(function(){
     $(document).on('click', '.fold_hider', function(){
@@ -440,6 +439,51 @@
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+<script src="/js/Q&A.js" defer></script>
+
+
+<!-- 点击出现社会主义彩色文字 -->
+ <!--<script type="text/javascript" src="/js/shzyhxjzg.js"></script>
+--><!-- 点击动画 --><!--
+ <script type="text/javascript" src="/js/love.js"></script>
+-->
+<!-- 点击出现社会主义彩色文字 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script><!-- 点击出现爱心 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+
+<!-- 动态标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+            "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+<!-- 折叠 --><!-- 
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).on('click', '.fold_hider', function(){
+        $('>.fold', this.parentNode).slideToggle();
+        $('>:first', this).toggleClass('open');
+    });
+    //默认情况下折叠
+    $("div.fold").css("display","none");
+});
+</script> -->
+<!-- 背景 -->
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"log":false,"model":{"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false}});</script></body>
+</html>
+
     NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
   ).then(() => 
     Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
